@@ -10,5 +10,7 @@ target 'Social Networking and Professional Development' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
+pod 'Firebase/Firestore'
+
 
 end

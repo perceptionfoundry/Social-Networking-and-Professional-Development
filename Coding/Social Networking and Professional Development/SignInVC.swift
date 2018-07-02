@@ -7,21 +7,34 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignInVC: UIViewController {
 
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    @IBAction func loginButtonAction(_ sender: Any) {
+        
+        if (emailTF.text?.isEmpty != true) && (passwordTF.text?.isEmpty != true){
+            
+            Auth.auth().signIn(withEmail: emailTF.text!, password: passwordTF.text!) { (user, err) in
+                print(user?.email)
+            }
+        }
+    }
+    
 
 }
 

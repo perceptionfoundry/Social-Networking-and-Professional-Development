@@ -78,6 +78,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuX-HS-YNZ"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-Qe-9Xp">
                                         <rect key="frame" x="38" y="124.5" width="215" height="27"/>
@@ -248,15 +251,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ffe-83-qtx"/>
+                    <connections>
+                        <outlet property="emailTF" destination="2Eq-90-ach" id="YtD-4B-7A3"/>
+                        <outlet property="passwordTF" destination="cfs-Rp-sjI" id="sFF-p7-FxX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="940" y="-15.742128935532236"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="9DR-qs-5GV">
             <objects>
-                <viewController id="Eo0-cW-O4F" sceneMemberID="viewController">
+                <viewController id="Eo0-cW-O4F" customClass="SignUpVC" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Hv-MW-YE3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -674,7 +681,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="8Va-NK-V18"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="Login">
+                                                <state key="normal" title="Submit">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -694,6 +701,9 @@
                                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SubmitButtonAction:" destination="Eo0-cW-O4F" eventType="touchUpInside" id="dbp-9G-80E"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -762,15 +772,28 @@
                         <viewLayoutGuide key="safeArea" id="zmm-NH-2s2"/>
                     </view>
                     <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="confirmPasswordTF" destination="QZm-nY-W73" id="2Ey-HT-uLZ"/>
+                        <outlet property="displayNameTF" destination="Yk3-VE-2t0" id="0Ba-w4-97G"/>
+                        <outlet property="emailTF" destination="Jj9-2U-Iwe" id="y8T-Jf-zu6"/>
+                        <outlet property="firstNameTF" destination="eSS-S5-UGQ" id="YAf-O8-4IT"/>
+                        <outlet property="lastNameTF" destination="cEu-tT-vrt" id="MUG-ti-DZq"/>
+                        <outlet property="mobileNumberTf" destination="3KB-ge-NFH" id="NFi-zI-FtF"/>
+                        <outlet property="passwordTF" destination="DuD-Yc-5nt" id="efm-Uo-Vfw"/>
+                        <outlet property="placeTF" destination="6iY-8v-IhX" id="Zic-nr-SBP"/>
+                        <outlet property="profileImage" destination="L8c-fA-DLD" id="O2g-LJ-oED"/>
+                        <outlet property="studyTF" destination="ipb-B1-nye" id="RCo-yf-y3f"/>
+                        <outlet property="workTF" destination="0LI-Y9-P3Y" id="lxB-Zy-kDT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YtI-fh-Zhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1724" y="750.22488755622192"/>
         </scene>
-        <!--View Controller-->
+        <!--ForgetVC-->
         <scene sceneID="vvB-Zj-s0M">
             <objects>
-                <viewController id="wib-1O-IbB" customClass="ViewController" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wib-1O-IbB" customClass="ForgetVC" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PJK-ig-4CX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -857,7 +880,7 @@
                                         <rect key="frame" x="19" y="174" width="337" height="40"/>
                                         <color key="backgroundColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Login">
+                                        <state key="normal" title="Submit">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -877,6 +900,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="SubmitButtonAction:" destination="wib-1O-IbB" eventType="touchUpInside" id="X0j-Du-xKu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5m-AU-OO3">
                                         <rect key="frame" x="19" y="66" width="315" height="22"/>
@@ -925,6 +951,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gbm-Mr-pgT"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="Phl-Cf-m6H" id="N1N-mh-y4l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ef-8K-WSF" sceneMemberID="firstResponder"/>
             </objects>
