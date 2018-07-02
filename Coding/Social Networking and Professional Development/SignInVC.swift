@@ -30,7 +30,33 @@ class SignInVC: UIViewController {
         if (emailTF.text?.isEmpty != true) && (passwordTF.text?.isEmpty != true){
             
             Auth.auth().signIn(withEmail: emailTF.text!, password: passwordTF.text!) { (user, err) in
-                print(user?.email)
+                if err == nil{
+                    
+                    if Auth.auth().currentUser?.isEmailVerified == true{
+                        let AlertVC = UIAlertController(title: "LOGIN", message: "SUCCESS", preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        
+                        AlertVC.addAction(alertAction)
+                        
+                        self.present(AlertVC, animated: true, completion: nil)                     }
+                    else{
+                        
+                        let AlertVC = UIAlertController(title: "VERIFY EMAIL", message: "Email address has not be verified yet, so please check your email inbox", preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        
+                        AlertVC.addAction(alertAction)
+                        
+                        self.present(AlertVC, animated: true, completion: nil)
+                    }
+                }
+                
+                else{
+                    let AlertVC = UIAlertController(title: "Server Error", message: err?.localizedDescription, preferredStyle: .alert)
+                    let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    
+                    AlertVC.addAction(alertAction)
+                    
+                    self.present(AlertVC, animated: true, completion: nil)                }
             }
         }
     }

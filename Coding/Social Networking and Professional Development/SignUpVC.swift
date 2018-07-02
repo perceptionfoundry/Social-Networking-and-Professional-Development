@@ -70,6 +70,18 @@ class SignUpVC: UIViewController {
                             if err == nil{
                                 
                                 print("Database Created")
+                                Auth.auth().currentUser?.sendEmailVerification(completion: { (err) in
+                                    if err == nil{
+                                        
+                                        let AlertVC = UIAlertController(title: "VERIFY EMAIL ADDRESS", message: "Please check your Email inbox to verify given email", preferredStyle: .alert)
+                                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                                            self.navigationController?.popViewController(animated: true)
+                                        })
+                                        AlertVC.addAction(alertAction)
+                                        
+                                        self.present(AlertVC, animated: true, completion: nil)
+                                    }
+                                })
                             }
                         })
                     }

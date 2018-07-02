@@ -24,11 +24,25 @@ class ForgetVC: UIViewController {
 
     @IBAction func SubmitButtonAction(_ sender: Any) {
         
-        
+
         if (emailTF.text?.isEmpty != true){
             
             Auth.auth().sendPasswordReset(withEmail: emailTF.text!) { (err) in
-                print(err?.localizedDescription)
+
+                
+                if err == nil{
+                    
+                    let AlertVC = UIAlertController(title: "Password Reset", message: "Check your Email Inbox to Password reset process ", preferredStyle: .alert)
+                    let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                        self.navigationController?.popViewController(animated: true)
+                    })
+                    
+                    AlertVC.addAction(alertAction)
+                    
+                    self.present(AlertVC, animated: true, completion: nil)
+                }
+                
+                
             }
         }
         
