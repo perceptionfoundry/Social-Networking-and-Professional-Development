@@ -29,6 +29,8 @@
 		F2E203D120E60D2900E3B5B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E203D020E60D2900E3B5B2 /* Assets.xcassets */; };
 		F2E203D420E60D2900E3B5B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E203D220E60D2900E3B5B2 /* LaunchScreen.storyboard */; };
 		F2E203DC20E60E2D00E3B5B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2E203DB20E60E2D00E3B5B2 /* GoogleService-Info.plist */; };
+		F2F0D28720EB7F0D0098CF97 /* CourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F0D28620EB7F0D0098CF97 /* CourseVC.swift */; };
+		F2F0D28920EB88820098CF97 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F0D28820EB88820098CF97 /* CourseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		F2E203D320E60D2900E3B5B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E203D520E60D2900E3B5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E203DB20E60E2D00E3B5B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2F0D28620EB7F0D0098CF97 /* CourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVC.swift; sourceTree = "<group>"; };
+		F2F0D28820EB88820098CF97 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 				F2E203D220E60D2900E3B5B2 /* LaunchScreen.storyboard */,
 				F2E203D520E60D2900E3B5B2 /* Info.plist */,
 				F2E203DB20E60E2D00E3B5B2 /* GoogleService-Info.plist */,
+				F2F0D28620EB7F0D0098CF97 /* CourseVC.swift */,
+				F2F0D28820EB88820098CF97 /* CourseCell.swift */,
 			);
 			path = "Social Networking and Professional Development";
 			sourceTree = "<group>";
@@ -296,6 +302,8 @@
 				F282894E20E614D0002A45B5 /* Custom_View.swift in Sources */,
 				F25DEB5520EA13AE00594F3E /* ForgetVC.swift in Sources */,
 				F2E203CC20E60D2800E3B5B2 /* SignInVC.swift in Sources */,
+				F2F0D28920EB88820098CF97 /* CourseCell.swift in Sources */,
+				F2F0D28720EB7F0D0098CF97 /* CourseVC.swift in Sources */,
 				F282894D20E614D0002A45B5 /* Custom_ImageView.swift in Sources */,
 				F282894C20E614D0002A45B5 /* Custom_Button.swift in Sources */,
 				F25DEB5320EA138D00594F3E /* SignUpVC.swift in Sources */,
@@ -447,7 +455,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUBZ24DP5B;
 				INFOPLIST_FILE = "Social Networking and Professional Development/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.perception.Social-Networking-and-Professional-Development";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -463,7 +474,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUBZ24DP5B;
 				INFOPLIST_FILE = "Social Networking and Professional Development/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.perception.Social-Networking-and-Professional-Development";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
