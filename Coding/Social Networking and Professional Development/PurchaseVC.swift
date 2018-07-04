@@ -1,44 +1,44 @@
 //
-//  CourseVC.swift
+//  PurchaseVC.swift
 //  Social Networking and Professional Development
 //
-//  Created by Syed ShahRukh Haider on 03/07/2018.
+//  Created by Syed ShahRukh Haider on 04/07/2018.
 //  Copyright © 2018 Syed ShahRukh Haider. All rights reserved.
 //
 
 import UIKit
 
-class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PurchaseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
-    
-    @IBOutlet weak var Course_Table: UITableView!
-   
+    @IBOutlet weak var purchase_table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Course_Table.dataSource = self
-        Course_Table.delegate = self
-
+        purchase_table.dataSource = self
+        purchase_table.delegate = self
+        
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 3
     }
-
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Course-Cell", for: indexPath) as! CourseCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PurchaseCell", for: indexPath) as! purchaseCell
         cell.selectionStyle = .none
         tableView.separatorStyle = .none
+        
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 134
+        return 131
+        
     }
+
+ 
+
 }

@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C446665DD91FFC645C434D57 /* Pods_Social_Networking_and_Professional_Development.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20833F0ACDCEFB8AE3FC9223 /* Pods_Social_Networking_and_Professional_Development.framework */; };
+		F25D15D520ECC63C00E5BCF5 /* purchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */; };
+		F25D15DB20ECCB0800E5BCF5 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */; };
+		F25D15DD20ECD18800E5BCF5 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = F25D15DC20ECD18800E5BCF5 /* sample.png */; };
+		F25D15DF20ECDCA100E5BCF5 /* friend.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F25D15DE20ECDCA100E5BCF5 /* friend.jpeg */; };
+		F25D15E120ECDD3800E5BCF5 /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D15E020ECDD3800E5BCF5 /* FriendVC.swift */; };
+		F25D15E320ECDD5F00E5BCF5 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D15E220ECDD5F00E5BCF5 /* FriendCell.swift */; };
+		F25D15E520ECE18200E5BCF5 /* research-picture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F25D15E420ECE18200E5BCF5 /* research-picture.jpeg */; };
 		F25DEB5320EA138D00594F3E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25DEB5220EA138D00594F3E /* SignUpVC.swift */; };
 		F25DEB5520EA13AE00594F3E /* ForgetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25DEB5420EA13AE00594F3E /* ForgetVC.swift */; };
 		F282894120E612A7002A45B5 /* purchase.png in Resources */ = {isa = PBXBuildFile; fileRef = F282893A20E612A7002A45B5 /* purchase.png */; };
@@ -37,6 +44,13 @@
 		20833F0ACDCEFB8AE3FC9223 /* Pods_Social_Networking_and_Professional_Development.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Networking_and_Professional_Development.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C36A70C714431C8ADC4025 /* Pods-Social Networking and Professional Development.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking and Professional Development.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Networking and Professional Development/Pods-Social Networking and Professional Development.debug.xcconfig"; sourceTree = "<group>"; };
 		62984F19ACBAE4AFCA1A4475 /* Pods-Social Networking and Professional Development.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking and Professional Development.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Networking and Professional Development/Pods-Social Networking and Professional Development.release.xcconfig"; sourceTree = "<group>"; };
+		F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purchaseCell.swift; sourceTree = "<group>"; };
+		F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
+		F25D15DC20ECD18800E5BCF5 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
+		F25D15DE20ECDCA100E5BCF5 /* friend.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = friend.jpeg; sourceTree = "<group>"; };
+		F25D15E020ECDD3800E5BCF5 /* FriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
+		F25D15E220ECDD5F00E5BCF5 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		F25D15E420ECE18200E5BCF5 /* research-picture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "research-picture.jpeg"; path = "../../../SN&PD (images)/research-picture.jpeg"; sourceTree = "<group>"; };
 		F25DEB5220EA138D00594F3E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		F25DEB5420EA13AE00594F3E /* ForgetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetVC.swift; sourceTree = "<group>"; };
 		F282893A20E612A7002A45B5 /* purchase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purchase.png; path = "../../../SN&PD (images)/purchase.png"; sourceTree = "<group>"; };
@@ -96,6 +110,9 @@
 		F282893920E61239002A45B5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				F25D15E420ECE18200E5BCF5 /* research-picture.jpeg */,
+				F25D15DC20ECD18800E5BCF5 /* sample.png */,
+				F25D15DE20ECDCA100E5BCF5 /* friend.jpeg */,
 				F28ED83120E67AD4007FBF8F /* add-image.png */,
 				F282895020E61826002A45B5 /* email.png */,
 				F282894F20E61826002A45B5 /* password.png */,
@@ -154,6 +171,10 @@
 				F2E203DB20E60E2D00E3B5B2 /* GoogleService-Info.plist */,
 				F2F0D28620EB7F0D0098CF97 /* CourseVC.swift */,
 				F2F0D28820EB88820098CF97 /* CourseCell.swift */,
+				F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */,
+				F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */,
+				F25D15E020ECDD3800E5BCF5 /* FriendVC.swift */,
+				F25D15E220ECDD5F00E5BCF5 /* FriendCell.swift */,
 			);
 			path = "Social Networking and Professional Development";
 			sourceTree = "<group>";
@@ -225,6 +246,7 @@
 				F2E203DC20E60E2D00E3B5B2 /* GoogleService-Info.plist in Resources */,
 				F282894720E612A7002A45B5 /* setting.png in Resources */,
 				F282895120E61826002A45B5 /* password.png in Resources */,
+				F25D15DF20ECDCA100E5BCF5 /* friend.jpeg in Resources */,
 				F28ED83220E67AD5007FBF8F /* add-image.png in Resources */,
 				F282895220E61826002A45B5 /* email.png in Resources */,
 				F2E203D120E60D2900E3B5B2 /* Assets.xcassets in Resources */,
@@ -232,6 +254,8 @@
 				F2E203CF20E60D2800E3B5B2 /* Main.storyboard in Resources */,
 				F282894420E612A7002A45B5 /* offer.png in Resources */,
 				F282894220E612A7002A45B5 /* chat.png in Resources */,
+				F25D15DD20ECD18800E5BCF5 /* sample.png in Resources */,
+				F25D15E520ECE18200E5BCF5 /* research-picture.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,13 +324,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F282894E20E614D0002A45B5 /* Custom_View.swift in Sources */,
+				F25D15DB20ECCB0800E5BCF5 /* PurchaseVC.swift in Sources */,
 				F25DEB5520EA13AE00594F3E /* ForgetVC.swift in Sources */,
+				F25D15D520ECC63C00E5BCF5 /* purchaseCell.swift in Sources */,
 				F2E203CC20E60D2800E3B5B2 /* SignInVC.swift in Sources */,
 				F2F0D28920EB88820098CF97 /* CourseCell.swift in Sources */,
 				F2F0D28720EB7F0D0098CF97 /* CourseVC.swift in Sources */,
 				F282894D20E614D0002A45B5 /* Custom_ImageView.swift in Sources */,
 				F282894C20E614D0002A45B5 /* Custom_Button.swift in Sources */,
 				F25DEB5320EA138D00594F3E /* SignUpVC.swift in Sources */,
+				F25D15E120ECDD3800E5BCF5 /* FriendVC.swift in Sources */,
+				F25D15E320ECDD5F00E5BCF5 /* FriendCell.swift in Sources */,
 				F2E203CA20E60D2800E3B5B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
