@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 
-class SignUpVC: UIViewController {
+class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     
     
@@ -28,75 +28,132 @@ class SignUpVC: UIViewController {
     
     
     // Firebase Variable
-    
-    var db = Firestore.firestore()
+    var docRef : DocumentReference!
+    let storage = Storage.storage()
+
+    var selectedProfileImage : UIImage?
+    var imageMetaData = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(imageUpload))
+        profileImage.addGestureRecognizer(imageTap)
     }
 
+    
+    
+    
+    
     @IBAction func SubmitButtonAction(_ sender: Any) {
+        
+        
+        
+        
         
         //Create Login credential
         
         if passwordTF.text?.isEmpty != true && confirmPasswordTF.text?.isEmpty != true && emailTF.text?.isEmpty != true && firstNameTF.text?.isEmpty != true && lastNameTF.text?.isEmpty != true && mobileNumberTf.text?.isEmpty != true && displayNameTF.text?.isEmpty != true && placeTF.text?.isEmpty != true && studyTF.text?.isEmpty != true && workTF.text?.isEmpty != true{
             
-            let userInfo = ["First-Name":firstNameTF.text!,
+            var userInfo = ["First-Name":firstNameTF.text!,
                             "Last-Name": lastNameTF.text!,
                             "Email-Address": emailTF.text!,
                             "Mobile-Number": mobileNumberTf.text!,
                             "Display-Name": displayNameTF.text!,
                             "Place":placeTF.text!,
                             "Study":studyTF.text!,
-                            "Work":workTF.text!
+                            "Work":workTF.text!,
+                            "Image":imageMetaData
             ]
             
             
             // *************** create authentication database *********************
             if passwordTF.text! == confirmPasswordTF.text!{
                 
-                Auth.auth().createUser(withEmail: emailTF.text!, password: passwordTF.text!) { (User, err) in
+                Auth.auth().createUser(withEmail: emailTF.text!, password: passwordTF.text!) { (User, err_email) in
                     
                     
-                    if err?.localizedDescription ==  nil{
-                        print("Successful!!!")
-                        
-                        
-                        var ref : DocumentReference? = nil
-                        
-                        ref = self.db.collection("User").addDocument(data: userInfo, completion: { (err) in
-                            if err == nil{
-                                
-                                print("Database Created")
-                                Auth.auth().currentUser?.sendEmailVerification(completion: { (err) in
-                                    if err == nil{
+                    
+                            var imageData = Data()
+                    
+                            imageData = UIImageJPEGRepresentation(self.selectedProfileImage!, 0.3)!
+                    
+                    
+                    
+                            let storageRef = self.storage.reference().child("User_Profile").child((Auth.auth().currentUser?.uid)!).child("profile_Image")
+                    
+                            let uploadMetaData = StorageMetadata()
+                            uploadMetaData.contentType = "image/jpeg"
+                            storageRef.putData(imageData, metadata: uploadMetaData, completion: { (metaData, error) in
+                    
+                    
+                    
+                                if error != nil{
+                    
+                                    let alert = UIAlertController(title: "ERROR!", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    
+                                    self.present(alert, animated: true, completion: nil)
+                    
+                    
+                                }
+                    
+                    
+                    
+                                else{
+                    
+                                    print(metaData?.downloadURL()?.description)
+                    
+                    
+                                    userInfo["Image"] = (metaData?.downloadURL()?.description)!
+                    
+                                    
+                                    
+                                    if err_email?.localizedDescription ==  nil{
+                                        print("Successful!!!")
                                         
-                                        let AlertVC = UIAlertController(title: "VERIFY EMAIL ADDRESS", message: "Please check your Email inbox to verify given email", preferredStyle: .alert)
-                                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
-                                            self.navigationController?.popViewController(animated: true)
+                                        
+                                        //                        var ref : DocumentReference? = nil
+                                        
+                                        
+                                        let  db = Firestore.firestore()
+                                        db.collection("User").document((Auth.auth().currentUser?.uid)!).setData(userInfo, completion: {
+                                            (err) in
+                                            if err == nil{
+                                                
+                                                let AlertVC = UIAlertController(title: "VERIFY EMAIL ADDRESS", message: "Please check your Email inbox to verify given email", preferredStyle: .alert)
+                                                let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                                                    self.navigationController?.popViewController(animated: true)
+                                                })
+                                                AlertVC.addAction(alertAction)
+                                                
+                                                self.present(AlertVC, animated: true, completion: nil)
+                                            }
                                         })
+                                        
+                                    }
+                                        
+                                        
+                                    else{
+                                        
+                                        
+                                        let AlertVC = UIAlertController(title: "Alert", message: err_email?.localizedDescription, preferredStyle: .alert)
+                                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                                        
                                         AlertVC.addAction(alertAction)
                                         
                                         self.present(AlertVC, animated: true, completion: nil)
                                     }
-                                })
-                            }
-                        })
-                    }
                     
+                                }
+                            })
                     
-                    else{
-                        
-                        
-                        let AlertVC = UIAlertController(title: "Alert", message: err?.localizedDescription, preferredStyle: .alert)
-                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                        
-                        AlertVC.addAction(alertAction)
-                        
-                        self.present(AlertVC, animated: true, completion: nil)
-                    }
+
+                    
+
                 }
             }
             
@@ -123,6 +180,34 @@ class SignUpVC: UIViewController {
             self.present(AlertVC, animated: true, completion: nil)
             
         }
+        
+    }
+    
+    // ********** Change profile photo *******
+    @objc func imageUpload(){
+        
+        print("************ tap *************")
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print(info)
+        let selectedImage = info["UIImagePickerControllerOriginalImage"] as! UIImage
+        
+        self.selectedProfileImage = selectedImage
+        
+
+        self.profileImage.image = selectedImage
+
+        
+        
+        dismiss(animated: true, completion: nil)
         
     }
     
