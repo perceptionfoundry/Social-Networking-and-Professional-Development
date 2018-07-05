@@ -107,6 +107,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F2187FB420EE202C00ED90AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F25DEB5420EA13AE00594F3E /* ForgetVC.swift */,
+				F2E203CB20E60D2800E3B5B2 /* SignInVC.swift */,
+				F25DEB5220EA138D00594F3E /* SignUpVC.swift */,
+				F2F0D28620EB7F0D0098CF97 /* CourseVC.swift */,
+				F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */,
+				F25D15E020ECDD3800E5BCF5 /* FriendVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F2187FB520EE204F00ED90AF /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				F2F0D28820EB88820098CF97 /* CourseCell.swift */,
+				F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */,
+				F25D15E220ECDD5F00E5BCF5 /* FriendCell.swift */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
 		F282893920E61239002A45B5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,23 +181,16 @@
 		F2E203C820E60D2800E3B5B2 /* Social Networking and Professional Development */ = {
 			isa = PBXGroup;
 			children = (
+				F2E203C920E60D2800E3B5B2 /* AppDelegate.swift */,
 				F282894820E614BA002A45B5 /* Customize */,
 				F282893920E61239002A45B5 /* Image */,
-				F2E203C920E60D2800E3B5B2 /* AppDelegate.swift */,
-				F25DEB5420EA13AE00594F3E /* ForgetVC.swift */,
-				F2E203CB20E60D2800E3B5B2 /* SignInVC.swift */,
-				F25DEB5220EA138D00594F3E /* SignUpVC.swift */,
+				F2187FB420EE202C00ED90AF /* Controller */,
+				F2187FB520EE204F00ED90AF /* TableCell */,
 				F2E203CD20E60D2800E3B5B2 /* Main.storyboard */,
 				F2E203D020E60D2900E3B5B2 /* Assets.xcassets */,
 				F2E203D220E60D2900E3B5B2 /* LaunchScreen.storyboard */,
 				F2E203D520E60D2900E3B5B2 /* Info.plist */,
 				F2E203DB20E60E2D00E3B5B2 /* GoogleService-Info.plist */,
-				F2F0D28620EB7F0D0098CF97 /* CourseVC.swift */,
-				F2F0D28820EB88820098CF97 /* CourseCell.swift */,
-				F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */,
-				F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */,
-				F25D15E020ECDD3800E5BCF5 /* FriendVC.swift */,
-				F25D15E220ECDD5F00E5BCF5 /* FriendCell.swift */,
 			);
 			path = "Social Networking and Professional Development";
 			sourceTree = "<group>";

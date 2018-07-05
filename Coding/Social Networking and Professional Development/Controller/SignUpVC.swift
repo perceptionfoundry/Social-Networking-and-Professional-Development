@@ -116,7 +116,6 @@ class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                                         print("Successful!!!")
                                         
                                         
-                                        //                        var ref : DocumentReference? = nil
                                         
                                         
                                         let  db = Firestore.firestore()
@@ -126,6 +125,10 @@ class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                                                 
                                                 let AlertVC = UIAlertController(title: "VERIFY EMAIL ADDRESS", message: "Please check your Email inbox to verify given email", preferredStyle: .alert)
                                                 let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                                                    Auth.auth().currentUser?.sendEmailVerification(completion: { (err_veri  ) in
+                                                        
+                                                        print(err_veri?.localizedDescription)
+                                                    })
                                                     self.navigationController?.popViewController(animated: true)
                                                 })
                                                 AlertVC.addAction(alertAction)

@@ -256,6 +256,7 @@
                     <connections>
                         <outlet property="emailTF" destination="2Eq-90-ach" id="YtD-4B-7A3"/>
                         <outlet property="passwordTF" destination="cfs-Rp-sjI" id="sFF-p7-FxX"/>
+                        <segue destination="C2t-OK-gXh" kind="presentation" identifier="Dashboard_Segue" id="tco-wH-DSC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

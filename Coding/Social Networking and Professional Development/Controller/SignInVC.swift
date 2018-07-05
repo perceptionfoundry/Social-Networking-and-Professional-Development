@@ -33,16 +33,24 @@ class SignInVC: UIViewController {
                 if err == nil{
                     
                     if Auth.auth().currentUser?.isEmailVerified == true{
-                        let AlertVC = UIAlertController(title: "LOGIN", message: "SUCCESS", preferredStyle: .alert)
-                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//
                         
-                        AlertVC.addAction(alertAction)
+                        self.performSegue(withIdentifier: "Dashboard_Segue", sender: nil)
                         
-                        self.present(AlertVC, animated: true, completion: nil)                     }
+                        
+                    }
+                        
+                        
+                        
                     else{
                         
                         let AlertVC = UIAlertController(title: "VERIFY EMAIL", message: "Email address has not be verified yet, so please check your email inbox", preferredStyle: .alert)
-                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        let alertAction = UIAlertAction(title: "OK", style:.default, handler: { (action) in
+                            Auth.auth().currentUser?.sendEmailVerification(completion: { (err_veri  ) in
+                                
+                                print(err_veri)
+                            })
+                        })
                         
                         AlertVC.addAction(alertAction)
                         

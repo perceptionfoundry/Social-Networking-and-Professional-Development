@@ -7,20 +7,44 @@
 //
 
 import UIKit
+import Firebase
 
 class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    let db = Firestore.firestore()
     
     
     @IBOutlet weak var Course_Table: UITableView!
    
+//    var db = Firestore.firestore()
+    
+
     
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         
         Course_Table.dataSource = self
         Course_Table.delegate = self
+        
+        db.collection("Course")
+            .addSnapshotListener { querySnapshot, error in
+                if let error = error {
+                    print("Error retreiving collection: \(error)")
+                }else {
+                    for doc in (querySnapshot?.documents)!{
+//                        print(doc.data())
+                        print("******************")
+                        print(doc.data()["Title"])
+                        print("******************")
 
+                    }
+                }
+        }
+
+        
+     
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
