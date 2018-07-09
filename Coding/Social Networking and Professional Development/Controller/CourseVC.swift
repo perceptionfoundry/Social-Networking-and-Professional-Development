@@ -8,15 +8,25 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let db = Firestore.firestore()
     
+    
+
+
+//    let db = Firestore.firestore()
+    var dbRef : DatabaseReference!
+    var dbHandle : DatabaseHandle!
+    
+    var course_Array = [[String : String]]()
+
+    
+    var loop = 0
     
     @IBOutlet weak var Course_Table: UITableView!
    
-//    var db = Firestore.firestore()
     
 
     
@@ -27,38 +37,79 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         Course_Table.dataSource = self
         Course_Table.delegate = self
         
-        db.collection("Course")
-            .addSnapshotListener { querySnapshot, error in
-                if let error = error {
-                    print("Error retreiving collection: \(error)")
-                }else {
-                    for doc in (querySnapshot?.documents)!{
-//                        print(doc.data())
-                        print("******************")
-                        print(doc.data()["Title"])
-                        print("******************")
-
-                    }
-                }
-        }
-
         
-     
+        
+        dbRef = Database.database().reference()
+        
+        self.dbRef.child("Course").observe(.childAdded) { (CourseSnap) in
+            
+            guard let Course_Data = CourseSnap.value else {return}
+            
+            
+           
+            
+            self.course_Array.append(Course_Data as! [String : String])
+             print(self.course_Array)
+            self.Course_Table.reloadData()
+        }
+        
+        
+        
+        
+        // *********** FireStore *******************
+//        db.collection("Course")
+//            .addSnapshotListener { querySnapshot, error in
+//                if let error = error {
+//                    print("Error retreiving collection: \(error)")
+//                }else {
+//                    for doc in  (querySnapshot?.documents)!{
+////                        print(doc.data())
+//
+//
+//                        self.course_Array.append(doc.data() as! [String : String])
+//
+//
+//                        print("#######################")
+//                        print(self.course_Array)
+//
+//                        print("#######################")
+////                        self.course_Array[self.loop].Title = doc.data()["Title"] as! String
+//
+//                    }
+//                    self.Course_Table.reloadData()
+//
+//                }
+//        }
+
+        //******************************
         
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return course_Array.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
+        print("#######################")
+        print(self.course_Array[indexPath.row]["Title"])
+        
+        print("#######################")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Course-Cell", for: indexPath) as! CourseCell
         
         cell.selectionStyle = .none
         tableView.separatorStyle = .none
         
+        cell.Course_Title.text = course_Array[indexPath.row]["Title"]
+        cell.Course_Descrip.text = course_Array[indexPath.row]["Description"]
+        
+        let string_url = URL(string: course_Array[indexPath.row]["Image_URL"]!)
+
+        cell.Course_Image.sd_setImage(with: string_url, placeholderImage: UIImage(named: "add-image"), options: .progressiveDownload, completed: nil)
         return cell
     }
     

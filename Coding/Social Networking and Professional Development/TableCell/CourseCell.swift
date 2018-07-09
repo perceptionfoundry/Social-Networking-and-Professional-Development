@@ -12,6 +12,7 @@ class CourseCell: UITableViewCell {
 
  
     @IBOutlet weak var Course_Image: UIImageView!
-    @IBOutlet weak var Course_Description: UILabel!
+    @IBOutlet weak var Course_Title: UILabel!
+    @IBOutlet weak var Course_Descrip: UILabel!
     
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 
 class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -28,6 +29,7 @@ class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
     
     
     // Firebase Variable
+    var dbRef : DatabaseReference!
     var docRef : DocumentReference!
     let storage = Storage.storage()
 
@@ -65,7 +67,9 @@ class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                             "Place":placeTF.text!,
                             "Study":studyTF.text!,
                             "Work":workTF.text!,
-                            "Image":imageMetaData
+                            "Image":imageMetaData,
+                            "uID":""
+                
             ]
             
             
@@ -107,7 +111,7 @@ class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                     
                                     print(metaData?.downloadURL()?.description)
                     
-                    
+                                    userInfo["uID"] = (Auth.auth().currentUser?.uid)!
                                     userInfo["Image"] = (metaData?.downloadURL()?.description)!
                     
                                     
@@ -115,27 +119,52 @@ class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                                     if err_email?.localizedDescription ==  nil{
                                         print("Successful!!!")
                                         
+                                        print(userInfo)
+                                        print((Auth.auth().currentUser?.uid)!)
+                                        
+                                        
+                                        self.dbRef = Database.database().reference()
+                                        
+                                        self.dbRef.child("User").child((Auth.auth().currentUser?.uid)!).setValue(userInfo)
                                         
                                         
                                         
-                                        let  db = Firestore.firestore()
-                                        db.collection("User").document((Auth.auth().currentUser?.uid)!).setData(userInfo, completion: {
-                                            (err) in
-                                            if err == nil{
-                                                
-                                                let AlertVC = UIAlertController(title: "VERIFY EMAIL ADDRESS", message: "Please check your Email inbox to verify given email", preferredStyle: .alert)
-                                                let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                                        let AlertVC = UIAlertController(title: "VERIFY EMAIL ADDRESS", message: "Please check your Email inbox to verify given email", preferredStyle: .alert)
+                                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
                                                     Auth.auth().currentUser?.sendEmailVerification(completion: { (err_veri  ) in
-                                                        
+                                        
                                                         print(err_veri?.localizedDescription)
+                                                                    })
+                                            self.navigationController?.popViewController(animated: true)
                                                     })
-                                                    self.navigationController?.popViewController(animated: true)
-                                                })
                                                 AlertVC.addAction(alertAction)
-                                                
-                                                self.present(AlertVC, animated: true, completion: nil)
-                                            }
-                                        })
+                                        
+                                        self.present(AlertVC, animated: true, completion: nil)
+                                        
+                                        
+                                        
+                                        //************************ FireStore **************************
+                                        
+//                                        let  db = Firestore.firestore()
+//                                        db.collection("User").document((Auth.auth().currentUser?.uid)!).setData(userInfo, completion: {
+//                                            (err) in
+//                                            if err == nil{
+//                                                
+//                                                let AlertVC = UIAlertController(title: "VERIFY EMAIL ADDRESS", message: "Please check your Email inbox to verify given email", preferredStyle: .alert)
+//                                                let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+//                                                    Auth.auth().currentUser?.sendEmailVerification(completion: { (err_veri  ) in
+//                                                        
+//                                                        print(err_veri?.localizedDescription)
+//                                                    })
+//                                                    self.navigationController?.popViewController(animated: true)
+//                                                })
+//                                                AlertVC.addAction(alertAction)
+//                                                
+//                                                self.present(AlertVC, animated: true, completion: nil)
+//                                            }
+//                                        })
+                                        
+                                        // ********************************
                                         
                                     }
                                         

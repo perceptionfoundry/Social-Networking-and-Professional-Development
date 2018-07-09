@@ -11,6 +11,9 @@ PODS:
   - Firebase/Core (4.10.1):
     - FirebaseAnalytics (= 4.1.0)
     - FirebaseCore (= 4.0.17)
+  - Firebase/Database (4.10.1):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.1.5)
   - Firebase/Firestore (4.10.1):
     - Firebase/Core
     - FirebaseFirestore (= 0.10.3)
@@ -28,6 +31,10 @@ PODS:
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.17):
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseDatabase (4.1.5):
+    - FirebaseAnalytics (~> 4.1)
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
   - FirebaseFirestore (0.10.3):
     - FirebaseAnalytics (~> 4.1)
     - FirebaseCore (~> 4.0)
@@ -77,12 +84,17 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.5.0)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Database
   - Firebase/Firestore
   - Firebase/Storage
+  - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -91,6 +103,7 @@ SPEC REPOS:
     - FirebaseAnalytics
     - FirebaseAuth
     - FirebaseCore
+    - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstanceID
     - FirebaseStorage
@@ -103,6 +116,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SDWebImage
 
 SPEC CHECKSUMS:
   BoringSSL: 32764dbaf5f5888cf51fbaa172a010126b41bcd4
@@ -110,6 +124,7 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
   FirebaseAuth: d040bb7a9db6dfc29d0e7ec82d48be51352b2581
   FirebaseCore: 872307b001bbefda1dfa0dbfffa50a6919023d4a
+  FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseFirestore: 41d1ec1f37963b63f8bbbcdb94d8545d4c6c1b42
   FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
   FirebaseStorage: 9a863a2bb96c406958eeff7c2f1dfa9f44c44a13
@@ -122,7 +137,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 5114c0b6be628b51a403d6bd89a9e7aa64568feb
+PODFILE CHECKSUM: 0595ccd31a38d61c471e4bf107a0e71e252f4688
 
 COCOAPODS: 1.5.0
