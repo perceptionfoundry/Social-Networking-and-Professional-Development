@@ -64,4 +64,44 @@ import UIKit
             }
         }
     }
+    
+    @IBInspectable var border_color : UIColor = UIColor.clear {
+        
+        didSet{
+            layer.borderWidth = 1
+            
+            layer.borderColor = border_color.cgColor
+        }
+    }
+    
+    
+    
+    @IBInspectable var firstColor : UIColor = UIColor.clear{
+        
+        didSet{
+            updateViewColor()
+        }
+    }
+    
+    @IBInspectable var secondColor : UIColor = UIColor.clear{
+        
+        didSet{
+            updateViewColor()
+        }
+    }
+    
+    override class var layerClass : AnyClass{
+        
+        get{
+            
+            return CAGradientLayer.self
+        }
+    }
+    
+    func updateViewColor(){
+        
+        let layer = self.layer as! CAGradientLayer
+        layer.colors = [firstColor.cgColor,secondColor.cgColor]
+//        layer.locations = [0.5]
+    }
 }

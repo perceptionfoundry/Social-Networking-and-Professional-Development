@@ -65,5 +65,22 @@ import UIKit
             }
         }
     }
+    
+    @IBInspectable var border_color : UIColor = UIColor.clear {
+        
+        didSet{
+            layer.borderWidth = 1
+            
+            layer.borderColor = border_color.cgColor
+        }
+    }
+    
+    @IBInspectable var border_width : CGFloat = 0{
+        didSet{
+            
+            layer.borderWidth = border_width
+        }
+        
+    }
 
 }
