@@ -10,6 +10,9 @@ import UIKit
 
 class OfferCell: UITableViewCell {
 
-  
-
+    @IBOutlet weak var Course_Image: UIImageView!
+    
+    @IBOutlet weak var course_title: UILabel!
+    @IBOutlet weak var offer_label: UILabel!
+    
 }

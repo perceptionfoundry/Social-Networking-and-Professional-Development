@@ -13,7 +13,7 @@ import SDWebImage
 class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
-    
+    var SelectedCourseTitle : String!
 
 
 //    let db = Firestore.firestore()
@@ -111,6 +111,20 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
         cell.Course_Image.sd_setImage(with: string_url, placeholderImage: UIImage(named: "add-image"), options: .progressiveDownload, completed: nil)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.SelectedCourseTitle = (course_Array[indexPath.row]["Title"])!
+       
+        
+        performSegue(withIdentifier: "Detail_Segue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! DetailVC
+        
+        dest.selected_Course = SelectedCourseTitle
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

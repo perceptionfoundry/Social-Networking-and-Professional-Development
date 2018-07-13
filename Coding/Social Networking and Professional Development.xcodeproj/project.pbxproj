@@ -17,6 +17,8 @@
 		F22F1AEC20F37995004FCF61 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F1AE920F37995004FCF61 /* ButtonTableViewCell.swift */; };
 		F22F1AEF20F38898004FCF61 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = F22F1AED20F38898004FCF61 /* feedback.png */; };
 		F22F1AF020F38898004FCF61 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = F22F1AEE20F38898004FCF61 /* help.png */; };
+		F254C1D520F89CA100177BEA /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254C1D420F89CA100177BEA /* DetailVC.swift */; };
+		F254C1D720F8A98E00177BEA /* no image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F254C1D620F8A98D00177BEA /* no image.jpeg */; };
 		F25D15D520ECC63C00E5BCF5 /* purchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */; };
 		F25D15DB20ECCB0800E5BCF5 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */; };
 		F25D15DD20ECD18800E5BCF5 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = F25D15DC20ECD18800E5BCF5 /* sample.png */; };
@@ -69,6 +71,8 @@
 		F22F1AE920F37995004FCF61 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		F22F1AED20F38898004FCF61 /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback.png; sourceTree = "<group>"; };
 		F22F1AEE20F38898004FCF61 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		F254C1D420F89CA100177BEA /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		F254C1D620F8A98D00177BEA /* no image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "no image.jpeg"; sourceTree = "<group>"; };
 		F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purchaseCell.swift; sourceTree = "<group>"; };
 		F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		F25D15DC20ECD18800E5BCF5 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				F22F1ADF20F37890004FCF61 /* ProfileVC.swift */,
 				F278F2B920F7D69700F45A0A /* ChatVC.swift */,
 				F278F2C920F7FB0E00F45A0A /* OfferVC.swift */,
+				F254C1D420F89CA100177BEA /* DetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				F282894F20E61826002A45B5 /* password.png */,
 				F282893B20E612A7002A45B5 /* chat.png */,
 				F282893C20E612A7002A45B5 /* friend.png */,
+				F254C1D620F8A98D00177BEA /* no image.jpeg */,
 				F282893E20E612A7002A45B5 /* logo.png */,
 				F282893D20E612A7002A45B5 /* offer.png */,
 				F282893F20E612A7002A45B5 /* plan.png */,
@@ -312,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F282894120E612A7002A45B5 /* purchase.png in Resources */,
+				F254C1D720F8A98E00177BEA /* no image.jpeg in Resources */,
 				F22F1AEF20F38898004FCF61 /* feedback.png in Resources */,
 				F219AD4120F38CD900DD83C4 /* Sign Out.png in Resources */,
 				F2E203D420E60D2900E3B5B2 /* LaunchScreen.storyboard in Resources */,
@@ -412,6 +419,7 @@
 				F22F1AE020F37891004FCF61 /* ProfileVC.swift in Sources */,
 				F278F2C420F7F76A00F45A0A /* customTF.swift in Sources */,
 				F25DEB5520EA13AE00594F3E /* ForgetVC.swift in Sources */,
+				F254C1D520F89CA100177BEA /* DetailVC.swift in Sources */,
 				F278F2C520F7F76A00F45A0A /* ConfigureUserInterface.swift in Sources */,
 				F25D15D520ECC63C00E5BCF5 /* purchaseCell.swift in Sources */,
 				F2E203CC20E60D2800E3B5B2 /* SignInVC.swift in Sources */,

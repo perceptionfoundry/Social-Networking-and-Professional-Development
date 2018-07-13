@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Fe-HS-RVK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VOc-Go-w0A">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -389,17 +389,17 @@
                     <tabBarItem key="tabBarItem" title="Course" image="plan.png" id="Ddm-a7-VVo"/>
                     <connections>
                         <outlet property="Course_Table" destination="Zua-ms-Grw" id="CZg-S6-Nys"/>
-                        <segue destination="2Fe-HS-RVK" kind="show" identifier="Detail_Segue" id="Wj3-K9-vah"/>
+                        <segue destination="2Fe-HS-RVK" kind="presentation" identifier="Detail_Segue" id="Wj3-K9-vah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntk-ii-lNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1775.2" y="3149.7751124437782"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="iDM-8H-qS6">
             <objects>
-                <viewController id="2Fe-HS-RVK" sceneMemberID="viewController">
+                <viewController id="2Fe-HS-RVK" customClass="DetailVC" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VqJ-K2-sJ0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -407,9 +407,12 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9F-IH-kR9">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="jZG-dg-QN9">
+                                    <navigationItem title="ABOUT COURSE" id="jZG-dg-QN9">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Lkb-77-Pbr">
                                             <color key="tintColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="Back_Button:" destination="2Fe-HS-RVK" id="YCq-tX-FLD"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -457,9 +460,11 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rY-DX-vRO">
                                                         <rect key="frame" x="75" y="0.0" width="75" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <size key="shadowOffset" width="-2" height="0.0"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -472,9 +477,9 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="enT-69-pbn">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="enT-69-pbn">
                                                         <rect key="frame" x="13" y="30.5" width="236.5" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -515,23 +520,49 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-Nu-tAY">
-                                                        <rect key="frame" x="13.5" y="34.5" width="236.5" height="162.5"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDI-tx-fOk">
+                                                        <rect key="frame" x="0.0" y="32" width="262.5" height="178"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oK1-4j-3Ng">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-Nu-tAY">
+                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="centerY" secondItem="oK1-4j-3Ng" secondAttribute="centerY" id="6Yp-fF-KZC"/>
+                                                                    <constraint firstAttribute="height" constant="240" id="db0-Aw-hUM"/>
+                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="centerX" secondItem="oK1-4j-3Ng" secondAttribute="centerX" id="gpA-jA-Cce"/>
+                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="width" secondItem="oK1-4j-3Ng" secondAttribute="width" multiplier="0.9" id="haI-9v-BLc"/>
+                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="height" secondItem="oK1-4j-3Ng" secondAttribute="height" id="rlR-s6-A33"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="oK1-4j-3Ng" firstAttribute="leading" secondItem="lDI-tx-fOk" secondAttribute="leading" id="GXa-Ku-hrn"/>
+                                                            <constraint firstItem="oK1-4j-3Ng" firstAttribute="top" secondItem="lDI-tx-fOk" secondAttribute="top" id="GzP-ws-g0F"/>
+                                                            <constraint firstAttribute="trailing" secondItem="oK1-4j-3Ng" secondAttribute="trailing" id="Jm8-T6-g3X"/>
+                                                            <constraint firstAttribute="bottom" secondItem="oK1-4j-3Ng" secondAttribute="bottom" id="f2R-VH-t0s"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="centerX" secondItem="Fyp-En-JlI" secondAttribute="centerX" id="5LF-JR-Gs2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lDI-tx-fOk" secondAttribute="trailing" id="78Z-69-Fge"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lDI-tx-fOk" secondAttribute="bottom" id="AVk-29-zsE"/>
                                                     <constraint firstItem="6IA-TA-bib" firstAttribute="width" secondItem="Fyp-En-JlI" secondAttribute="width" multiplier="0.9" id="K7Z-Eq-Fpi"/>
-                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="centerY" secondItem="Fyp-En-JlI" secondAttribute="centerY" multiplier="1.1" id="Q1K-x1-nRR"/>
-                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="height" secondItem="Fyp-En-JlI" secondAttribute="height" multiplier="0.775" id="gY5-NM-O34"/>
-                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="width" secondItem="Fyp-En-JlI" secondAttribute="width" multiplier="0.9" id="sy3-xw-ayt"/>
+                                                    <constraint firstItem="lDI-tx-fOk" firstAttribute="top" secondItem="6IA-TA-bib" secondAttribute="bottom" id="gMD-0f-Tbg"/>
+                                                    <constraint firstItem="lDI-tx-fOk" firstAttribute="leading" secondItem="Fyp-En-JlI" secondAttribute="leading" id="lDa-YA-VPt"/>
                                                     <constraint firstItem="6IA-TA-bib" firstAttribute="centerX" secondItem="Fyp-En-JlI" secondAttribute="centerX" id="t1F-Rw-geA"/>
                                                     <constraint firstItem="6IA-TA-bib" firstAttribute="centerY" secondItem="Fyp-En-JlI" secondAttribute="centerY" multiplier="0.2" id="t6r-v1-jJW"/>
+                                                    <constraint firstItem="oK1-4j-3Ng" firstAttribute="width" secondItem="Fyp-En-JlI" secondAttribute="width" id="u0O-vg-59j"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
@@ -560,23 +591,48 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-uu-VuG">
-                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDu-rU-nFf">
+                                                        <rect key="frame" x="0.0" y="35" width="262.5" height="205"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pj-SU-56c">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-uu-VuG">
+                                                                        <rect key="frame" x="12.5" y="0.0" width="236.5" height="240"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="centerY" secondItem="9pj-SU-56c" secondAttribute="centerY" id="0QI-uR-mh6"/>
+                                                                    <constraint firstAttribute="height" constant="240" id="CRD-0r-MRH"/>
+                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="centerX" secondItem="9pj-SU-56c" secondAttribute="centerX" id="NIc-wK-yFO"/>
+                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="height" secondItem="9pj-SU-56c" secondAttribute="height" id="YGu-8Q-OZC"/>
+                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="width" secondItem="9pj-SU-56c" secondAttribute="width" multiplier="0.9" id="yqy-SV-eOI"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="9pj-SU-56c" firstAttribute="leading" secondItem="LDu-rU-nFf" secondAttribute="leading" id="7Ln-bS-I9o"/>
+                                                            <constraint firstItem="9pj-SU-56c" firstAttribute="top" secondItem="LDu-rU-nFf" secondAttribute="top" id="e3j-Ha-Zmu"/>
+                                                            <constraint firstAttribute="bottom" secondItem="9pj-SU-56c" secondAttribute="bottom" id="jnY-55-BCG"/>
+                                                            <constraint firstAttribute="trailing" secondItem="9pj-SU-56c" secondAttribute="trailing" id="nLp-i6-Fpp"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="width" secondItem="Kmd-oT-wnm" secondAttribute="width" constant="-26" id="1Hr-w0-v9K"/>
+                                                    <constraint firstItem="LDu-rU-nFf" firstAttribute="top" secondItem="SMS-cl-FuP" secondAttribute="bottom" id="CVE-lh-34b"/>
                                                     <constraint firstItem="SMS-cl-FuP" firstAttribute="centerY" secondItem="Kmd-oT-wnm" secondAttribute="centerY" constant="-95.75" id="FKu-Gv-JKE"/>
-                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="centerY" secondItem="Kmd-oT-wnm" secondAttribute="centerY" constant="12" id="FTF-UR-E3R"/>
-                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="height" secondItem="Kmd-oT-wnm" secondAttribute="height" constant="-54" id="Lae-GA-uY7"/>
-                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="centerX" secondItem="Kmd-oT-wnm" secondAttribute="centerX" id="PcP-fk-Lv1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LDu-rU-nFf" secondAttribute="bottom" id="TBu-04-Zse"/>
+                                                    <constraint firstAttribute="trailing" secondItem="LDu-rU-nFf" secondAttribute="trailing" id="X6t-hB-dJ8"/>
                                                     <constraint firstItem="SMS-cl-FuP" firstAttribute="width" secondItem="Kmd-oT-wnm" secondAttribute="width" constant="-26" id="mg9-wU-OB8"/>
                                                     <constraint firstItem="SMS-cl-FuP" firstAttribute="centerX" secondItem="Kmd-oT-wnm" secondAttribute="centerX" id="nAp-2w-mp5"/>
+                                                    <constraint firstItem="9pj-SU-56c" firstAttribute="width" secondItem="Kmd-oT-wnm" secondAttribute="width" id="pGj-Gi-d7q"/>
+                                                    <constraint firstItem="LDu-rU-nFf" firstAttribute="leading" secondItem="Kmd-oT-wnm" secondAttribute="leading" id="r7g-dW-bE3"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
@@ -605,22 +661,47 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y5F-p6-15D">
-                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-fS-nzJ">
+                                                        <rect key="frame" x="0.0" y="35.5" width="262.5" height="204.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cS2-VO-zPL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y5F-p6-15D">
+                                                                        <rect key="frame" x="12.5" y="0.0" width="236.5" height="240"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="240" id="87N-51-xA6"/>
+                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="height" secondItem="cS2-VO-zPL" secondAttribute="height" id="9tI-nO-Kje"/>
+                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="centerX" secondItem="cS2-VO-zPL" secondAttribute="centerX" id="AyT-Te-HIp"/>
+                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="centerY" secondItem="cS2-VO-zPL" secondAttribute="centerY" id="Hyw-rk-QZ8"/>
+                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="width" secondItem="cS2-VO-zPL" secondAttribute="width" multiplier="0.9" id="lai-oS-6O3"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="cS2-VO-zPL" secondAttribute="trailing" id="JC3-cD-2dQ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="cS2-VO-zPL" secondAttribute="bottom" id="gDN-g8-Tzn"/>
+                                                            <constraint firstItem="cS2-VO-zPL" firstAttribute="top" secondItem="rc0-fS-nzJ" secondAttribute="top" id="hDq-IS-Ef1"/>
+                                                            <constraint firstItem="cS2-VO-zPL" firstAttribute="leading" secondItem="rc0-fS-nzJ" secondAttribute="leading" id="xq7-Cs-67D"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="E9u-B2-iQK" firstAttribute="centerX" secondItem="LtW-cW-g5w" secondAttribute="centerX" id="2yO-Ge-SNl"/>
-                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="height" secondItem="LtW-cW-g5w" secondAttribute="height" constant="-54" id="B4k-c2-wfJ"/>
-                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="width" secondItem="LtW-cW-g5w" secondAttribute="width" constant="-26" id="K95-hf-aZb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rc0-fS-nzJ" secondAttribute="bottom" id="AVQ-Qe-1Ku"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rc0-fS-nzJ" secondAttribute="trailing" id="FjC-Pc-77s"/>
+                                                    <constraint firstItem="rc0-fS-nzJ" firstAttribute="leading" secondItem="LtW-cW-g5w" secondAttribute="leading" id="IjH-YH-ptT"/>
+                                                    <constraint firstItem="cS2-VO-zPL" firstAttribute="width" secondItem="LtW-cW-g5w" secondAttribute="width" id="PAo-g8-jRw"/>
                                                     <constraint firstItem="E9u-B2-iQK" firstAttribute="centerY" secondItem="LtW-cW-g5w" secondAttribute="centerY" constant="-95.25" id="eIk-Vc-v2Q"/>
-                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="centerX" secondItem="LtW-cW-g5w" secondAttribute="centerX" id="kQJ-kw-URi"/>
-                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="centerY" secondItem="LtW-cW-g5w" secondAttribute="centerY" constant="12" id="q90-FH-QFN"/>
+                                                    <constraint firstItem="rc0-fS-nzJ" firstAttribute="top" secondItem="E9u-B2-iQK" secondAttribute="bottom" id="jbB-DH-mJn"/>
                                                     <constraint firstItem="E9u-B2-iQK" firstAttribute="width" secondItem="LtW-cW-g5w" secondAttribute="width" constant="-26" id="zCo-i0-MRU"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -650,22 +731,47 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sY7-wU-y92">
-                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpX-dC-CSU">
+                                                        <rect key="frame" x="0.0" y="36" width="262.5" height="204"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-Oz-e7e">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sY7-wU-y92">
+                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="centerY" secondItem="I1g-Oz-e7e" secondAttribute="centerY" id="2Kk-Ny-4dy"/>
+                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="height" secondItem="I1g-Oz-e7e" secondAttribute="height" id="LSp-Ao-342"/>
+                                                                    <constraint firstAttribute="height" constant="240" id="aSi-Zc-J7Y"/>
+                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="width" secondItem="I1g-Oz-e7e" secondAttribute="width" multiplier="0.9" id="kPz-bT-ucX"/>
+                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="centerX" secondItem="I1g-Oz-e7e" secondAttribute="centerX" id="yx3-em-ZP9"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="I1g-Oz-e7e" secondAttribute="trailing" id="DeD-oa-5Qt"/>
+                                                            <constraint firstAttribute="bottom" secondItem="I1g-Oz-e7e" secondAttribute="bottom" id="rpw-IA-7Xw"/>
+                                                            <constraint firstItem="I1g-Oz-e7e" firstAttribute="top" secondItem="cpX-dC-CSU" secondAttribute="top" id="yEg-Fk-OG2"/>
+                                                            <constraint firstItem="I1g-Oz-e7e" firstAttribute="leading" secondItem="cpX-dC-CSU" secondAttribute="leading" id="zm1-sy-tbL"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="height" secondItem="IuM-Sv-WpO" secondAttribute="height" constant="-54" id="69k-18-oVz"/>
+                                                    <constraint firstItem="cpX-dC-CSU" firstAttribute="top" secondItem="nzX-NJ-dwH" secondAttribute="bottom" id="8Ca-qQ-Csd"/>
                                                     <constraint firstItem="nzX-NJ-dwH" firstAttribute="width" secondItem="IuM-Sv-WpO" secondAttribute="width" constant="-26" id="8iV-7i-Fgk"/>
-                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="centerY" secondItem="IuM-Sv-WpO" secondAttribute="centerY" constant="12" id="9uv-K9-5Oa"/>
-                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="width" secondItem="IuM-Sv-WpO" secondAttribute="width" constant="-26" id="Cnp-mN-mBf"/>
                                                     <constraint firstItem="nzX-NJ-dwH" firstAttribute="centerY" secondItem="IuM-Sv-WpO" secondAttribute="centerY" constant="-94.75" id="I2j-P1-cJ6"/>
-                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="centerX" secondItem="IuM-Sv-WpO" secondAttribute="centerX" id="ZSs-yV-GhQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cpX-dC-CSU" secondAttribute="trailing" id="JTW-PI-coS"/>
+                                                    <constraint firstItem="I1g-Oz-e7e" firstAttribute="width" secondItem="IuM-Sv-WpO" secondAttribute="width" id="QyK-6n-BWV"/>
+                                                    <constraint firstItem="cpX-dC-CSU" firstAttribute="leading" secondItem="IuM-Sv-WpO" secondAttribute="leading" id="eI9-VN-DqI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cpX-dC-CSU" secondAttribute="bottom" id="ezI-Qw-krq"/>
                                                     <constraint firstItem="nzX-NJ-dwH" firstAttribute="centerX" secondItem="IuM-Sv-WpO" secondAttribute="centerX" id="xxY-Ni-iS9"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -695,23 +801,48 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-rU-geE">
-                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMz-9f-lxe">
+                                                        <rect key="frame" x="0.0" y="37" width="262.5" height="203"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebs-4B-prO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-rU-geE">
+                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="centerY" secondItem="Ebs-4B-prO" secondAttribute="centerY" id="HG3-oI-zms"/>
+                                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="centerX" secondItem="Ebs-4B-prO" secondAttribute="centerX" id="PJl-iB-8Wl"/>
+                                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="height" secondItem="Ebs-4B-prO" secondAttribute="height" id="m6L-DL-u7V"/>
+                                                                    <constraint firstAttribute="height" constant="240" id="w7X-9M-60H"/>
+                                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="width" secondItem="Ebs-4B-prO" secondAttribute="width" multiplier="0.9" id="zLd-i3-fQn"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="Ebs-4B-prO" secondAttribute="bottom" id="NJd-g6-UjA"/>
+                                                            <constraint firstItem="Ebs-4B-prO" firstAttribute="top" secondItem="lMz-9f-lxe" secondAttribute="top" id="UVV-gL-F8p"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ebs-4B-prO" secondAttribute="trailing" id="W02-Tz-Wd0"/>
+                                                            <constraint firstItem="Ebs-4B-prO" firstAttribute="leading" secondItem="lMz-9f-lxe" secondAttribute="leading" id="hba-iZ-HOU"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="DUY-cy-wlU" firstAttribute="width" secondItem="tlw-9b-IcH" secondAttribute="width" constant="-26" id="2Qa-Xg-0wi"/>
-                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="centerX" secondItem="tlw-9b-IcH" secondAttribute="centerX" id="ZDX-Np-ULC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lMz-9f-lxe" secondAttribute="trailing" id="41E-j8-FuR"/>
+                                                    <constraint firstItem="lMz-9f-lxe" firstAttribute="leading" secondItem="tlw-9b-IcH" secondAttribute="leading" id="KhE-VA-rel"/>
+                                                    <constraint firstItem="Ebs-4B-prO" firstAttribute="width" secondItem="tlw-9b-IcH" secondAttribute="width" id="Sl5-r7-p5b"/>
                                                     <constraint firstItem="DUY-cy-wlU" firstAttribute="centerY" secondItem="tlw-9b-IcH" secondAttribute="centerY" constant="-93.75" id="a18-id-IRq"/>
-                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="centerY" secondItem="tlw-9b-IcH" secondAttribute="centerY" constant="12" id="aMt-1B-7A8"/>
                                                     <constraint firstItem="DUY-cy-wlU" firstAttribute="centerX" secondItem="tlw-9b-IcH" secondAttribute="centerX" id="ehr-AV-BA1"/>
-                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="width" secondItem="tlw-9b-IcH" secondAttribute="width" constant="-26" id="mrk-2q-Fxr"/>
-                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="height" secondItem="tlw-9b-IcH" secondAttribute="height" constant="-54" id="zjU-ba-hZD"/>
+                                                    <constraint firstItem="lMz-9f-lxe" firstAttribute="top" secondItem="DUY-cy-wlU" secondAttribute="bottom" id="p65-Fh-vEv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lMz-9f-lxe" secondAttribute="bottom" id="yKe-ce-ICL"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
@@ -740,23 +871,48 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="99y-7f-JK5">
-                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-Is-IFe">
+                                                        <rect key="frame" x="0.0" y="37.5" width="262.5" height="202.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-9J-Wzn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="99y-7f-JK5">
+                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="centerY" secondItem="vmg-9J-Wzn" secondAttribute="centerY" id="9bk-Mt-T6e"/>
+                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="centerX" secondItem="vmg-9J-Wzn" secondAttribute="centerX" id="Bi1-Nd-Mxy"/>
+                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="width" secondItem="vmg-9J-Wzn" secondAttribute="width" multiplier="0.9" id="TyG-kD-Ci4"/>
+                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="height" secondItem="vmg-9J-Wzn" secondAttribute="height" id="X4p-3N-WKa"/>
+                                                                    <constraint firstAttribute="height" constant="240" id="jGh-ux-st4"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="vmg-9J-Wzn" secondAttribute="bottom" id="EO8-lU-yM9"/>
+                                                            <constraint firstItem="vmg-9J-Wzn" firstAttribute="top" secondItem="Nem-Is-IFe" secondAttribute="top" id="UH6-do-lma"/>
+                                                            <constraint firstAttribute="trailing" secondItem="vmg-9J-Wzn" secondAttribute="trailing" id="V5j-1t-Ivm"/>
+                                                            <constraint firstItem="vmg-9J-Wzn" firstAttribute="leading" secondItem="Nem-Is-IFe" secondAttribute="leading" id="fC5-Zg-Gr9"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Nem-Is-IFe" secondAttribute="bottom" id="Gae-CV-cf4"/>
+                                                    <constraint firstItem="vmg-9J-Wzn" firstAttribute="width" secondItem="IFe-VS-9EO" secondAttribute="width" id="JMX-pG-1Oj"/>
                                                     <constraint firstItem="eVy-DN-2m6" firstAttribute="centerY" secondItem="IFe-VS-9EO" secondAttribute="centerY" constant="-93.5" id="VCh-0O-zmU"/>
-                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="centerY" secondItem="IFe-VS-9EO" secondAttribute="centerY" constant="12" id="ZWB-KM-xx5"/>
                                                     <constraint firstItem="eVy-DN-2m6" firstAttribute="centerX" secondItem="IFe-VS-9EO" secondAttribute="centerX" id="aHB-uu-5AG"/>
-                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="width" secondItem="IFe-VS-9EO" secondAttribute="width" constant="-26" id="gzD-ta-tUx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Nem-Is-IFe" secondAttribute="trailing" id="qDD-c1-ppT"/>
                                                     <constraint firstItem="eVy-DN-2m6" firstAttribute="width" secondItem="IFe-VS-9EO" secondAttribute="width" constant="-26" id="rcw-fe-nvI"/>
-                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="centerX" secondItem="IFe-VS-9EO" secondAttribute="centerX" id="sHB-nZ-dCN"/>
-                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="height" secondItem="IFe-VS-9EO" secondAttribute="height" constant="-54" id="xcK-HJ-pwR"/>
+                                                    <constraint firstItem="Nem-Is-IFe" firstAttribute="leading" secondItem="IFe-VS-9EO" secondAttribute="leading" id="sYj-Bq-kc4"/>
+                                                    <constraint firstItem="Nem-Is-IFe" firstAttribute="top" secondItem="eVy-DN-2m6" secondAttribute="bottom" id="tfc-rw-fsq"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
@@ -785,23 +941,48 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b4A-AB-6Jx">
-                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL0-Nm-XSJ">
+                                                        <rect key="frame" x="0.0" y="37.5" width="262.5" height="202.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPo-kO-syh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b4A-AB-6Jx">
+                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="centerX" secondItem="NPo-kO-syh" secondAttribute="centerX" id="6mk-vH-JHt"/>
+                                                                    <constraint firstAttribute="height" constant="240" id="AFA-3S-2cH"/>
+                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="height" secondItem="NPo-kO-syh" secondAttribute="height" id="Eir-yd-LZk"/>
+                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="centerY" secondItem="NPo-kO-syh" secondAttribute="centerY" id="WNq-Jm-be3"/>
+                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="width" secondItem="NPo-kO-syh" secondAttribute="width" multiplier="0.9" id="ZyI-XG-Ujl"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="NPo-kO-syh" secondAttribute="bottom" id="0AF-EY-mTV"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NPo-kO-syh" secondAttribute="trailing" id="Py9-d5-aeA"/>
+                                                            <constraint firstItem="NPo-kO-syh" firstAttribute="top" secondItem="yL0-Nm-XSJ" secondAttribute="top" id="VJw-wW-jzy"/>
+                                                            <constraint firstItem="NPo-kO-syh" firstAttribute="leading" secondItem="yL0-Nm-XSJ" secondAttribute="leading" id="gDK-Vi-z5s"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="height" secondItem="FSJ-BP-gP3" secondAttribute="height" constant="-54" id="MbR-Kq-ef5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yL0-Nm-XSJ" secondAttribute="trailing" id="S6S-8X-yfW"/>
+                                                    <constraint firstItem="NPo-kO-syh" firstAttribute="width" secondItem="FSJ-BP-gP3" secondAttribute="width" id="Tug-qj-9pv"/>
+                                                    <constraint firstItem="yL0-Nm-XSJ" firstAttribute="top" secondItem="HbP-cB-FAa" secondAttribute="bottom" id="ULC-mE-Z4w"/>
+                                                    <constraint firstItem="yL0-Nm-XSJ" firstAttribute="leading" secondItem="FSJ-BP-gP3" secondAttribute="leading" id="Yrf-Ak-DQm"/>
                                                     <constraint firstItem="HbP-cB-FAa" firstAttribute="centerY" secondItem="FSJ-BP-gP3" secondAttribute="centerY" constant="-93.5" id="ZPB-mz-73w"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yL0-Nm-XSJ" secondAttribute="bottom" id="bOj-u1-EZr"/>
                                                     <constraint firstItem="HbP-cB-FAa" firstAttribute="centerX" secondItem="FSJ-BP-gP3" secondAttribute="centerX" id="eRa-C9-y4A"/>
-                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="centerX" secondItem="FSJ-BP-gP3" secondAttribute="centerX" id="ecN-7X-QyK"/>
-                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="centerY" secondItem="FSJ-BP-gP3" secondAttribute="centerY" constant="12" id="hBh-gH-mNM"/>
                                                     <constraint firstItem="HbP-cB-FAa" firstAttribute="width" secondItem="FSJ-BP-gP3" secondAttribute="width" constant="-26" id="lsY-E9-bG0"/>
-                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="width" secondItem="FSJ-BP-gP3" secondAttribute="width" constant="-26" id="nLF-So-tOx"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
@@ -830,23 +1011,48 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lU7-mq-kNH">
-                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdU-Mp-Dck">
+                                                        <rect key="frame" x="0.0" y="37.5" width="262.5" height="202.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lF-Vm-G1K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lU7-mq-kNH">
+                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="centerY" secondItem="5lF-Vm-G1K" secondAttribute="centerY" id="P3C-R8-Tkj"/>
+                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="height" secondItem="5lF-Vm-G1K" secondAttribute="height" id="WHh-Pk-Hpx"/>
+                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="width" secondItem="5lF-Vm-G1K" secondAttribute="width" multiplier="0.9" id="XKz-R3-Awh"/>
+                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="centerX" secondItem="5lF-Vm-G1K" secondAttribute="centerX" id="htE-Y9-H2J"/>
+                                                                    <constraint firstAttribute="height" constant="240" id="mS2-Ni-dEM"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="5lF-Vm-G1K" firstAttribute="leading" secondItem="IdU-Mp-Dck" secondAttribute="leading" id="8wN-0k-h4n"/>
+                                                            <constraint firstAttribute="trailing" secondItem="5lF-Vm-G1K" secondAttribute="trailing" id="9rc-5w-Knd"/>
+                                                            <constraint firstItem="5lF-Vm-G1K" firstAttribute="top" secondItem="IdU-Mp-Dck" secondAttribute="top" id="BJ7-hR-1Q6"/>
+                                                            <constraint firstAttribute="bottom" secondItem="5lF-Vm-G1K" secondAttribute="bottom" id="Ne5-8C-mrZ"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="fAB-Th-HHr" firstAttribute="centerX" secondItem="xqg-cO-KYd" secondAttribute="centerX" id="01T-U5-Uw8"/>
-                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="width" secondItem="xqg-cO-KYd" secondAttribute="width" constant="-26" id="RTG-ve-1mH"/>
-                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="centerY" secondItem="xqg-cO-KYd" secondAttribute="centerY" constant="12" id="b8a-ih-d6B"/>
+                                                    <constraint firstAttribute="bottom" secondItem="IdU-Mp-Dck" secondAttribute="bottom" id="5dr-LR-vV1"/>
+                                                    <constraint firstItem="IdU-Mp-Dck" firstAttribute="leading" secondItem="xqg-cO-KYd" secondAttribute="leading" id="CWf-PA-Zbs"/>
+                                                    <constraint firstItem="5lF-Vm-G1K" firstAttribute="width" secondItem="xqg-cO-KYd" secondAttribute="width" id="Zjt-IE-fOE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IdU-Mp-Dck" secondAttribute="trailing" id="hc3-tZ-7Kz"/>
                                                     <constraint firstItem="fAB-Th-HHr" firstAttribute="width" secondItem="xqg-cO-KYd" secondAttribute="width" constant="-26" id="hta-pr-wJG"/>
                                                     <constraint firstItem="fAB-Th-HHr" firstAttribute="centerY" secondItem="xqg-cO-KYd" secondAttribute="centerY" constant="-93.5" id="kLB-ma-6AX"/>
-                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="height" secondItem="xqg-cO-KYd" secondAttribute="height" constant="-54" id="lQj-zA-W19"/>
-                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="centerX" secondItem="xqg-cO-KYd" secondAttribute="centerX" id="wz5-ew-RWx"/>
+                                                    <constraint firstItem="IdU-Mp-Dck" firstAttribute="top" secondItem="fAB-Th-HHr" secondAttribute="bottom" id="spP-SZ-7cD"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
@@ -875,22 +1081,47 @@
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-Oh-vE8">
-                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
-                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDO-tL-1Ft">
+                                                        <rect key="frame" x="0.0" y="37.5" width="262.5" height="202.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiW-xJ-Eiq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-Oh-vE8">
+                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="width" secondItem="HiW-xJ-Eiq" secondAttribute="width" multiplier="0.9" id="ADv-TQ-aWF"/>
+                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="centerY" secondItem="HiW-xJ-Eiq" secondAttribute="centerY" id="Gby-sR-uMy"/>
+                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="height" secondItem="HiW-xJ-Eiq" secondAttribute="height" id="LB5-gz-wvn"/>
+                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="centerX" secondItem="HiW-xJ-Eiq" secondAttribute="centerX" id="kee-11-jxS"/>
+                                                                    <constraint firstAttribute="height" constant="240" id="sy9-is-TF5"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="HiW-xJ-Eiq" secondAttribute="bottom" id="503-vq-dCz"/>
+                                                            <constraint firstItem="HiW-xJ-Eiq" firstAttribute="leading" secondItem="nDO-tL-1Ft" secondAttribute="leading" id="Pdy-Bc-a4I"/>
+                                                            <constraint firstItem="HiW-xJ-Eiq" firstAttribute="top" secondItem="nDO-tL-1Ft" secondAttribute="top" id="SAG-Tu-w9p"/>
+                                                            <constraint firstAttribute="trailing" secondItem="HiW-xJ-Eiq" secondAttribute="trailing" id="nrl-Ic-ibV"/>
+                                                        </constraints>
+                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="centerX" secondItem="KBO-su-M8o" secondAttribute="centerX" id="2IE-Bv-uH1"/>
+                                                    <constraint firstItem="HiW-xJ-Eiq" firstAttribute="width" secondItem="KBO-su-M8o" secondAttribute="width" id="3SJ-2P-CT9"/>
+                                                    <constraint firstAttribute="bottom" secondItem="nDO-tL-1Ft" secondAttribute="bottom" id="3uB-Tx-k4g"/>
+                                                    <constraint firstItem="nDO-tL-1Ft" firstAttribute="top" secondItem="lXg-Y7-5YR" secondAttribute="bottom" id="66J-TW-2Ix"/>
                                                     <constraint firstItem="lXg-Y7-5YR" firstAttribute="centerY" secondItem="KBO-su-M8o" secondAttribute="centerY" constant="-93.5" id="AUq-FO-aUd"/>
-                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="height" secondItem="KBO-su-M8o" secondAttribute="height" constant="-54" id="Uww-xh-MpW"/>
-                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="width" secondItem="KBO-su-M8o" secondAttribute="width" constant="-26" id="cHN-Uz-oBz"/>
-                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="centerY" secondItem="KBO-su-M8o" secondAttribute="centerY" constant="12" id="f6I-Wf-jo6"/>
+                                                    <constraint firstItem="nDO-tL-1Ft" firstAttribute="leading" secondItem="KBO-su-M8o" secondAttribute="leading" id="K05-oU-Q4C"/>
                                                     <constraint firstItem="lXg-Y7-5YR" firstAttribute="width" secondItem="KBO-su-M8o" secondAttribute="width" constant="-26" id="gWg-yp-cu8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nDO-tL-1Ft" secondAttribute="trailing" id="qkP-EZ-Xy3"/>
                                                     <constraint firstItem="lXg-Y7-5YR" firstAttribute="centerX" secondItem="KBO-su-M8o" secondAttribute="centerX" id="rbR-bM-cMg"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -926,12 +1157,15 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="2"/>
+                                                        <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="1" height="1"/>
+                                                        <size key="value" width="2" height="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="Purchase_Button:" destination="2Fe-HS-RVK" eventType="touchUpInside" id="zFE-83-rFx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1014,10 +1248,24 @@
                         <viewLayoutGuide key="safeArea" id="um9-bg-YYs"/>
                     </view>
                     <size key="freeformSize" width="375" height="3000"/>
+                    <connections>
+                        <outlet property="Amount" destination="6rY-DX-vRO" id="Iuc-8B-yhG"/>
+                        <outlet property="Assessment_Label" destination="5WC-Oh-vE8" id="mZz-cM-mHu"/>
+                        <outlet property="Career_Label" destination="b4A-AB-6Jx" id="Xke-qB-gDD"/>
+                        <outlet property="Course_Image" destination="Vri-dS-0cx" id="Nr8-Jq-rWe"/>
+                        <outlet property="Descip_Label" destination="Abo-Nu-tAY" id="iM9-sf-WJr"/>
+                        <outlet property="Entry_Label" destination="sY7-wU-y92" id="Vfv-6h-Flv"/>
+                        <outlet property="Learning_Label" destination="LCg-rU-geE" id="uda-og-CDl"/>
+                        <outlet property="Objective_Label" destination="Jps-uu-VuG" id="sPA-Wn-QDf"/>
+                        <outlet property="Outcome_Label" destination="lU7-mq-kNH" id="6ET-46-tFj"/>
+                        <outlet property="Study_Label" destination="99y-7f-JK5" id="wde-C8-k8G"/>
+                        <outlet property="Title_Label" destination="enT-69-pbn" id="kEb-Wa-f2d"/>
+                        <outlet property="Whom_Label" destination="Y5F-p6-15D" id="aTG-3h-WR1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKJ-42-emZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2316" y="4280.9595202398805"/>
+            <point key="canvasLocation" x="1" y="5439"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="9DR-qs-5GV">
@@ -2141,8 +2389,8 @@
                                                                 <constraint firstAttribute="width" secondItem="7va-zi-7ao" secondAttribute="height" multiplier="1:1" id="PKU-6G-hDF"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Course Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v2c-Jq-sMm">
-                                                            <rect key="frame" x="110" y="47" width="227" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v2c-Jq-sMm">
+                                                            <rect key="frame" x="110.5" y="39" width="207" height="45"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -2174,12 +2422,14 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="v2c-Jq-sMm" firstAttribute="width" secondItem="4oo-Lt-Qrq" secondAttribute="width" multiplier="0.6" id="CLH-lm-vZJ"/>
                                                         <constraint firstItem="5J4-2Q-lAi" firstAttribute="centerY" secondItem="4oo-Lt-Qrq" secondAttribute="centerY" multiplier="0.4" id="Ftb-RP-6sY"/>
                                                         <constraint firstItem="5J4-2Q-lAi" firstAttribute="centerX" secondItem="4oo-Lt-Qrq" secondAttribute="centerX" multiplier="1.75" id="Gbp-JS-ERZ"/>
                                                         <constraint firstItem="7va-zi-7ao" firstAttribute="centerY" secondItem="4oo-Lt-Qrq" secondAttribute="centerY" id="UEN-pr-Nb2"/>
-                                                        <constraint firstItem="v2c-Jq-sMm" firstAttribute="centerY" secondItem="4oo-Lt-Qrq" secondAttribute="centerY" id="aUD-jq-Fay"/>
+                                                        <constraint firstItem="v2c-Jq-sMm" firstAttribute="centerX" secondItem="4oo-Lt-Qrq" secondAttribute="centerX" multiplier="1.24" id="Zky-kl-3gH"/>
+                                                        <constraint firstItem="v2c-Jq-sMm" firstAttribute="centerY" secondItem="4oo-Lt-Qrq" secondAttribute="centerY" multiplier="1.1" id="fgh-2f-deG"/>
                                                         <constraint firstItem="7va-zi-7ao" firstAttribute="width" secondItem="4oo-Lt-Qrq" secondAttribute="width" multiplier="0.24" id="g4E-bw-wNd"/>
-                                                        <constraint firstItem="v2c-Jq-sMm" firstAttribute="centerX" secondItem="4oo-Lt-Qrq" secondAttribute="centerX" constant="51" id="vAy-pv-3On"/>
+                                                        <constraint firstItem="v2c-Jq-sMm" firstAttribute="height" secondItem="4oo-Lt-Qrq" secondAttribute="height" multiplier="0.4" id="k2C-hn-jKE"/>
                                                         <constraint firstItem="5J4-2Q-lAi" firstAttribute="width" secondItem="4oo-Lt-Qrq" secondAttribute="width" multiplier="0.17" id="xjM-ve-rpz"/>
                                                         <constraint firstItem="7va-zi-7ao" firstAttribute="centerX" secondItem="4oo-Lt-Qrq" secondAttribute="centerX" multiplier="0.35" id="zby-mV-P8h"/>
                                                     </constraints>
@@ -2210,6 +2460,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="Course_Image" destination="7va-zi-7ao" id="W1D-or-grI"/>
+                                            <outlet property="course_title" destination="v2c-Jq-sMm" id="aJa-Go-KG0"/>
+                                            <outlet property="offer_label" destination="glo-td-kjV" id="IDO-6d-biq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2247,6 +2502,7 @@
                     <tabBarItem key="tabBarItem" title="Offer" image="offer.png" id="Bzu-YG-8ED"/>
                     <connections>
                         <outlet property="offerTable" destination="fEZ-IP-ydU" id="B6K-kv-LOK"/>
+                        <segue destination="2Fe-HS-RVK" kind="presentation" identifier="Detail_Segue" id="8yg-3r-wcX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dct-Th-SHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2269,4 +2525,7 @@
         <image name="sample.png" width="242" height="159"/>
         <image name="setting.png" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8yg-3r-wcX"/>
+    </inferredMetricsTieBreakers>
 </document>
