@@ -28,7 +28,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var Assessment_Label: UILabel!
     
     
-    
+    var CourseData = [String : String]()
     var selected_Course: String!
     var courseDetail = [String : String]()
     
@@ -47,31 +47,31 @@ class DetailVC: UIViewController {
         dbHandle = dbRef.child("Course").observe(.childAdded, with: { (CourseSnap) in
             guard let Course_Data = CourseSnap.value else {return}
             
-            let CourseData = Course_Data as! [String : String]
+             self.CourseData = Course_Data as! [String : String]
             
             
-            if (CourseData["Title"])! == self.selected_Course!{
+            if (self.CourseData["Title"])! == self.selected_Course!{
                 
                 self.courseDetail = Course_Data as! [String : String]
 
                 print("*******************************")
-                            print(self.courseDetail)
+                            print(self.CourseData)
                 print("*******************************")
                 
-                let url = URL(string: CourseData["Image_URL"]!)
+                let url = URL(string: self.CourseData["Image_URL"]!)
                 self.Course_Image.sd_setImage(with: url!, placeholderImage: UIImage(named: "no image"), options: .progressiveDownload, completed: nil)
                 
-                self.Amount.text = CourseData["Price"]!
-                self.Title_Label.text = CourseData["Title"]!
-                self.Objective_Label.text = CourseData["Objective"]!
-                self.Descip_Label.text = CourseData["Description"]!
-                self.Whom_Label.text = CourseData["For_Whom"]!
-                self.Entry_Label.text = CourseData["Entry_Requirement"]!
-                self.Learning_Label.text = CourseData["Learning_Path"]!
-                self.Study_Label.text = CourseData["Study_Path"]!
-                self.Career_Label.text = CourseData["Career_Path"]!
-                self.Outcome_Label.text = CourseData["Outcome"]!
-                self.Assessment_Label.text = CourseData["Assessment"]!
+                self.Amount.text = self.CourseData["Price"]!
+                self.Title_Label.text = self.CourseData["Title"]!
+                self.Objective_Label.text = self.CourseData["Objective"]!
+                self.Descip_Label.text = self.CourseData["Description"]!
+                self.Whom_Label.text = self.CourseData["For_Whom"]!
+                self.Entry_Label.text = self.CourseData["Entry_Requirement"]!
+                self.Learning_Label.text = self.CourseData["Learning_Path"]!
+                self.Study_Label.text = self.CourseData["Study_Path"]!
+                self.Career_Label.text = self.CourseData["Career_Path"]!
+                self.Outcome_Label.text = self.CourseData["Outcome"]!
+                self.Assessment_Label.text = self.CourseData["Assessment"]!
             }
             
             
@@ -82,6 +82,13 @@ class DetailVC: UIViewController {
     }
 
     @IBAction func Purchase_Button(_ sender: Any) {
+        performSegue(withIdentifier: "Check_Segue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination  as! CheckOutVC
+        
+        dest.selectedCourse = self.CourseData
     }
     
     @IBAction func Back_Button(_ sender: Any) {

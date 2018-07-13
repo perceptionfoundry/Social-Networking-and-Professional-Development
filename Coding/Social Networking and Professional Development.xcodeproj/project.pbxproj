@@ -48,6 +48,7 @@
 		F282895120E61826002A45B5 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = F282894F20E61826002A45B5 /* password.png */; };
 		F282895220E61826002A45B5 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = F282895020E61826002A45B5 /* email.png */; };
 		F28ED83220E67AD5007FBF8F /* add-image.png in Resources */ = {isa = PBXBuildFile; fileRef = F28ED83120E67AD4007FBF8F /* add-image.png */; };
+		F2DAF1E820F8CF8E007BF7DC /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAF1E720F8CF8E007BF7DC /* CheckOutVC.swift */; };
 		F2E203CA20E60D2800E3B5B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E203C920E60D2800E3B5B2 /* AppDelegate.swift */; };
 		F2E203CC20E60D2800E3B5B2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E203CB20E60D2800E3B5B2 /* SignInVC.swift */; };
 		F2E203CF20E60D2800E3B5B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E203CD20E60D2800E3B5B2 /* Main.storyboard */; };
@@ -102,6 +103,7 @@
 		F282894F20E61826002A45B5 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = password.png; path = "../../../SN&PD (images)/password.png"; sourceTree = "<group>"; };
 		F282895020E61826002A45B5 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = "../../../SN&PD (images)/email.png"; sourceTree = "<group>"; };
 		F28ED83120E67AD4007FBF8F /* add-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-image.png"; path = "../../../SN&PD (images)/add-image.png"; sourceTree = "<group>"; };
+		F2DAF1E720F8CF8E007BF7DC /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
 		F2E203C620E60D2800E3B5B2 /* Social Networking and Professional Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Networking and Professional Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E203C920E60D2800E3B5B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E203CB20E60D2800E3B5B2 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				F278F2B920F7D69700F45A0A /* ChatVC.swift */,
 				F278F2C920F7FB0E00F45A0A /* OfferVC.swift */,
 				F254C1D420F89CA100177BEA /* DetailVC.swift */,
+				F2DAF1E720F8CF8E007BF7DC /* CheckOutVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				F25D15D520ECC63C00E5BCF5 /* purchaseCell.swift in Sources */,
 				F2E203CC20E60D2800E3B5B2 /* SignInVC.swift in Sources */,
 				F278F2CC20F7FB7900F45A0A /* OfferCell.swift in Sources */,
+				F2DAF1E820F8CF8E007BF7DC /* CheckOutVC.swift in Sources */,
 				F22F1AEB20F37995004FCF61 /* TopTableViewCell.swift in Sources */,
 				F278F2BA20F7D69700F45A0A /* ChatVC.swift in Sources */,
 				F278F2C820F7F76A00F45A0A /* UnderlinedTextField.swift in Sources */,

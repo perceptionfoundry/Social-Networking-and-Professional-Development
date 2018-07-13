@@ -97,7 +97,7 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIIm
         
         // ********** DATA FOR TABLEVIEW CELL ***********
 
-        dataArray = [Cell_info(cell: 1, image: self.ProfileImage, Title: self.fullName, Sub_Title: "view & edit"),
+        dataArray = [Cell_info(cell: 1, image: self.ProfileImage, Title: self.fullName, Sub_Title: ""),
                      Cell_info(cell: 3, image: #imageLiteral(resourceName: "help.png"), Title: nil, Sub_Title: "About US"),
                      Cell_info(cell: 3, image: #imageLiteral(resourceName: "feedback.png"), Title: nil, Sub_Title: "Give us feedback"),
                      Cell_info(cell: 3, image: #imageLiteral(resourceName: "Sign Out.png"), Title: nil, Sub_Title: "Log Out"),
@@ -191,7 +191,15 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIIm
 //            let controller = storyboard?.instantiateViewController(withIdentifier: VC)
 //            self.navigationController?.pushViewController(controller!, animated: true)
 //        }
-        if indexPath.row == 3{
+        if indexPath.row == 1{
+            
+            UIApplication.shared.open(URL(string: "https://cmls-global.com/about/")!, options: [:], completionHandler: nil)
+        }
+        
+        else if indexPath.row == 2{
+            UIApplication.shared.open(URL(string: "https://cmls-global.com/contact/")!, options: [:], completionHandler: nil)
+        }
+        else if indexPath.row == 3{
             let VC = UIAlertController(title:nil, message: nil, preferredStyle: .actionSheet)
             let logoutAction = UIAlertAction(title: "Log Out", style: .default, handler: { (action) in
                 

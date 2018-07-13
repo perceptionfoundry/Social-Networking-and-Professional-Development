@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -33,7 +34,11 @@
                         <size key="shadowOffset" width="2" height="0.0"/>
                     </label>
                     <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="0ad-0i-yYT" customClass="Custom_ImageView" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
-                        <rect key="frame" x="242" y="8" width="98" height="91.5"/>
+                        <rect key="frame" x="248.5" y="8" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="3tm-RN-9Sv"/>
+                            <constraint firstAttribute="width" secondItem="0ad-0i-yYT" secondAttribute="height" multiplier="1:1" id="zKc-Ns-Fbw"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
                                 <real key="value" value="45"/>
@@ -53,12 +58,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="0ad-0i-yYT" secondAttribute="trailing" constant="16" id="7Xz-hh-LFe"/>
-                    <constraint firstAttribute="bottom" secondItem="0ad-0i-yYT" secondAttribute="bottom" constant="8" id="BzB-6o-Div"/>
-                    <constraint firstItem="0ad-0i-yYT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.275" id="Czr-bz-a4O"/>
                     <constraint firstItem="QOc-aR-CCG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cZ1-Q8-ibu"/>
+                    <constraint firstItem="0ad-0i-yYT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="e6z-dp-rtF"/>
                     <constraint firstItem="swe-Oc-g6L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="gbU-8A-984"/>
-                    <constraint firstItem="0ad-0i-yYT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ghm-HB-Bo2"/>
+                    <constraint firstItem="0ad-0i-yYT" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.65" id="j3F-nm-TkN"/>
                     <constraint firstItem="swe-Oc-g6L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="n3o-gA-mZC"/>
                     <constraint firstAttribute="bottomMargin" secondItem="QOc-aR-CCG" secondAttribute="bottom" constant="33" id="yeq-Fu-4fJ"/>
                 </constraints>
