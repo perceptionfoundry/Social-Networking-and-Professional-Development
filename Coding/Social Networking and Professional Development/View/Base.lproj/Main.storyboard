@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VOc-Go-w0A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Fe-HS-RVK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -389,11 +389,635 @@
                     <tabBarItem key="tabBarItem" title="Course" image="plan.png" id="Ddm-a7-VVo"/>
                     <connections>
                         <outlet property="Course_Table" destination="Zua-ms-Grw" id="CZg-S6-Nys"/>
+                        <segue destination="2Fe-HS-RVK" kind="show" identifier="Detail_Segue" id="Wj3-K9-vah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntk-ii-lNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1775.2" y="3149.7751124437782"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iDM-8H-qS6">
+            <objects>
+                <viewController id="2Fe-HS-RVK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VqJ-K2-sJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9F-IH-kR9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="jZG-dg-QN9">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Lkb-77-Pbr">
+                                            <color key="tintColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yaq-qe-Wfd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="2936"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wV-DH-r1b">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="research-picture.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Vri-dS-0cx" customClass="Custom_ImageView" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="30" width="262.5" height="210"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="border_width">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VRy-AQ-p96">
+                                                <rect key="frame" x="112.5" y="255" width="150" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8p-uc-gQ1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rY-DX-vRO">
+                                                        <rect key="frame" x="75" y="0.0" width="75" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u5-bf-5c3" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="300" width="262.5" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2p-8G-Wqj">
+                                                        <rect key="frame" x="13" y="4.5" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="enT-69-pbn">
+                                                        <rect key="frame" x="13" y="30.5" width="236.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="enT-69-pbn" firstAttribute="width" secondItem="7u5-bf-5c3" secondAttribute="width" multiplier="0.9" id="Aph-0J-tb5"/>
+                                                    <constraint firstItem="Z2p-8G-Wqj" firstAttribute="centerY" secondItem="7u5-bf-5c3" secondAttribute="centerY" multiplier="0.5" id="MpT-aY-trv"/>
+                                                    <constraint firstItem="enT-69-pbn" firstAttribute="centerX" secondItem="7u5-bf-5c3" secondAttribute="centerX" id="Us0-Ue-rEM"/>
+                                                    <constraint firstItem="Z2p-8G-Wqj" firstAttribute="centerX" secondItem="7u5-bf-5c3" secondAttribute="centerX" id="eIG-HI-y3T"/>
+                                                    <constraint firstItem="Z2p-8G-Wqj" firstAttribute="width" secondItem="7u5-bf-5c3" secondAttribute="width" multiplier="0.9" id="eQb-QX-yCj"/>
+                                                    <constraint firstItem="enT-69-pbn" firstAttribute="centerY" secondItem="7u5-bf-5c3" secondAttribute="centerY" multiplier="1.3" id="rF7-Af-l8g"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fyp-En-JlI" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56.5" y="375" width="262.5" height="210"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-TA-bib">
+                                                        <rect key="frame" x="13" y="10.5" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-Nu-tAY">
+                                                        <rect key="frame" x="13.5" y="34.5" width="236.5" height="162.5"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="centerX" secondItem="Fyp-En-JlI" secondAttribute="centerX" id="5LF-JR-Gs2"/>
+                                                    <constraint firstItem="6IA-TA-bib" firstAttribute="width" secondItem="Fyp-En-JlI" secondAttribute="width" multiplier="0.9" id="K7Z-Eq-Fpi"/>
+                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="centerY" secondItem="Fyp-En-JlI" secondAttribute="centerY" multiplier="1.1" id="Q1K-x1-nRR"/>
+                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="height" secondItem="Fyp-En-JlI" secondAttribute="height" multiplier="0.775" id="gY5-NM-O34"/>
+                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="width" secondItem="Fyp-En-JlI" secondAttribute="width" multiplier="0.9" id="sy3-xw-ayt"/>
+                                                    <constraint firstItem="6IA-TA-bib" firstAttribute="centerX" secondItem="Fyp-En-JlI" secondAttribute="centerX" id="t1F-Rw-geA"/>
+                                                    <constraint firstItem="6IA-TA-bib" firstAttribute="centerY" secondItem="Fyp-En-JlI" secondAttribute="centerY" multiplier="0.2" id="t6r-v1-jJW"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kmd-oT-wnm" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="600" width="262.5" height="240"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objection:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SMS-cl-FuP">
+                                                        <rect key="frame" x="13" y="13.5" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-uu-VuG">
+                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="width" secondItem="Kmd-oT-wnm" secondAttribute="width" constant="-26" id="1Hr-w0-v9K"/>
+                                                    <constraint firstItem="SMS-cl-FuP" firstAttribute="centerY" secondItem="Kmd-oT-wnm" secondAttribute="centerY" constant="-95.75" id="FKu-Gv-JKE"/>
+                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="centerY" secondItem="Kmd-oT-wnm" secondAttribute="centerY" constant="12" id="FTF-UR-E3R"/>
+                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="height" secondItem="Kmd-oT-wnm" secondAttribute="height" constant="-54" id="Lae-GA-uY7"/>
+                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="centerX" secondItem="Kmd-oT-wnm" secondAttribute="centerX" id="PcP-fk-Lv1"/>
+                                                    <constraint firstItem="SMS-cl-FuP" firstAttribute="width" secondItem="Kmd-oT-wnm" secondAttribute="width" constant="-26" id="mg9-wU-OB8"/>
+                                                    <constraint firstItem="SMS-cl-FuP" firstAttribute="centerX" secondItem="Kmd-oT-wnm" secondAttribute="centerX" id="nAp-2w-mp5"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtW-cW-g5w" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="860" width="262.5" height="240"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For whom:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E9u-B2-iQK">
+                                                        <rect key="frame" x="13" y="14" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y5F-p6-15D">
+                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="E9u-B2-iQK" firstAttribute="centerX" secondItem="LtW-cW-g5w" secondAttribute="centerX" id="2yO-Ge-SNl"/>
+                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="height" secondItem="LtW-cW-g5w" secondAttribute="height" constant="-54" id="B4k-c2-wfJ"/>
+                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="width" secondItem="LtW-cW-g5w" secondAttribute="width" constant="-26" id="K95-hf-aZb"/>
+                                                    <constraint firstItem="E9u-B2-iQK" firstAttribute="centerY" secondItem="LtW-cW-g5w" secondAttribute="centerY" constant="-95.25" id="eIk-Vc-v2Q"/>
+                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="centerX" secondItem="LtW-cW-g5w" secondAttribute="centerX" id="kQJ-kw-URi"/>
+                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="centerY" secondItem="LtW-cW-g5w" secondAttribute="centerY" constant="12" id="q90-FH-QFN"/>
+                                                    <constraint firstItem="E9u-B2-iQK" firstAttribute="width" secondItem="LtW-cW-g5w" secondAttribute="width" constant="-26" id="zCo-i0-MRU"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuM-Sv-WpO" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="1121" width="262.5" height="240"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry Requirement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nzX-NJ-dwH">
+                                                        <rect key="frame" x="13" y="14.5" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sY7-wU-y92">
+                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="height" secondItem="IuM-Sv-WpO" secondAttribute="height" constant="-54" id="69k-18-oVz"/>
+                                                    <constraint firstItem="nzX-NJ-dwH" firstAttribute="width" secondItem="IuM-Sv-WpO" secondAttribute="width" constant="-26" id="8iV-7i-Fgk"/>
+                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="centerY" secondItem="IuM-Sv-WpO" secondAttribute="centerY" constant="12" id="9uv-K9-5Oa"/>
+                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="width" secondItem="IuM-Sv-WpO" secondAttribute="width" constant="-26" id="Cnp-mN-mBf"/>
+                                                    <constraint firstItem="nzX-NJ-dwH" firstAttribute="centerY" secondItem="IuM-Sv-WpO" secondAttribute="centerY" constant="-94.75" id="I2j-P1-cJ6"/>
+                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="centerX" secondItem="IuM-Sv-WpO" secondAttribute="centerX" id="ZSs-yV-GhQ"/>
+                                                    <constraint firstItem="nzX-NJ-dwH" firstAttribute="centerX" secondItem="IuM-Sv-WpO" secondAttribute="centerX" id="xxY-Ni-iS9"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlw-9b-IcH" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="1380" width="262.5" height="240"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learning Path:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DUY-cy-wlU">
+                                                        <rect key="frame" x="13" y="15.5" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-rU-geE">
+                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="DUY-cy-wlU" firstAttribute="width" secondItem="tlw-9b-IcH" secondAttribute="width" constant="-26" id="2Qa-Xg-0wi"/>
+                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="centerX" secondItem="tlw-9b-IcH" secondAttribute="centerX" id="ZDX-Np-ULC"/>
+                                                    <constraint firstItem="DUY-cy-wlU" firstAttribute="centerY" secondItem="tlw-9b-IcH" secondAttribute="centerY" constant="-93.75" id="a18-id-IRq"/>
+                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="centerY" secondItem="tlw-9b-IcH" secondAttribute="centerY" constant="12" id="aMt-1B-7A8"/>
+                                                    <constraint firstItem="DUY-cy-wlU" firstAttribute="centerX" secondItem="tlw-9b-IcH" secondAttribute="centerX" id="ehr-AV-BA1"/>
+                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="width" secondItem="tlw-9b-IcH" secondAttribute="width" constant="-26" id="mrk-2q-Fxr"/>
+                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="height" secondItem="tlw-9b-IcH" secondAttribute="height" constant="-54" id="zjU-ba-hZD"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFe-VS-9EO" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="1655" width="262.5" height="240"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Path:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eVy-DN-2m6">
+                                                        <rect key="frame" x="13" y="16" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="99y-7f-JK5">
+                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="eVy-DN-2m6" firstAttribute="centerY" secondItem="IFe-VS-9EO" secondAttribute="centerY" constant="-93.5" id="VCh-0O-zmU"/>
+                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="centerY" secondItem="IFe-VS-9EO" secondAttribute="centerY" constant="12" id="ZWB-KM-xx5"/>
+                                                    <constraint firstItem="eVy-DN-2m6" firstAttribute="centerX" secondItem="IFe-VS-9EO" secondAttribute="centerX" id="aHB-uu-5AG"/>
+                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="width" secondItem="IFe-VS-9EO" secondAttribute="width" constant="-26" id="gzD-ta-tUx"/>
+                                                    <constraint firstItem="eVy-DN-2m6" firstAttribute="width" secondItem="IFe-VS-9EO" secondAttribute="width" constant="-26" id="rcw-fe-nvI"/>
+                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="centerX" secondItem="IFe-VS-9EO" secondAttribute="centerX" id="sHB-nZ-dCN"/>
+                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="height" secondItem="IFe-VS-9EO" secondAttribute="height" constant="-54" id="xcK-HJ-pwR"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-BP-gP3" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="1918" width="262.5" height="240"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Career Path:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HbP-cB-FAa">
+                                                        <rect key="frame" x="13" y="16" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b4A-AB-6Jx">
+                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="height" secondItem="FSJ-BP-gP3" secondAttribute="height" constant="-54" id="MbR-Kq-ef5"/>
+                                                    <constraint firstItem="HbP-cB-FAa" firstAttribute="centerY" secondItem="FSJ-BP-gP3" secondAttribute="centerY" constant="-93.5" id="ZPB-mz-73w"/>
+                                                    <constraint firstItem="HbP-cB-FAa" firstAttribute="centerX" secondItem="FSJ-BP-gP3" secondAttribute="centerX" id="eRa-C9-y4A"/>
+                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="centerX" secondItem="FSJ-BP-gP3" secondAttribute="centerX" id="ecN-7X-QyK"/>
+                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="centerY" secondItem="FSJ-BP-gP3" secondAttribute="centerY" constant="12" id="hBh-gH-mNM"/>
+                                                    <constraint firstItem="HbP-cB-FAa" firstAttribute="width" secondItem="FSJ-BP-gP3" secondAttribute="width" constant="-26" id="lsY-E9-bG0"/>
+                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="width" secondItem="FSJ-BP-gP3" secondAttribute="width" constant="-26" id="nLF-So-tOx"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-cO-KYd" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="2185" width="262.5" height="240"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fAB-Th-HHr">
+                                                        <rect key="frame" x="13" y="16" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lU7-mq-kNH">
+                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="fAB-Th-HHr" firstAttribute="centerX" secondItem="xqg-cO-KYd" secondAttribute="centerX" id="01T-U5-Uw8"/>
+                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="width" secondItem="xqg-cO-KYd" secondAttribute="width" constant="-26" id="RTG-ve-1mH"/>
+                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="centerY" secondItem="xqg-cO-KYd" secondAttribute="centerY" constant="12" id="b8a-ih-d6B"/>
+                                                    <constraint firstItem="fAB-Th-HHr" firstAttribute="width" secondItem="xqg-cO-KYd" secondAttribute="width" constant="-26" id="hta-pr-wJG"/>
+                                                    <constraint firstItem="fAB-Th-HHr" firstAttribute="centerY" secondItem="xqg-cO-KYd" secondAttribute="centerY" constant="-93.5" id="kLB-ma-6AX"/>
+                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="height" secondItem="xqg-cO-KYd" secondAttribute="height" constant="-54" id="lQj-zA-W19"/>
+                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="centerX" secondItem="xqg-cO-KYd" secondAttribute="centerX" id="wz5-ew-RWx"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBO-su-M8o" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56" y="2454" width="262.5" height="240"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assessment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lXg-Y7-5YR">
+                                                        <rect key="frame" x="13" y="16" width="236.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-Oh-vE8">
+                                                        <rect key="frame" x="13.5" y="39" width="236.5" height="186"/>
+                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="centerX" secondItem="KBO-su-M8o" secondAttribute="centerX" id="2IE-Bv-uH1"/>
+                                                    <constraint firstItem="lXg-Y7-5YR" firstAttribute="centerY" secondItem="KBO-su-M8o" secondAttribute="centerY" constant="-93.5" id="AUq-FO-aUd"/>
+                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="height" secondItem="KBO-su-M8o" secondAttribute="height" constant="-54" id="Uww-xh-MpW"/>
+                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="width" secondItem="KBO-su-M8o" secondAttribute="width" constant="-26" id="cHN-Uz-oBz"/>
+                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="centerY" secondItem="KBO-su-M8o" secondAttribute="centerY" constant="12" id="f6I-Wf-jo6"/>
+                                                    <constraint firstItem="lXg-Y7-5YR" firstAttribute="width" secondItem="KBO-su-M8o" secondAttribute="width" constant="-26" id="gWg-yp-cu8"/>
+                                                    <constraint firstItem="lXg-Y7-5YR" firstAttribute="centerX" secondItem="KBO-su-M8o" secondAttribute="centerX" id="rbR-bM-cMg"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dax-2u-KLe" customClass="Custom_Button" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                                <rect key="frame" x="56.5" y="2760" width="262.5" height="105"/>
+                                                <color key="backgroundColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <state key="normal" title="Purchase">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="1" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Fyp-En-JlI" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.32" id="03t-2U-bcQ"/>
+                                            <constraint firstItem="FSJ-BP-gP3" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="0ah-z8-lNL"/>
+                                            <constraint firstItem="LtW-cW-g5w" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="1Xm-WQ-12z"/>
+                                            <constraint firstItem="Vri-dS-0cx" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.09" id="2Fl-dD-xe6"/>
+                                            <constraint firstItem="IFe-VS-9EO" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="275" id="2Gs-ko-cCL"/>
+                                            <constraint firstItem="tlw-9b-IcH" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="4Y1-7C-Ds8"/>
+                                            <constraint firstItem="LtW-cW-g5w" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="5d7-tu-G45"/>
+                                            <constraint firstItem="VRy-AQ-p96" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="8qc-ct-5ZW"/>
+                                            <constraint firstItem="dax-2u-KLe" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="CE7-5g-E2D"/>
+                                            <constraint firstItem="Fyp-En-JlI" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" multiplier="0.7" id="Cd0-gf-wjb"/>
+                                            <constraint firstItem="Fyp-En-JlI" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="DIl-Lp-9GW"/>
+                                            <constraint firstItem="IFe-VS-9EO" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="EOc-eo-DDP"/>
+                                            <constraint firstItem="VRy-AQ-p96" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" multiplier="0.4" id="FfV-AN-SSA"/>
+                                            <constraint firstItem="7u5-bf-5c3" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" multiplier="0.7" id="JWE-TC-wGJ"/>
+                                            <constraint firstItem="IuM-Sv-WpO" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="Kcu-Rj-ABL"/>
+                                            <constraint firstItem="7u5-bf-5c3" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.22" id="LDV-Bv-Dxj"/>
+                                            <constraint firstItem="dax-2u-KLe" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.035" id="LN2-lc-kVm"/>
+                                            <constraint firstItem="Vri-dS-0cx" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="Lye-La-6x0"/>
+                                            <constraint firstItem="Vri-dS-0cx" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.07" id="MNQ-3F-B3W"/>
+                                            <constraint firstItem="KBO-su-M8o" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="OXj-z6-MAw"/>
+                                            <constraint firstItem="7u5-bf-5c3" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.02" id="Oh0-wG-oll"/>
+                                            <constraint firstItem="IFe-VS-9EO" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="PQ8-xM-9KK"/>
+                                            <constraint firstItem="IuM-Sv-WpO" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="-259" id="QNo-El-UYf"/>
+                                            <constraint firstItem="xqg-cO-KYd" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="Qw8-QG-vpV"/>
+                                            <constraint firstItem="Kmd-oT-wnm" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" multiplier="0.7" id="Tff-7X-s6U"/>
+                                            <constraint firstItem="IuM-Sv-WpO" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="Tu5-qd-zr5"/>
+                                            <constraint firstItem="VRy-AQ-p96" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.01" id="Uls-XQ-EtK"/>
+                                            <constraint firstItem="xqg-cO-KYd" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="VTn-fh-fHJ"/>
+                                            <constraint firstItem="IuM-Sv-WpO" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="XZ2-Gz-qgs"/>
+                                            <constraint firstItem="dax-2u-KLe" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="1.875" id="Xgj-d2-25R"/>
+                                            <constraint firstItem="7u5-bf-5c3" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="Y2O-zS-tKT"/>
+                                            <constraint firstAttribute="height" constant="3000" id="YqP-dx-n9l"/>
+                                            <constraint firstItem="tlw-9b-IcH" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="bIs-Bl-BHr"/>
+                                            <constraint firstItem="IFe-VS-9EO" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="bfE-OG-vW4"/>
+                                            <constraint firstItem="FSJ-BP-gP3" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="eYa-4o-gfN"/>
+                                            <constraint firstItem="Kmd-oT-wnm" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.48" id="ejp-jH-zkC"/>
+                                            <constraint firstItem="KBO-su-M8o" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="1074" id="fDv-0C-ill"/>
+                                            <constraint firstItem="KBO-su-M8o" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="gy3-5m-1cC"/>
+                                            <constraint firstItem="KBO-su-M8o" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="hAj-n9-q9t"/>
+                                            <constraint firstItem="VRy-AQ-p96" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.18" id="izf-jo-B7D"/>
+                                            <constraint firstItem="LtW-cW-g5w" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="-520" id="j9h-e6-BJE"/>
+                                            <constraint firstItem="FSJ-BP-gP3" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="538" id="jj3-gW-PV7"/>
+                                            <constraint firstItem="Kmd-oT-wnm" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.08" id="ljp-xE-2ue"/>
+                                            <constraint firstItem="FSJ-BP-gP3" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="mSX-sL-bBa"/>
+                                            <constraint firstItem="dax-2u-KLe" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" multiplier="0.7" id="od0-KZ-3Tu"/>
+                                            <constraint firstItem="xqg-cO-KYd" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="qzQ-Dq-3d6"/>
+                                            <constraint firstItem="xqg-cO-KYd" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="805" id="tYv-Qg-MUP"/>
+                                            <constraint firstItem="Kmd-oT-wnm" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="vPJ-qO-F5N"/>
+                                            <constraint firstItem="Vri-dS-0cx" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" multiplier="0.7" id="vVP-dS-9AH"/>
+                                            <constraint firstItem="Fyp-En-JlI" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.07" id="wZl-Wq-1J8"/>
+                                            <constraint firstItem="tlw-9b-IcH" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="xOG-Fh-WEN"/>
+                                            <constraint firstItem="LtW-cW-g5w" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="xSP-6e-6XK"/>
+                                            <constraint firstItem="tlw-9b-IcH" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" id="yzN-QD-zR8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4wV-DH-r1b" secondAttribute="trailing" id="45g-ZN-PTx"/>
+                                    <constraint firstItem="4wV-DH-r1b" firstAttribute="leading" secondItem="Yaq-qe-Wfd" secondAttribute="leading" id="fMS-mS-WB1"/>
+                                    <constraint firstItem="4wV-DH-r1b" firstAttribute="top" secondItem="Yaq-qe-Wfd" secondAttribute="top" id="fOf-Zg-fbz"/>
+                                    <constraint firstAttribute="bottom" secondItem="4wV-DH-r1b" secondAttribute="bottom" id="zO2-5a-JsY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yaq-qe-Wfd" firstAttribute="top" secondItem="H9F-IH-kR9" secondAttribute="bottom" id="8Ps-bh-zhD"/>
+                            <constraint firstItem="4wV-DH-r1b" firstAttribute="width" secondItem="VqJ-K2-sJ0" secondAttribute="width" id="Bms-9X-Faj"/>
+                            <constraint firstItem="H9F-IH-kR9" firstAttribute="top" secondItem="um9-bg-YYs" secondAttribute="top" id="Q0Z-1C-R7g"/>
+                            <constraint firstItem="H9F-IH-kR9" firstAttribute="trailing" secondItem="um9-bg-YYs" secondAttribute="trailing" id="SV6-ka-ncZ"/>
+                            <constraint firstItem="H9F-IH-kR9" firstAttribute="leading" secondItem="um9-bg-YYs" secondAttribute="leading" id="YU1-0R-gTc"/>
+                            <constraint firstItem="Yaq-qe-Wfd" firstAttribute="leading" secondItem="um9-bg-YYs" secondAttribute="leading" id="pK6-Yy-cVW"/>
+                            <constraint firstItem="um9-bg-YYs" firstAttribute="trailing" secondItem="Yaq-qe-Wfd" secondAttribute="trailing" id="vOh-hE-Yt5"/>
+                            <constraint firstItem="um9-bg-YYs" firstAttribute="bottom" secondItem="Yaq-qe-Wfd" secondAttribute="bottom" id="yfE-VP-ltx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="um9-bg-YYs"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="3000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKJ-42-emZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2316" y="4280.9595202398805"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="9DR-qs-5GV">
@@ -1524,7 +2148,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J4-2Q-lAi" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
-                                                            <rect key="frame" x="281.5" y="6" width="59" height="20"/>
+                                                            <rect key="frame" x="272.5" y="12.5" width="59" height="20"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glo-td-kjV">
                                                                     <rect key="frame" x="18" y="4" width="24.5" height="13.5"/>
@@ -1550,9 +2174,8 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="5J4-2Q-lAi" firstAttribute="height" secondItem="4oo-Lt-Qrq" secondAttribute="height" multiplier="0.2" constant="-2.4000000000000021" id="4g6-5B-tc8"/>
-                                                        <constraint firstItem="5J4-2Q-lAi" firstAttribute="centerY" secondItem="4oo-Lt-Qrq" secondAttribute="centerY" multiplier="0.3" id="Ftb-RP-6sY"/>
-                                                        <constraint firstItem="5J4-2Q-lAi" firstAttribute="centerX" secondItem="4oo-Lt-Qrq" secondAttribute="centerX" multiplier="1.8" id="Gbp-JS-ERZ"/>
+                                                        <constraint firstItem="5J4-2Q-lAi" firstAttribute="centerY" secondItem="4oo-Lt-Qrq" secondAttribute="centerY" multiplier="0.4" id="Ftb-RP-6sY"/>
+                                                        <constraint firstItem="5J4-2Q-lAi" firstAttribute="centerX" secondItem="4oo-Lt-Qrq" secondAttribute="centerX" multiplier="1.75" id="Gbp-JS-ERZ"/>
                                                         <constraint firstItem="7va-zi-7ao" firstAttribute="centerY" secondItem="4oo-Lt-Qrq" secondAttribute="centerY" id="UEN-pr-Nb2"/>
                                                         <constraint firstItem="v2c-Jq-sMm" firstAttribute="centerY" secondItem="4oo-Lt-Qrq" secondAttribute="centerY" id="aUD-jq-Fay"/>
                                                         <constraint firstItem="7va-zi-7ao" firstAttribute="width" secondItem="4oo-Lt-Qrq" secondAttribute="width" multiplier="0.24" id="g4E-bw-wNd"/>
