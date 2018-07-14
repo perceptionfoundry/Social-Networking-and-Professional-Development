@@ -14,7 +14,6 @@ class purchaseCell: UITableViewCell {
     
     @IBOutlet weak var Purchase_description: UILabel!
     
-    @IBOutlet weak var purchase_Price: UILabel!
     
     
 

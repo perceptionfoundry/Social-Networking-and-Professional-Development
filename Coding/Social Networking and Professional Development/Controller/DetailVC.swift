@@ -88,7 +88,7 @@ class DetailVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination  as! CheckOutVC
         
-        dest.selectedCourse = self.CourseData
+        dest.selectedCourse = self.courseDetail
     }
     
     @IBAction func Back_Button(_ sender: Any) {

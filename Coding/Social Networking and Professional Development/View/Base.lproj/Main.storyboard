@@ -447,7 +447,7 @@
                                                 <rect key="frame" x="0.0" y="22" width="236.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -467,7 +467,7 @@
                                                 <rect key="frame" x="0.0" y="22" width="79" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -2253,18 +2253,12 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="research-picture.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="he0-vy-5ag">
                                                             <rect key="frame" x="18" y="22" width="310.5" height="65.5"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS developement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myI-tF-EGP">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS developement" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="myI-tF-EGP">
                                                             <rect key="frame" x="190.5" y="63" width="137.5" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                             <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                             <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 1120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9rF-iD-q1R">
-                                                            <rect key="frame" x="273.5" y="85" width="63.5" height="24"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-rw-NaA">
                                                             <rect key="frame" x="0.0" y="0.0" width="111" height="22"/>
@@ -2283,8 +2277,6 @@
                                                         <constraint firstItem="WwA-rw-NaA" firstAttribute="leading" secondItem="Vci-0X-hdJ" secondAttribute="leading" id="ayM-Xi-y2i"/>
                                                         <constraint firstItem="he0-vy-5ag" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" id="fJC-h5-4H8"/>
                                                         <constraint firstItem="he0-vy-5ag" firstAttribute="top" secondItem="WwA-rw-NaA" secondAttribute="bottom" id="mzu-ju-ocD"/>
-                                                        <constraint firstAttribute="bottom" secondItem="9rF-iD-q1R" secondAttribute="bottom" id="phw-Ir-VRs"/>
-                                                        <constraint firstAttribute="trailing" secondItem="9rF-iD-q1R" secondAttribute="trailing" constant="8" id="sca-Id-8gR"/>
                                                         <constraint firstItem="he0-vy-5ag" firstAttribute="width" secondItem="Vci-0X-hdJ" secondAttribute="width" multiplier="0.9" id="xmo-FM-ieP"/>
                                                         <constraint firstItem="myI-tF-EGP" firstAttribute="top" secondItem="Vci-0X-hdJ" secondAttribute="top" constant="63" id="yE1-ep-vKd"/>
                                                     </constraints>
@@ -2318,7 +2310,6 @@
                                         <connections>
                                             <outlet property="Purchase_Image" destination="he0-vy-5ag" id="3nJ-TP-5da"/>
                                             <outlet property="Purchase_description" destination="myI-tF-EGP" id="Uk3-jE-jjc"/>
-                                            <outlet property="purchase_Price" destination="9rF-iD-q1R" id="dKe-uh-zDu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2360,16 +2351,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dL-fL-kzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sLr-la-fqj">
-                    <rect key="frame" x="0.0" y="0.0" width="56" height="47"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="chat.png"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P6X-Ch-mB5">
-                    <rect key="frame" x="0.0" y="0.0" width="56" height="47"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="chat.png"/>
-                </button>
             </objects>
             <point key="canvasLocation" x="-431.19999999999999" y="3149.7751124437782"/>
         </scene>

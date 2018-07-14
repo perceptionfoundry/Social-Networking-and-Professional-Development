@@ -52,14 +52,16 @@ class CheckOutVC: UIViewController {
         let CardHolder = self.User_Name.text!
         let CreditCard = self.CreditCard.text!
         let CVV = self.CVV.text!
-        let
+        let urlLink = selectedCourse["Image_URL"]!
+        
         
         dbRef = Database.database().reference()
+            
+            var cart = ["Course": courseName, "Card_holder" : CardHolder,"Credit_Card" : CreditCard,"CVV": CVV, "Image_URL": urlLink]
         
-        dbRef.child("Purchase").child((Auth.auth().currentUser?.uid)!).child("Course").setValue(courseName)
-        dbRef.child("Purchase").child((Auth.auth().currentUser?.uid)!).child("Card_Holder").setValue(CardHolder)
-        dbRef.child("Purchase").child((Auth.auth().currentUser?.uid)!).child("Credit_Card").setValue(CreditCard)
-        dbRef.child("Purchase").child((Auth.auth().currentUser?.uid)!).child("CVV").setValue(CVV)
+        dbRef.child("Purchase").child((Auth.auth().currentUser?.uid)!).childByAutoId().setValue(cart)
+            self.dismiss(animated: true, completion: nil)
+    
     }
     else{
     
