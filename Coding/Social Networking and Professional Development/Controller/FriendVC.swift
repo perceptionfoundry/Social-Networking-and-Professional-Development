@@ -102,11 +102,33 @@ class FriendVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
        
         
-        return cell
+//        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+        
+    }
+    
+    @IBAction func liveChat_button(_ sender: Any) {
+        
+        performSegue(withIdentifier: "Live_Segue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "Live_Segue"{
+            let Nav = segue.destination as! UINavigationController
+            
+            let dest = Nav.viewControllers.first as! chatViewController
+            
+            
+            
+            dest.channelName = (Auth.auth().currentUser?.uid)! + "live"
+            dest.receiverID = "dsjkhvasd982fbh"
+            
+        }
+     
         
     }
 

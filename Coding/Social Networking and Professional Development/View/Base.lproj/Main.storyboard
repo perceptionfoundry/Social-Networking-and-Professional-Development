@@ -366,7 +366,7 @@
                                 <rect key="frame" x="291.5" y="550.5" width="56" height="47"/>
                                 <state key="normal" image="chat.png"/>
                                 <connections>
-                                    <segue destination="I4O-nL-4Lq" kind="show" id="x4Y-g9-iSj"/>
+                                    <action selector="liveChat_button:" destination="ZgN-dG-m0T" eventType="touchUpInside" id="Uj8-W8-Alo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -390,6 +390,7 @@
                     <connections>
                         <outlet property="Course_Table" destination="Zua-ms-Grw" id="CZg-S6-Nys"/>
                         <segue destination="2Fe-HS-RVK" kind="presentation" identifier="Detail_Segue" id="Wj3-K9-vah"/>
+                        <segue destination="cpr-oM-6LV" kind="presentation" identifier="Live_Segue" id="HJo-0P-5Xu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntk-ii-lNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -586,7 +587,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="research-picture.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="2Fu-TS-PQW" customClass="Custom_ImageView" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no image.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="2Fu-TS-PQW" customClass="Custom_ImageView" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
                                 <rect key="frame" x="152" y="102.5" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Fu-TS-PQW" secondAttribute="height" multiplier="1:1" id="Lj5-rP-Umg"/>
@@ -624,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4d-f8-GVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2356" y="4755"/>
+            <point key="canvasLocation" x="-2902" y="4827"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="iDM-8H-qS6">
@@ -2327,6 +2328,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIU-os-RAj">
                                 <rect key="frame" x="291" y="550.5" width="56" height="47"/>
                                 <state key="normal" image="chat.png"/>
+                                <connections>
+                                    <action selector="liveChat_button:" destination="Ys2-el-28u" eventType="touchUpInside" id="zqF-m8-66Y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2348,6 +2352,7 @@
                     <tabBarItem key="tabBarItem" title="Purchase" image="purchase.png" id="Z5h-EQ-lLB"/>
                     <connections>
                         <outlet property="purchase_table" destination="8hN-Xj-2C1" id="vol-zY-ygh"/>
+                        <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="KHV-6I-MLA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dL-fL-kzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2450,6 +2455,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I86-I1-ZmU">
                                 <rect key="frame" x="291" y="550.5" width="56" height="47"/>
                                 <state key="normal" image="chat.png"/>
+                                <connections>
+                                    <action selector="liveChat_button:" destination="EmC-NQ-jB4" eventType="touchUpInside" id="mzc-1h-XbV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2478,6 +2486,7 @@
                     <tabBarItem key="tabBarItem" title="Friend" image="friend.png" id="58Y-ae-u4A"/>
                     <connections>
                         <outlet property="Friend_Table" destination="tlu-bK-EHj" id="XUe-F2-sab"/>
+                        <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="lEg-aw-kd5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iH2-Q8-QjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2488,22 +2497,6 @@
                 </button>
             </objects>
             <point key="canvasLocation" x="1949.5999999999999" y="3149.7751124437782"/>
-        </scene>
-        <!--ChatVC-->
-        <scene sceneID="YQ6-09-bFq">
-            <objects>
-                <viewController id="cwe-eU-C5A" customClass="ChatVC" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="g1M-SM-VMO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="8o5-hu-6J6"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="CyB-mW-VvZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WOT-Rx-Lgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2983" y="4370"/>
         </scene>
         <!--Profile-->
         <scene sceneID="IP5-75-cXp">
@@ -2554,24 +2547,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEj-qI-SrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4644" y="3150"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="KhQ-4b-utR">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I4O-nL-4Lq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bfI-TH-Sj1">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cwe-eU-C5A" kind="relationship" relationship="rootViewController" id="h9s-vM-XHR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OHW-E5-VJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1876" y="4370.4647676161921"/>
         </scene>
         <!--Offer-->
         <scene sceneID="OsM-Xi-A7G">
@@ -2693,6 +2668,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrE-bb-pk0">
                                 <rect key="frame" x="291.5" y="550.5" width="56" height="47"/>
                                 <state key="normal" image="chat.png"/>
+                                <connections>
+                                    <action selector="liveChat_button:" destination="qhr-zG-W8Y" eventType="touchUpInside" id="Gkq-5Q-bJ1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2715,11 +2693,56 @@
                     <connections>
                         <outlet property="offerTable" destination="fEZ-IP-ydU" id="B6K-kv-LOK"/>
                         <segue destination="2Fe-HS-RVK" kind="presentation" identifier="Detail_Segue" id="8yg-3r-wcX"/>
+                        <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="L8i-mk-0LN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dct-Th-SHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="877.60000000000002" y="3149.7751124437782"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="sHW-cw-Ad0">
+            <objects>
+                <viewController id="eST-Pa-J4n" customClass="chatViewController" customModule="srchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mdy-q1-ecK"/>
+                        <viewControllerLayoutGuide type="bottom" id="bxo-Kn-BNj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dAF-up-8Ol">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="pM3-cN-g4C"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jwc-OO-k0Z">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="zMQ-FT-nu9">
+                            <connections>
+                                <action selector="backButton:" destination="eST-Pa-J4n" id="7HQ-Zw-PGa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGV-IT-e2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="4345.2773613193403"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lYg-o4-44P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cpr-oM-6LV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="toy-yn-ipy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eST-Pa-J4n" kind="relationship" relationship="rootViewController" id="9VM-U7-NqJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9IS-55-PHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432.8" y="4345.2773613193403"/>
         </scene>
     </scenes>
     <resources>
@@ -2729,6 +2752,7 @@
         <image name="friend.jpeg" width="260" height="194"/>
         <image name="friend.png" width="32" height="32"/>
         <image name="logo.png" width="265" height="361"/>
+        <image name="no image.jpeg" width="300" height="300"/>
         <image name="offer.png" width="32" height="32"/>
         <image name="password.png" width="24" height="24"/>
         <image name="plan.png" width="32" height="32"/>
@@ -2738,6 +2762,7 @@
         <image name="setting.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="KHV-6I-MLA"/>
         <segue reference="8yg-3r-wcX"/>
     </inferredMetricsTieBreakers>
 </document>

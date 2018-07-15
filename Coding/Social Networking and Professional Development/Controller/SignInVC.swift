@@ -22,12 +22,12 @@ class SignInVC: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         
         
-//        if Auth.auth().currentUser != nil{
-//            
-//            self.performSegue(withIdentifier: "Dashboard_Segue", sender: nil)
-//
-//            
-//        }
+        if Auth.auth().currentUser != nil{
+            
+            self.performSegue(withIdentifier: "Dashboard_Segue", sender: nil)
+
+            
+        }
         
     }
 

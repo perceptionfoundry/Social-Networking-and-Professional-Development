@@ -121,10 +121,25 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         performSegue(withIdentifier: "Detail_Segue", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination as! DetailVC
+    @IBAction func liveChat_button(_ sender: Any) {
         
-        dest.selected_Course = SelectedCourseTitle
+        performSegue(withIdentifier: "Live_Segue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Live_Segue"{
+            let Nav = segue.destination as! UINavigationController
+            
+            let dest = Nav.viewControllers.first as! chatViewController
+            
+            
+            
+            dest.channelName = (Auth.auth().currentUser?.uid)! + "live"
+            dest.receiverID = "dsjkhvasd982fbh"
+        
+            
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
