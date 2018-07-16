@@ -22,12 +22,12 @@ class SignInVC: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         
         
-        if Auth.auth().currentUser != nil{
-            
-            self.performSegue(withIdentifier: "Dashboard_Segue", sender: nil)
-
-            
-        }
+//        if Auth.auth().currentUser != nil{
+//            
+//            self.performSegue(withIdentifier: "Dashboard_Segue", sender: nil)
+//
+//            
+//        }
         
     }
 
@@ -36,42 +36,53 @@ class SignInVC: UIViewController {
         
         if (emailTF.text?.isEmpty != true) && (passwordTF.text?.isEmpty != true){
             
-            Auth.auth().signIn(withEmail: emailTF.text!, password: passwordTF.text!) { (user, err) in
-                if err == nil{
-                    
-                    if Auth.auth().currentUser?.isEmailVerified == true{
-//
+           
+            
+            if (emailTF.text == "admin@admin.com") && (passwordTF.text == "admin123"){
+                
+                
+                 self.performSegue(withIdentifier: "Admin_Segue", sender: nil)
+                
+            }
+                
+            else{
+                Auth.auth().signIn(withEmail: emailTF.text!, password: passwordTF.text!) { (user, err) in
+                    if err == nil{
                         
-                        self.performSegue(withIdentifier: "Dashboard_Segue", sender: nil)
-                        
-               
+                        if Auth.auth().currentUser?.isEmailVerified == true{
+                            //
+                            
+                            self.performSegue(withIdentifier: "Dashboard_Segue", sender: nil)
+                            
+                            
+                        }
+                            
+                            
+                            
+                        else{
+                            
+                            let AlertVC = UIAlertController(title: "VERIFY EMAIL", message: "Email address has not be verified yet, so please check your email inbox", preferredStyle: .alert)
+                            let alertAction = UIAlertAction(title: "OK", style:.default, handler: { (action) in
+                                Auth.auth().currentUser?.sendEmailVerification(completion: { (err_veri  ) in
+                                    
+                                    print(err_veri)
+                                })
+                            })
+                            
+                            AlertVC.addAction(alertAction)
+                            
+                            self.present(AlertVC, animated: true, completion: nil)
+                        }
                     }
                         
-                        
-                        
                     else{
-                        
-                        let AlertVC = UIAlertController(title: "VERIFY EMAIL", message: "Email address has not be verified yet, so please check your email inbox", preferredStyle: .alert)
-                        let alertAction = UIAlertAction(title: "OK", style:.default, handler: { (action) in
-                            Auth.auth().currentUser?.sendEmailVerification(completion: { (err_veri  ) in
-                                
-                                print(err_veri)
-                            })
-                        })
+                        let AlertVC = UIAlertController(title: "Server Error", message: err?.localizedDescription, preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                         
                         AlertVC.addAction(alertAction)
                         
-                        self.present(AlertVC, animated: true, completion: nil)
-                    }
+                        self.present(AlertVC, animated: true, completion: nil)                }
                 }
-                
-                else{
-                    let AlertVC = UIAlertController(title: "Server Error", message: err?.localizedDescription, preferredStyle: .alert)
-                    let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    
-                    AlertVC.addAction(alertAction)
-                    
-                    self.present(AlertVC, animated: true, completion: nil)                }
             }
         }
     }

@@ -28,6 +28,7 @@ class chatViewController: JSQMessagesViewController {
     
     var channelName = "live chat"
     var receiverID = "CMLS guy"
+    var DP : UIImage!
     
     
     // VARIABLE THAT HOLD MESSAGE IN ARRAY FORMAT
@@ -41,7 +42,7 @@ class chatViewController: JSQMessagesViewController {
     var msgRef = Database.database().reference().child("Messages")
     var userRef = Database.database().reference().child("users")
     
-    let currentUserId = Auth.auth().currentUser?.uid
+    var currentUserId = ""
 
     
     
@@ -53,7 +54,7 @@ class chatViewController: JSQMessagesViewController {
 
 // INITIALIZE VARIABLE REQUIRED BY THIS VC
         
-        senderId = currentUserId!
+        senderId = currentUserId
         senderDisplayName = ""
         
         
@@ -138,6 +139,8 @@ class chatViewController: JSQMessagesViewController {
                     let data = NSData(contentsOf: url!)
                     let picture = UIImage(data: data as! Data)
                     let photo = JSQPhotoMediaItem(image: picture)
+                    
+                    
                     self.messages.append(JSQMessage(senderId: senderid, displayName: senderName, media: photo))
                  
                     // identify incoming OR outgoing photo
@@ -235,7 +238,14 @@ class chatViewController: JSQMessagesViewController {
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
         
-        return JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named: "person"), diameter: 30)
+        
+        
+        let message = messages[indexPath.item]
+        
+        if message.senderId == senderId{
+        return JSQMessagesAvatarImageFactory.avatarImage(with: self.DP, diameter: 30)
+        }
+        return JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named: "friend"), diameter: 30)
     }
 
 

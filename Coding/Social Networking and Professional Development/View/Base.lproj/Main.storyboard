@@ -257,6 +257,7 @@
                         <outlet property="emailTF" destination="2Eq-90-ach" id="YtD-4B-7A3"/>
                         <outlet property="passwordTF" destination="cfs-Rp-sjI" id="sFF-p7-FxX"/>
                         <segue destination="C2t-OK-gXh" kind="presentation" identifier="Dashboard_Segue" id="tco-wH-DSC"/>
+                        <segue destination="sh6-pO-vGa" kind="presentation" identifier="Admin_Segue" id="ILF-fG-jff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -2188,6 +2189,37 @@
             </objects>
             <point key="canvasLocation" x="1724" y="-331.48425787106447"/>
         </scene>
+        <!--Admin ChatVC-->
+        <scene sceneID="0Yj-Bc-vKX">
+            <objects>
+                <viewController id="sh6-pO-vGa" customClass="AdminChatVC" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ZI-x6-Xi2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f98-ue-PZA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f98-ue-PZA" firstAttribute="leading" secondItem="FG6-Kw-5Ok" secondAttribute="leading" id="2Mz-eC-P2j"/>
+                            <constraint firstItem="f98-ue-PZA" firstAttribute="top" secondItem="FG6-Kw-5Ok" secondAttribute="top" id="LfK-Dj-Tmu"/>
+                            <constraint firstItem="FG6-Kw-5Ok" firstAttribute="trailing" secondItem="f98-ue-PZA" secondAttribute="trailing" id="c1I-re-3C5"/>
+                            <constraint firstItem="FG6-Kw-5Ok" firstAttribute="bottom" secondItem="f98-ue-PZA" secondAttribute="bottom" id="x6m-NQ-StU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FG6-Kw-5Ok"/>
+                    </view>
+                    <connections>
+                        <outlet property="adminTable" destination="f98-ue-PZA" id="xMz-hJ-aSA"/>
+                        <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="JZX-sj-RLm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhK-p1-Ac4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1099" y="779"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="HRp-5C-DUd">
             <objects>
@@ -2353,6 +2385,7 @@
                     <connections>
                         <outlet property="purchase_table" destination="8hN-Xj-2C1" id="vol-zY-ygh"/>
                         <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="KHV-6I-MLA"/>
+                        <segue destination="2Fe-HS-RVK" kind="presentation" identifier="Detail_Segue" id="VOy-9D-JtN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dL-fL-kzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2487,6 +2520,7 @@
                     <connections>
                         <outlet property="Friend_Table" destination="tlu-bK-EHj" id="XUe-F2-sab"/>
                         <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="lEg-aw-kd5"/>
+                        <segue destination="cpr-oM-6LV" kind="show" identifier="Friend_Segue" id="yp9-cw-n22"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iH2-Q8-QjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2496,7 +2530,7 @@
                     <state key="normal" image="chat.png"/>
                 </button>
             </objects>
-            <point key="canvasLocation" x="1949.5999999999999" y="3149.7751124437782"/>
+            <point key="canvasLocation" x="2114" y="3150"/>
         </scene>
         <!--Profile-->
         <scene sceneID="IP5-75-cXp">
@@ -2703,7 +2737,7 @@
         <!--Chat View Controller-->
         <scene sceneID="sHW-cw-Ad0">
             <objects>
-                <viewController id="eST-Pa-J4n" customClass="chatViewController" customModule="srchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eST-Pa-J4n" customClass="chatViewController" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mdy-q1-ecK"/>
                         <viewControllerLayoutGuide type="bottom" id="bxo-Kn-BNj"/>
@@ -2724,7 +2758,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGV-IT-e2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2372" y="4345.2773613193403"/>
+            <point key="canvasLocation" x="-105" y="1711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lYg-o4-44P">
@@ -2742,7 +2776,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9IS-55-PHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432.8" y="4345.2773613193403"/>
+            <point key="canvasLocation" x="-1826" y="1609"/>
         </scene>
     </scenes>
     <resources>
@@ -2763,6 +2797,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KHV-6I-MLA"/>
-        <segue reference="8yg-3r-wcX"/>
+        <segue reference="VOy-9D-JtN"/>
     </inferredMetricsTieBreakers>
 </document>

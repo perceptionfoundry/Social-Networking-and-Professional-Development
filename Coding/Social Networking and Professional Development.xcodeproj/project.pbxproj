@@ -19,6 +19,7 @@
 		F22F1AF020F38898004FCF61 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = F22F1AEE20F38898004FCF61 /* help.png */; };
 		F254C1D520F89CA100177BEA /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254C1D420F89CA100177BEA /* DetailVC.swift */; };
 		F254C1D720F8A98E00177BEA /* no image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F254C1D620F8A98D00177BEA /* no image.jpeg */; };
+		F2586BAC20FC5F7900E3D51D /* AdminChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2586BAB20FC5F7900E3D51D /* AdminChatVC.swift */; };
 		F25D15D520ECC63C00E5BCF5 /* purchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */; };
 		F25D15DB20ECCB0800E5BCF5 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */; };
 		F25D15DD20ECD18800E5BCF5 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = F25D15DC20ECD18800E5BCF5 /* sample.png */; };
@@ -75,6 +76,7 @@
 		F22F1AEE20F38898004FCF61 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		F254C1D420F89CA100177BEA /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		F254C1D620F8A98D00177BEA /* no image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "no image.jpeg"; sourceTree = "<group>"; };
+		F2586BAB20FC5F7900E3D51D /* AdminChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChatVC.swift; sourceTree = "<group>"; };
 		F25D15D420ECC63C00E5BCF5 /* purchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purchaseCell.swift; sourceTree = "<group>"; };
 		F25D15DA20ECCB0800E5BCF5 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		F25D15DC20ECD18800E5BCF5 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				F278F2C920F7FB0E00F45A0A /* OfferVC.swift */,
 				F254C1D420F89CA100177BEA /* DetailVC.swift */,
 				F2DAF1E720F8CF8E007BF7DC /* CheckOutVC.swift */,
+				F2586BAB20FC5F7900E3D51D /* AdminChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2586BAC20FC5F7900E3D51D /* AdminChatVC.swift in Sources */,
 				F25D15DB20ECCB0800E5BCF5 /* PurchaseVC.swift in Sources */,
 				F278F2C320F7F76A00F45A0A /* Custom_View.swift in Sources */,
 				F22F1AE020F37891004FCF61 /* ProfileVC.swift in Sources */,

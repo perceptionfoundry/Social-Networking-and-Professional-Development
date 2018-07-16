@@ -19,6 +19,9 @@ class FriendVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var dbRef : DatabaseReference!
     var dbhandle : DatabaseHandle!
     
+    var selectedFrienduID = ""
+
+    
     
     var friend_Array = [[String : String]]()
 
@@ -124,12 +127,72 @@ class FriendVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             
             
             
+            dbRef = Database.database().reference()
+            dbhandle = dbRef.child("User").observe(.childAdded, with: { (UserSnap) in
+                guard let userData = UserSnap.value else{return}
+                
+                let Uservalue = userData as! [String : String]
+                
+                if Auth.auth().currentUser?.uid == Uservalue["uID"]{
+                    
+                    
+                    let fileUrl = Uservalue["Image"] as! String
+                    let url = URL(string: fileUrl)
+                    let data = NSData(contentsOf: url!)
+                    let picture = UIImage(data: data as! Data)
+                    dest.DP = picture!
+                    
+                }
+                
+            })
+            
+            
             dest.channelName = (Auth.auth().currentUser?.uid)! + "live"
             dest.receiverID = "dsjkhvasd982fbh"
+            dest.currentUserId = (Auth.auth().currentUser?.uid)!
+
+        }
+        
+        else if segue.identifier == "Friend_Segue"{
+            let Nav = segue.destination as! UINavigationController
             
+            let dest = Nav.viewControllers.first as! chatViewController
+            
+            dbRef = Database.database().reference()
+            dbhandle = dbRef.child("User").observe(.childAdded, with: { (UserSnap) in
+                guard let userData = UserSnap.value else{return}
+                
+                let Uservalue = userData as! [String : String]
+                
+                if Auth.auth().currentUser?.uid == Uservalue["uID"]{
+                    
+                    
+                    let fileUrl = Uservalue["Image"] as! String
+                    let url = URL(string: fileUrl)
+                    let data = NSData(contentsOf: url!)
+                    let picture = UIImage(data: data! as Data)
+                    dest.DP = picture!
+                    
+                }
+                
+            })
+            
+            
+            
+            dest.channelName = (Auth.auth().currentUser?.uid)! + selectedFrienduID
+            dest.receiverID = selectedFrienduID
+            dest.currentUserId = (Auth.auth().currentUser?.uid)!
         }
      
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.selectedFrienduID = friend_Array[indexPath.row]["uID"]!
+        self.performSegue(withIdentifier: "Friend_Segue", sender: nil)
+    }
+    
+   
 
 }

@@ -21,7 +21,6 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var dbHandle : DatabaseHandle!
     
     var course_Array = [[String : String]]()
-
     
     var loop = 0
     
@@ -132,12 +131,38 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             let dest = Nav.viewControllers.first as! chatViewController
             
+            dbRef = Database.database().reference()
+            dbHandle = dbRef.child("User").observe(.childAdded, with: { (UserSnap) in
+                guard let userData = UserSnap.value else{return}
+                
+                let Uservalue = userData as! [String : String]
+                
+                if Auth.auth().currentUser?.uid == Uservalue["uID"]{
+                    
+                    
+                    let fileUrl = Uservalue["Image"] as! String
+                    let url = URL(string: fileUrl)
+                    let data = NSData(contentsOf: url!)
+                    let picture = UIImage(data: data as! Data)
+                    dest.DP = picture!
+                    
+                }
+                
+            })
             
             
+           
+
             dest.channelName = (Auth.auth().currentUser?.uid)! + "live"
-            dest.receiverID = "dsjkhvasd982fbh"
-        
+            dest.receiverID = "Live_Chat"
+            dest.currentUserId = (Auth.auth().currentUser?.uid)!
             
+        }
+        
+        else{
+            let dest = segue.destination as! DetailVC
+            
+            dest.selected_Course = SelectedCourseTitle
         }
         
     }
