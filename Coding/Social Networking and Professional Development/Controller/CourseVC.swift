@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SDWebImage
+import XLPagerTabStrip
 
 class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -169,5 +170,12 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 134
+    }
+}
+
+extension CourseVC : IndicatorInfoProvider{
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "All Course")
     }
 }

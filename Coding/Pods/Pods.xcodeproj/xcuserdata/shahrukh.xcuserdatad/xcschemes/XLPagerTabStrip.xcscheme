@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "143D471AE34988AF50472897AB208FAE"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "59D942D3C3063939F2610E3D1EBD145A"
+               BlueprintName = "XLPagerTabStrip"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SDWebImage.framework">
+               BuildableName = "XLPagerTabStrip.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

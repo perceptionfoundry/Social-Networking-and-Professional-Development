@@ -17,6 +17,8 @@
 		F22F1AEC20F37995004FCF61 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F1AE920F37995004FCF61 /* ButtonTableViewCell.swift */; };
 		F22F1AEF20F38898004FCF61 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = F22F1AED20F38898004FCF61 /* feedback.png */; };
 		F22F1AF020F38898004FCF61 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = F22F1AEE20F38898004FCF61 /* help.png */; };
+		F247BEF720FF5E03003B409E /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F247BEF620FF5E03003B409E /* CollectionVC.swift */; };
+		F247BEF920FF5EB9003B409E /* PlanningVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F247BEF820FF5EB9003B409E /* PlanningVC.swift */; };
 		F254C1D520F89CA100177BEA /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254C1D420F89CA100177BEA /* DetailVC.swift */; };
 		F254C1D720F8A98E00177BEA /* no image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F254C1D620F8A98D00177BEA /* no image.jpeg */; };
 		F2586BAC20FC5F7900E3D51D /* AdminChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2586BAB20FC5F7900E3D51D /* AdminChatVC.swift */; };
@@ -50,6 +52,9 @@
 		F282895120E61826002A45B5 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = F282894F20E61826002A45B5 /* password.png */; };
 		F282895220E61826002A45B5 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = F282895020E61826002A45B5 /* email.png */; };
 		F28ED83220E67AD5007FBF8F /* add-image.png in Resources */ = {isa = PBXBuildFile; fileRef = F28ED83120E67AD4007FBF8F /* add-image.png */; };
+		F29FBD6020FF9453006B2063 /* CareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FBD5F20FF9453006B2063 /* CareerVC.swift */; };
+		F29FBD6220FF95CD006B2063 /* log.png in Resources */ = {isa = PBXBuildFile; fileRef = F29FBD6120FF95CC006B2063 /* log.png */; };
+		F29FBD6420FF9A21006B2063 /* CPD_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FBD6320FF9A21006B2063 /* CPD_Cell.swift */; };
 		F2DAF1E820F8CF8E007BF7DC /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAF1E720F8CF8E007BF7DC /* CheckOutVC.swift */; };
 		F2E203CA20E60D2800E3B5B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E203C920E60D2800E3B5B2 /* AppDelegate.swift */; };
 		F2E203CC20E60D2800E3B5B2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E203CB20E60D2800E3B5B2 /* SignInVC.swift */; };
@@ -74,6 +79,8 @@
 		F22F1AE920F37995004FCF61 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		F22F1AED20F38898004FCF61 /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback.png; sourceTree = "<group>"; };
 		F22F1AEE20F38898004FCF61 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		F247BEF620FF5E03003B409E /* CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
+		F247BEF820FF5EB9003B409E /* PlanningVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningVC.swift; sourceTree = "<group>"; };
 		F254C1D420F89CA100177BEA /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		F254C1D620F8A98D00177BEA /* no image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "no image.jpeg"; sourceTree = "<group>"; };
 		F2586BAB20FC5F7900E3D51D /* AdminChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChatVC.swift; sourceTree = "<group>"; };
@@ -107,6 +114,9 @@
 		F282894F20E61826002A45B5 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = password.png; path = "../../../SN&PD (images)/password.png"; sourceTree = "<group>"; };
 		F282895020E61826002A45B5 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = "../../../SN&PD (images)/email.png"; sourceTree = "<group>"; };
 		F28ED83120E67AD4007FBF8F /* add-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-image.png"; path = "../../../SN&PD (images)/add-image.png"; sourceTree = "<group>"; };
+		F29FBD5F20FF9453006B2063 /* CareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerVC.swift; sourceTree = "<group>"; };
+		F29FBD6120FF95CC006B2063 /* log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = log.png; sourceTree = "<group>"; };
+		F29FBD6320FF9A21006B2063 /* CPD_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPD_Cell.swift; sourceTree = "<group>"; };
 		F2DAF1E720F8CF8E007BF7DC /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
 		F2E203C620E60D2800E3B5B2 /* Social Networking and Professional Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Networking and Professional Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E203C920E60D2800E3B5B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +174,9 @@
 				F254C1D420F89CA100177BEA /* DetailVC.swift */,
 				F2DAF1E720F8CF8E007BF7DC /* CheckOutVC.swift */,
 				F2586BAB20FC5F7900E3D51D /* AdminChatVC.swift */,
+				F247BEF620FF5E03003B409E /* CollectionVC.swift */,
+				F247BEF820FF5EB9003B409E /* PlanningVC.swift */,
+				F29FBD5F20FF9453006B2063 /* CareerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,6 +190,7 @@
 				F22F1AE920F37995004FCF61 /* ButtonTableViewCell.swift */,
 				F22F1AE820F37994004FCF61 /* TopTableViewCell.swift */,
 				F278F2CB20F7FB7900F45A0A /* OfferCell.swift */,
+				F29FBD6320FF9A21006B2063 /* CPD_Cell.swift */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -195,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				F279016520FB264C0003AB52 /* person.png */,
+				F29FBD6120FF95CC006B2063 /* log.png */,
 				F219AD4020F38CD900DD83C4 /* Sign Out.png */,
 				F22F1AED20F38898004FCF61 /* feedback.png */,
 				F22F1AEE20F38898004FCF61 /* help.png */,
@@ -326,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29FBD6220FF95CD006B2063 /* log.png in Resources */,
 				F282894120E612A7002A45B5 /* purchase.png in Resources */,
 				F254C1D720F8A98E00177BEA /* no image.jpeg in Resources */,
 				F22F1AEF20F38898004FCF61 /* feedback.png in Resources */,
@@ -372,6 +388,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -389,6 +406,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -427,10 +445,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2586BAC20FC5F7900E3D51D /* AdminChatVC.swift in Sources */,
+				F247BEF720FF5E03003B409E /* CollectionVC.swift in Sources */,
 				F25D15DB20ECCB0800E5BCF5 /* PurchaseVC.swift in Sources */,
 				F278F2C320F7F76A00F45A0A /* Custom_View.swift in Sources */,
 				F22F1AE020F37891004FCF61 /* ProfileVC.swift in Sources */,
 				F278F2C420F7F76A00F45A0A /* customTF.swift in Sources */,
+				F29FBD6020FF9453006B2063 /* CareerVC.swift in Sources */,
 				F25DEB5520EA13AE00594F3E /* ForgetVC.swift in Sources */,
 				F254C1D520F89CA100177BEA /* DetailVC.swift in Sources */,
 				F278F2C520F7F76A00F45A0A /* ConfigureUserInterface.swift in Sources */,
@@ -441,9 +461,11 @@
 				F22F1AEB20F37995004FCF61 /* TopTableViewCell.swift in Sources */,
 				F278F2C820F7F76A00F45A0A /* UnderlinedTextField.swift in Sources */,
 				F279016820FB273D0003AB52 /* chatViewController.swift in Sources */,
+				F29FBD6420FF9A21006B2063 /* CPD_Cell.swift in Sources */,
 				F2F0D28920EB88820098CF97 /* CourseCell.swift in Sources */,
 				F2F0D28720EB7F0D0098CF97 /* CourseVC.swift in Sources */,
 				F25DEB5320EA138D00594F3E /* SignUpVC.swift in Sources */,
+				F247BEF920FF5EB9003B409E /* PlanningVC.swift in Sources */,
 				F278F2C720F7F76A00F45A0A /* Custom_ImageView.swift in Sources */,
 				F25D15E120ECDD3800E5BCF5 /* FriendVC.swift in Sources */,
 				F278F2C220F7F76A00F45A0A /* Custom_Label.swift in Sources */,

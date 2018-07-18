@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SDWebImage
+import XLPagerTabStrip
 
 class PurchaseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -176,4 +177,11 @@ class PurchaseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
  
 
+}
+
+extension PurchaseVC : IndicatorInfoProvider{
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Purchase")
+    }
 }
