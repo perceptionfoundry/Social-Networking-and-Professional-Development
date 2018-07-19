@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 
 protocol dateFetching {
@@ -16,10 +17,22 @@ protocol dateFetching {
 class PlanningVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, dateFetching {
     
     
+    var dataValue = ["Title" : "",
+                     "Learn" : "",
+                     "Objective" : "",
+                     "Category" : "",
+                     "Activity" : "",
+                     "Support" : "",
+                     "Date" : "",
+                     "Measure" : "",
+                     "Status" : ""
+                     ]
     
     
+    var status = "No Achieved"
+    var Segue_resource = ""
+    var Segue_Data = [String : String]()
 
-    
     @IBOutlet weak var Plan_Title: UITextField!
     @IBOutlet weak var Want_To_Learn: UITextView!
     @IBOutlet weak var Objective: UITextField!
@@ -29,6 +42,11 @@ class PlanningVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var date: UITextField!
     @IBOutlet weak var measure: UITextView!
     @IBOutlet weak var Achievement_Segment: UISegmentedControl!
+    
+    @IBOutlet weak var edit_Button: Custom_Button!
+    
+    var dbRef : DatabaseReference!
+    
     
     
     var dateValue : String?
@@ -47,6 +65,41 @@ class PlanningVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        edit_Button.isHidden = true
+        
+        
+        if Segue_resource == "Segue"{
+            
+            edit_Button.isHidden = false
+            Plan_Title.isUserInteractionEnabled = false
+            Want_To_Learn.isUserInteractionEnabled = false
+            Objective.isUserInteractionEnabled = false
+            personalORprofessional.isUserInteractionEnabled = false
+            activity.isUserInteractionEnabled = false
+            support.isUserInteractionEnabled = false
+            date.isUserInteractionEnabled = false
+            measure.isUserInteractionEnabled = false
+            
+            self.dataValue = self.Segue_Data
+            
+            print(self.dataValue)
+            
+            
+            
+            Plan_Title.text! = self.dataValue["Title"]!
+            Want_To_Learn.text! =  self.dataValue["Learn"]!
+              Objective.text! = self.dataValue["Objective"]!
+           personalORprofessional.text! =  self.dataValue["Category"]!
+            activity.text! =  self.dataValue["Activity"]!
+             support.text! = self.dataValue["Support"]!
+             date.text! = self.dataValue["Date"]!
+            measure.text! = self.dataValue["Measure"]!
+           self.status =  self.dataValue["Status"]!
+            
+        }
+        
+       
 
         // Do any additional setup after loading the view.
         PickerView.dataSource = self
@@ -67,6 +120,14 @@ class PlanningVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
   
     @IBAction func Status_Segment(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
+        
+        if sender.selectedSegmentIndex == 1{
+            self.status = "Achieved"
+        }
+        else{
+            self.status = "No Achieved"
+
+        }
     }
     
     
@@ -74,13 +135,52 @@ class PlanningVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     
     @IBAction func Edit(_ sender: Any) {
+        
+        edit_Button.isHidden = true
+        Plan_Title.isUserInteractionEnabled = true
+        Want_To_Learn.isUserInteractionEnabled = true
+        Objective.isUserInteractionEnabled = true
+        personalORprofessional.isUserInteractionEnabled = true
+        activity.isUserInteractionEnabled = true
+        support.isUserInteractionEnabled = true
+        date.isUserInteractionEnabled = true
+        measure.isUserInteractionEnabled = true
     }
     
     @IBAction func Cancel_Button(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    
     @IBAction func Save_button(_ sender: Any) {
+        
+        self.dataValue["Title"] = Plan_Title.text!
+        self.dataValue["Learn"] = Want_To_Learn.text!
+        self.dataValue["Objective"] = Objective.text!
+        self.dataValue["Category"] = personalORprofessional.text!
+        self.dataValue["Activity"] = activity.text!
+        self.dataValue["Support"] = support.text!
+        self.dataValue["Date"] = date.text!
+        self.dataValue["Measure"] = measure.text!
+        self.dataValue["Status"] = self.status
+                     
+        print(dataValue)
+        
+        dbRef = Database.database().reference()
+        
+        dbRef.child("CPD").child((Auth.auth().currentUser?.uid)!).child(self.dataValue["Title"]!).setValue(dataValue)
+        
+        self.dismiss(animated: true, completion: nil)
+       
     }
+    
+    
+
+    
+    
+    
     
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
