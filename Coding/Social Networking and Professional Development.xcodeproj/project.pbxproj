@@ -51,6 +51,7 @@
 		F282894720E612A7002A45B5 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = F282894020E612A7002A45B5 /* setting.png */; };
 		F282895120E61826002A45B5 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = F282894F20E61826002A45B5 /* password.png */; };
 		F282895220E61826002A45B5 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = F282895020E61826002A45B5 /* email.png */; };
+		F28E99A02100A204003B4CE6 /* DateCheckinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28E999F2100A204003B4CE6 /* DateCheckinVC.swift */; };
 		F28ED83220E67AD5007FBF8F /* add-image.png in Resources */ = {isa = PBXBuildFile; fileRef = F28ED83120E67AD4007FBF8F /* add-image.png */; };
 		F29FBD6020FF9453006B2063 /* CareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FBD5F20FF9453006B2063 /* CareerVC.swift */; };
 		F29FBD6220FF95CD006B2063 /* log.png in Resources */ = {isa = PBXBuildFile; fileRef = F29FBD6120FF95CC006B2063 /* log.png */; };
@@ -113,6 +114,7 @@
 		F282894020E612A7002A45B5 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting.png; path = "../../../SN&PD (images)/setting.png"; sourceTree = "<group>"; };
 		F282894F20E61826002A45B5 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = password.png; path = "../../../SN&PD (images)/password.png"; sourceTree = "<group>"; };
 		F282895020E61826002A45B5 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = "../../../SN&PD (images)/email.png"; sourceTree = "<group>"; };
+		F28E999F2100A204003B4CE6 /* DateCheckinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCheckinVC.swift; sourceTree = "<group>"; };
 		F28ED83120E67AD4007FBF8F /* add-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-image.png"; path = "../../../SN&PD (images)/add-image.png"; sourceTree = "<group>"; };
 		F29FBD5F20FF9453006B2063 /* CareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerVC.swift; sourceTree = "<group>"; };
 		F29FBD6120FF95CC006B2063 /* log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = log.png; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		F2187FB420EE202C00ED90AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F28E999F2100A204003B4CE6 /* DateCheckinVC.swift */,
 				F279016720FB273D0003AB52 /* chatViewController.swift */,
 				F25DEB5420EA13AE00594F3E /* ForgetVC.swift */,
 				F2E203CB20E60D2800E3B5B2 /* SignInVC.swift */,
@@ -471,6 +474,7 @@
 				F278F2C220F7F76A00F45A0A /* Custom_Label.swift in Sources */,
 				F278F2CA20F7FB0E00F45A0A /* OfferVC.swift in Sources */,
 				F278F2C620F7F76A00F45A0A /* Custom_Button.swift in Sources */,
+				F28E99A02100A204003B4CE6 /* DateCheckinVC.swift in Sources */,
 				F25D15E320ECDD5F00E5BCF5 /* FriendCell.swift in Sources */,
 				F2E203CA20E60D2800E3B5B2 /* AppDelegate.swift in Sources */,
 				F22F1AEC20F37995004FCF61 /* ButtonTableViewCell.swift in Sources */,

@@ -628,6 +628,9 @@ Write your objective
                                                     <segment title="Achieved"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="Status_Segment:" destination="aTP-Cs-64l" eventType="valueChanged" id="Izx-1o-d1K"/>
+                                                </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uab-jx-LVm" customClass="Custom_Button" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
                                                 <rect key="frame" x="270" y="30" width="85" height="30"/>
@@ -750,6 +753,7 @@ Write your objective
                         <outlet property="measure" destination="A92-xI-PxZ" id="eUK-vx-otH"/>
                         <outlet property="personalORprofessional" destination="T4l-xw-GVY" id="kX1-BM-fqW"/>
                         <outlet property="support" destination="kPk-OC-ClD" id="j48-F5-aiF"/>
+                        <segue destination="lbZ-V1-UlC" kind="presentation" identifier="Date_Segue" id="jYD-DK-FZl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPR-GS-I6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2886,8 +2890,8 @@ Write your objective
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eWY-L2-qxu">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eWY-L2-qxu">
+                                <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-Xj-2C1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
@@ -3032,7 +3036,7 @@ Write your objective
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PKi-Ap-Vl1">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PKi-Ap-Vl1">
                                 <rect key="frame" x="177" y="323" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3228,8 +3232,8 @@ Write your objective
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-wr-z3q">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-wr-z3q">
+                                <rect key="frame" x="-0.5" y="-14.5" width="375" height="667"/>
                                 <color key="color" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fEZ-IP-ydU">
@@ -3425,6 +3429,96 @@ Write your objective
             </objects>
             <point key="canvasLocation" x="470" y="6861"/>
         </scene>
+        <!--Date CheckinVC-->
+        <scene sceneID="pi1-TC-n5q">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="lbZ-V1-UlC" customClass="DateCheckinVC" customModule="Gleepads" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OgA-VX-G2B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRw-qx-8eW" customClass="Custom_View" customModule="Gleepads" customModuleProvider="target">
+                                <rect key="frame" x="30" y="164" width="315" height="359"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cEK-ZZ-SXN">
+                                        <rect key="frame" x="-2.5" y="71.5" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="549447453.60212195">
+                                            <!--2018-05-31 08:17:33 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="pickerAction:" destination="lbZ-V1-UlC" eventType="valueChanged" id="RCz-II-5F2"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8t-DW-EPk" customClass="Custom_Button" customModule="Gleepads" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="304" width="173" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Confirm">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ConfirmAction:" destination="lbZ-V1-UlC" eventType="touchUpInside" id="Qc4-lx-FYw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-In Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51h-o4-ebV">
+                                        <rect key="frame" x="72" y="3.5" width="172" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9836503379" green="0.97889840390000005" blue="0.98840227189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="51h-o4-ebV" firstAttribute="centerX" secondItem="gRw-qx-8eW" secondAttribute="centerX" id="7M8-Gf-ei3"/>
+                                    <constraint firstItem="51h-o4-ebV" firstAttribute="centerY" secondItem="gRw-qx-8eW" secondAttribute="centerY" constant="-160" id="RHT-fV-4Eh"/>
+                                    <constraint firstItem="cEK-ZZ-SXN" firstAttribute="centerX" secondItem="gRw-qx-8eW" secondAttribute="centerX" id="WZz-nT-FwV"/>
+                                    <constraint firstItem="U8t-DW-EPk" firstAttribute="leading" secondItem="gRw-qx-8eW" secondAttribute="leading" constant="71" id="e4z-U1-FX5"/>
+                                    <constraint firstItem="U8t-DW-EPk" firstAttribute="top" secondItem="cEK-ZZ-SXN" secondAttribute="bottom" constant="17" id="fkS-Hz-Pdg"/>
+                                    <constraint firstItem="cEK-ZZ-SXN" firstAttribute="centerY" secondItem="gRw-qx-8eW" secondAttribute="centerY" id="jx8-NE-O5y"/>
+                                    <constraint firstAttribute="trailing" secondItem="U8t-DW-EPk" secondAttribute="trailing" constant="71" id="kGu-hk-hcd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.89362157529999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gRw-qx-8eW" firstAttribute="leading" secondItem="aE7-FZ-cBd" secondAttribute="leading" constant="30" id="D1f-eq-5e9"/>
+                            <constraint firstItem="gRw-qx-8eW" firstAttribute="top" secondItem="aE7-FZ-cBd" secondAttribute="top" constant="144" id="Flu-Rl-dus"/>
+                            <constraint firstItem="aE7-FZ-cBd" firstAttribute="bottom" secondItem="gRw-qx-8eW" secondAttribute="bottom" constant="144" id="Km5-K8-p8B"/>
+                            <constraint firstItem="aE7-FZ-cBd" firstAttribute="trailing" secondItem="gRw-qx-8eW" secondAttribute="trailing" constant="30" id="n3j-dv-ZSD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aE7-FZ-cBd"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="cEK-ZZ-SXN" id="He6-Bj-wHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2GQ-vo-CaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3676" y="3112"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add-image.png" width="80" height="80"/>
@@ -3444,8 +3538,8 @@ Write your objective
         <image name="setting.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="L8i-mk-0LN"/>
-        <segue reference="8yg-3r-wcX"/>
+        <segue reference="KHV-6I-MLA"/>
+        <segue reference="VOy-9D-JtN"/>
         <segue reference="K99-zC-8P3"/>
     </inferredMetricsTieBreakers>
 </document>
