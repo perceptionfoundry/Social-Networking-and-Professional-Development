@@ -14,6 +14,7 @@ class OfferVC: UIViewController,UITableViewDataSource,UITableViewDelegate{
 
     @IBOutlet weak var offerTable: UITableView!
    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     var SelectedCourseTitle : String!
     //    let db = Firestore.firestore()
     var dbRef : DatabaseReference!
@@ -48,6 +49,7 @@ class OfferVC: UIViewController,UITableViewDataSource,UITableViewDelegate{
             
             self.course_Array.append(Course_Data as! [String : String])
             print(self.course_Array)
+            self.indicator.isHidden = true
             self.offerTable.reloadData()
         }
         

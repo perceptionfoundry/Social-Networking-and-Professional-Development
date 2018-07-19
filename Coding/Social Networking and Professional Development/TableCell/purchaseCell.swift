@@ -10,7 +10,6 @@ import UIKit
 
 class purchaseCell: UITableViewCell {
 
-    @IBOutlet weak var Purchase_Image: UIImageView!
     
     @IBOutlet weak var Purchase_description: UILabel!
     

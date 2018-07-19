@@ -26,7 +26,8 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var loop = 0
     
     @IBOutlet weak var Course_Table: UITableView!
-   
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     
 
     
@@ -51,6 +52,7 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             self.course_Array.append(Course_Data as! [String : String])
              print(self.course_Array)
             self.Course_Table.reloadData()
+            self.indicator.isHidden = true
         }
         
         
@@ -105,11 +107,12 @@ class CourseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.separatorStyle = .none
         
         cell.Course_Title.text = course_Array[indexPath.row]["Title"]
-        cell.Course_Descrip.text = course_Array[indexPath.row]["Description"]
+        cell.Course_Descrip.text = course_Array[indexPath.row]["Objective"]
         
-        let string_url = URL(string: course_Array[indexPath.row]["Image_URL"]!)
-
-        cell.Course_Image.sd_setImage(with: string_url, placeholderImage: UIImage(named: "add-image"), options: .progressiveDownload, completed: nil)
+//        let string_url = URL(string: course_Array[indexPath.row]["Image_URL"])
+//
+//        cell.Course_Image.sd_setImage(with: string_url, placeholderImage: UIImage(named: "add-image"), options: .progressiveDownload, completed: nil)
+        cell.Course_Image.image = UIImage(named: "logo.png")
         return cell
     }
     

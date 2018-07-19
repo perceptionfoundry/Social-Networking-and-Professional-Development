@@ -32,9 +32,10 @@ class CheckOutVC: UIViewController {
         print("*******************")
         
         
-        let url = URL(string: self.selectedCourse["Image_URL"]!)
-        self.Course_Image.sd_setImage(with: url!, placeholderImage: UIImage(named: "no image"), options: .progressiveDownload, completed: nil)
+//        let url = URL(string: self.selectedCourse["Image_URL"]!)
+//        self.Course_Image.sd_setImage(with: url!, placeholderImage: UIImage(named: "no image"), options: .progressiveDownload, completed: nil)
         
+        self.Course_Image.image = UIImage(named: "logo.png")
         self.Price_label.text = selectedCourse["Price"]
         self.Course_Title.text = selectedCourse["Title"]
         

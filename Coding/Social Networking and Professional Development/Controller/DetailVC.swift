@@ -21,7 +21,6 @@ class DetailVC: UIViewController {
     @IBOutlet weak var Objective_Label: UILabel!
     @IBOutlet weak var Whom_Label: UILabel!
     @IBOutlet weak var Entry_Label: UILabel!
-    @IBOutlet weak var Learning_Label: UILabel!
     @IBOutlet weak var Study_Label: UILabel!
     @IBOutlet weak var Career_Label: UILabel!
     @IBOutlet weak var Outcome_Label: UILabel!
@@ -58,16 +57,15 @@ class DetailVC: UIViewController {
                             print(self.CourseData)
                 print("*******************************")
                 
-                let url = URL(string: self.CourseData["Image_URL"]!)
-                self.Course_Image.sd_setImage(with: url!, placeholderImage: UIImage(named: "no image"), options: .progressiveDownload, completed: nil)
-                
+//                let url = URL(string: self.CourseData["Image_URL"]!)
+//                self.Course_Image.sd_setImage(with: url!, placeholderImage: UIImage(named: "logo.png"), options: .progressiveDownload, completed: nil)
+                self.Course_Image.image = UIImage(named: "logo.png")
                 self.Amount.text = self.CourseData["Price"]!
                 self.Title_Label.text = self.CourseData["Title"]!
                 self.Objective_Label.text = self.CourseData["Objective"]!
                 self.Descip_Label.text = self.CourseData["Description"]!
                 self.Whom_Label.text = self.CourseData["For_Whom"]!
                 self.Entry_Label.text = self.CourseData["Entry_Requirement"]!
-                self.Learning_Label.text = self.CourseData["Learning_Path"]!
                 self.Study_Label.text = self.CourseData["Study_Path"]!
                 self.Career_Label.text = self.CourseData["Career_Path"]!
                 self.Outcome_Label.text = self.CourseData["Outcome"]!

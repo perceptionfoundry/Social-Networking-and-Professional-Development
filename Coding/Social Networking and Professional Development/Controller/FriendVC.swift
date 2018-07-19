@@ -13,6 +13,7 @@ class FriendVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var Friend_Table: UITableView!
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
 //    var db = Firestore.firestore()
     
@@ -43,6 +44,7 @@ class FriendVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 self.friend_Array.append(Uservalue)
                 
             }
+            self.indicator.isHidden = true
             self.Friend_Table.reloadData()
 
         })

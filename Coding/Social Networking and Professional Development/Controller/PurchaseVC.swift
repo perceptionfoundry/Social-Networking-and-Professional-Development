@@ -15,6 +15,7 @@ class PurchaseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var SelectedCourseTitle : String!
 
+    @IBOutlet weak var indictor: UIActivityIndicatorView!
     
     @IBOutlet weak var purchase_table: UITableView!
     
@@ -51,7 +52,7 @@ class PurchaseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             self.purchase_array.append(Course_Data as! [String : String])
             print(self.purchase_array)
-
+            self.indictor.isHidden = true
             self.purchase_table.reloadData()
         }
         
@@ -101,7 +102,7 @@ class PurchaseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.Purchase_description.text = purchase_array[indexPath.row]["Course"]
         let string_url = URL(string: purchase_array[indexPath.row]["Image_URL"]!)
 
-        cell.Purchase_Image.sd_setImage(with: string_url, placeholderImage: UIImage(named: "no image"), options: .progressiveDownload, completed: nil)
+      
 
         cell.selectionStyle = .none
         tableView.separatorStyle = .none

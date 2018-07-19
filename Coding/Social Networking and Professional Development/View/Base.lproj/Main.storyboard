@@ -793,18 +793,17 @@ Write your objective
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqm-Rx-mf1" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
                                                             <rect key="frame" x="4" y="5" width="219.5" height="40"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-0g-rca">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-0g-rca">
                                                                     <rect key="frame" x="11" y="2" width="197" height="36"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Acheived" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XA4-ar-hKj">
-                                                                    <rect key="frame" x="224" y="9.5" width="101.5" height="21"/>
+                                                                    <rect key="frame" x="224.5" y="9.5" width="100.5" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <size key="shadowOffset" width="-1" height="0.0"/>
+                                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.40000000000000002" green="0.45882352939999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -830,7 +829,7 @@ Write your objective
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="iqm-Rx-mf1" firstAttribute="width" secondItem="1fT-gV-zuZ" secondAttribute="width" multiplier="0.65" id="G03-Gb-Mk2"/>
                                                         <constraint firstItem="iqm-Rx-mf1" firstAttribute="centerX" secondItem="1fT-gV-zuZ" secondAttribute="centerX" multiplier="0.675" id="bz6-EA-C9f"/>
@@ -851,12 +850,6 @@ Write your objective
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                            <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -970,6 +963,10 @@ Write your objective
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ucM-oG-IRK">
+                                <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                                <color key="color" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zua-ms-Grw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1071,6 +1068,7 @@ Write your objective
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ucM-oG-IRK" firstAttribute="height" secondItem="v6D-sH-kHc" secondAttribute="height" id="Bjc-Sp-ge5"/>
                             <constraint firstItem="vSw-Ps-nC3" firstAttribute="width" secondItem="v6D-sH-kHc" secondAttribute="width" multiplier="0.15" id="Bw2-wF-sFQ"/>
                             <constraint firstItem="Zua-ms-Grw" firstAttribute="trailing" secondItem="RrG-ut-Ty1" secondAttribute="trailing" id="EDX-Ym-FmD"/>
                             <constraint firstItem="vSw-Ps-nC3" firstAttribute="centerY" secondItem="RrG-ut-Ty1" secondAttribute="centerY" multiplier="1.8" id="O5d-h2-VrF"/>
@@ -1078,9 +1076,12 @@ Write your objective
                             <constraint firstItem="vSw-Ps-nC3" firstAttribute="centerX" secondItem="RrG-ut-Ty1" secondAttribute="centerX" multiplier="1.7" id="cus-UP-gVJ"/>
                             <constraint firstItem="Zua-ms-Grw" firstAttribute="top" secondItem="PH3-U8-iBY" secondAttribute="bottom" id="eNm-lj-T4n"/>
                             <constraint firstItem="PH3-U8-iBY" firstAttribute="top" secondItem="RrG-ut-Ty1" secondAttribute="top" id="ein-Qq-JRU"/>
+                            <constraint firstItem="ucM-oG-IRK" firstAttribute="centerX" secondItem="RrG-ut-Ty1" secondAttribute="centerX" id="fB9-HG-Xj8"/>
                             <constraint firstItem="PH3-U8-iBY" firstAttribute="trailing" secondItem="RrG-ut-Ty1" secondAttribute="trailing" id="pXz-Rg-uLO"/>
+                            <constraint firstItem="ucM-oG-IRK" firstAttribute="centerY" secondItem="RrG-ut-Ty1" secondAttribute="centerY" id="q9c-cM-kfn"/>
                             <constraint firstItem="Zua-ms-Grw" firstAttribute="bottom" secondItem="RrG-ut-Ty1" secondAttribute="bottom" id="rtv-ou-xFh"/>
                             <constraint firstItem="vSw-Ps-nC3" firstAttribute="height" secondItem="v6D-sH-kHc" secondAttribute="height" multiplier="0.07" id="wsZ-E2-H8g"/>
+                            <constraint firstItem="ucM-oG-IRK" firstAttribute="width" secondItem="v6D-sH-kHc" secondAttribute="width" id="yNZ-X2-GgL"/>
                             <constraint firstItem="PH3-U8-iBY" firstAttribute="leading" secondItem="RrG-ut-Ty1" secondAttribute="leading" id="zSB-gi-FGJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RrG-ut-Ty1"/>
@@ -1088,6 +1089,7 @@ Write your objective
                     <tabBarItem key="tabBarItem" title="Course" image="plan.png" id="Ddm-a7-VVo"/>
                     <connections>
                         <outlet property="Course_Table" destination="Zua-ms-Grw" id="CZg-S6-Nys"/>
+                        <outlet property="indicator" destination="ucM-oG-IRK" id="iaG-bV-DsR"/>
                         <segue destination="2Fe-HS-RVK" kind="presentation" identifier="Detail_Segue" id="Wj3-K9-vah"/>
                         <segue destination="cpr-oM-6LV" kind="presentation" identifier="Live_Segue" id="HJo-0P-5Xu"/>
                     </connections>
@@ -1353,7 +1355,7 @@ Write your objective
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wV-DH-r1b">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="research-picture.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Vri-dS-0cx" customClass="Custom_ImageView" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="research-picture.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Vri-dS-0cx" customClass="Custom_ImageView" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
                                                 <rect key="frame" x="56" y="30" width="262.5" height="210"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
@@ -1454,10 +1456,10 @@ Write your objective
                                                         <rect key="frame" x="0.0" y="32" width="262.5" height="178"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oK1-4j-3Ng">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="600"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-Nu-tAY">
-                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-Nu-tAY">
+                                                                        <rect key="frame" x="13" y="13" width="236.5" height="264"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1467,11 +1469,10 @@ Write your objective
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="centerY" secondItem="oK1-4j-3Ng" secondAttribute="centerY" id="6Yp-fF-KZC"/>
-                                                                    <constraint firstAttribute="height" constant="240" id="db0-Aw-hUM"/>
-                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="centerX" secondItem="oK1-4j-3Ng" secondAttribute="centerX" id="gpA-jA-Cce"/>
-                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="width" secondItem="oK1-4j-3Ng" secondAttribute="width" multiplier="0.9" id="haI-9v-BLc"/>
-                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="height" secondItem="oK1-4j-3Ng" secondAttribute="height" id="rlR-s6-A33"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Abo-Nu-tAY" secondAttribute="trailing" constant="13" id="Ggq-6G-uRt"/>
+                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="top" secondItem="oK1-4j-3Ng" secondAttribute="top" constant="13" id="Jye-zT-9Au"/>
+                                                                    <constraint firstAttribute="height" constant="600" id="db0-Aw-hUM"/>
+                                                                    <constraint firstItem="Abo-Nu-tAY" firstAttribute="leading" secondItem="oK1-4j-3Ng" secondAttribute="leading" constant="13" id="iPB-oX-Axf"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1515,7 +1516,7 @@ Write your objective
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kmd-oT-wnm" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
                                                 <rect key="frame" x="56" y="600" width="262.5" height="240"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objection:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SMS-cl-FuP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OverView:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SMS-cl-FuP">
                                                         <rect key="frame" x="13" y="13.5" width="236.5" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1525,10 +1526,10 @@ Write your objective
                                                         <rect key="frame" x="0.0" y="35" width="262.5" height="205"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pj-SU-56c">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="1000"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-uu-VuG">
-                                                                        <rect key="frame" x="12.5" y="0.0" width="236.5" height="240"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-uu-VuG">
+                                                                        <rect key="frame" x="13" y="13" width="237" height="264"/>
                                                                         <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -1537,11 +1538,10 @@ Write your objective
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="centerY" secondItem="9pj-SU-56c" secondAttribute="centerY" id="0QI-uR-mh6"/>
-                                                                    <constraint firstAttribute="height" constant="240" id="CRD-0r-MRH"/>
-                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="centerX" secondItem="9pj-SU-56c" secondAttribute="centerX" id="NIc-wK-yFO"/>
-                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="height" secondItem="9pj-SU-56c" secondAttribute="height" id="YGu-8Q-OZC"/>
-                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="width" secondItem="9pj-SU-56c" secondAttribute="width" multiplier="0.9" id="yqy-SV-eOI"/>
+                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="top" secondItem="9pj-SU-56c" secondAttribute="top" constant="13" id="0VZ-Dh-npa"/>
+                                                                    <constraint firstAttribute="height" constant="1000" id="CRD-0r-MRH"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Jps-uu-VuG" secondAttribute="trailing" constant="13" id="Ced-OH-o9k"/>
+                                                                    <constraint firstItem="Jps-uu-VuG" firstAttribute="leading" secondItem="9pj-SU-56c" secondAttribute="leading" constant="13" id="KQ7-Cu-MBp"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1595,10 +1595,10 @@ Write your objective
                                                         <rect key="frame" x="0.0" y="35.5" width="262.5" height="204.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cS2-VO-zPL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="600"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y5F-p6-15D">
-                                                                        <rect key="frame" x="12.5" y="0.0" width="236.5" height="240"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y5F-p6-15D">
+                                                                        <rect key="frame" x="12.5" y="13" width="236.5" height="264"/>
                                                                         <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -1607,11 +1607,10 @@ Write your objective
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="240" id="87N-51-xA6"/>
-                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="height" secondItem="cS2-VO-zPL" secondAttribute="height" id="9tI-nO-Kje"/>
-                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="centerX" secondItem="cS2-VO-zPL" secondAttribute="centerX" id="AyT-Te-HIp"/>
-                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="centerY" secondItem="cS2-VO-zPL" secondAttribute="centerY" id="Hyw-rk-QZ8"/>
-                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="width" secondItem="cS2-VO-zPL" secondAttribute="width" multiplier="0.9" id="lai-oS-6O3"/>
+                                                                    <constraint firstAttribute="height" constant="600" id="87N-51-xA6"/>
+                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="top" secondItem="cS2-VO-zPL" secondAttribute="top" constant="13" id="WEf-bX-wTt"/>
+                                                                    <constraint firstItem="Y5F-p6-15D" firstAttribute="leading" secondItem="cS2-VO-zPL" secondAttribute="leading" constant="13" id="qU5-au-36w"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Y5F-p6-15D" secondAttribute="trailing" constant="13" id="v1Z-M1-MJJ"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1665,10 +1664,10 @@ Write your objective
                                                         <rect key="frame" x="0.0" y="36" width="262.5" height="204"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-Oz-e7e">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="600"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sY7-wU-y92">
-                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sY7-wU-y92">
+                                                                        <rect key="frame" x="13" y="13" width="236.5" height="264"/>
                                                                         <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -1677,11 +1676,10 @@ Write your objective
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="centerY" secondItem="I1g-Oz-e7e" secondAttribute="centerY" id="2Kk-Ny-4dy"/>
-                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="height" secondItem="I1g-Oz-e7e" secondAttribute="height" id="LSp-Ao-342"/>
-                                                                    <constraint firstAttribute="height" constant="240" id="aSi-Zc-J7Y"/>
-                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="width" secondItem="I1g-Oz-e7e" secondAttribute="width" multiplier="0.9" id="kPz-bT-ucX"/>
-                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="centerX" secondItem="I1g-Oz-e7e" secondAttribute="centerX" id="yx3-em-ZP9"/>
+                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="top" secondItem="I1g-Oz-e7e" secondAttribute="top" constant="13" id="F0g-nd-t2J"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="sY7-wU-y92" secondAttribute="trailing" constant="13" id="Zqz-G4-Or7"/>
+                                                                    <constraint firstAttribute="height" constant="600" id="aSi-Zc-J7Y"/>
+                                                                    <constraint firstItem="sY7-wU-y92" firstAttribute="leading" secondItem="I1g-Oz-e7e" secondAttribute="leading" constant="13" id="zoR-iX-rlD"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1722,78 +1720,8 @@ Write your objective
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlw-9b-IcH" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
-                                                <rect key="frame" x="56" y="1380" width="262.5" height="240"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learning Path:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DUY-cy-wlU">
-                                                        <rect key="frame" x="13" y="15.5" width="236.5" height="21.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                        <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMz-9f-lxe">
-                                                        <rect key="frame" x="0.0" y="37" width="262.5" height="203"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebs-4B-prO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-rU-geE">
-                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
-                                                                        <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="centerY" secondItem="Ebs-4B-prO" secondAttribute="centerY" id="HG3-oI-zms"/>
-                                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="centerX" secondItem="Ebs-4B-prO" secondAttribute="centerX" id="PJl-iB-8Wl"/>
-                                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="height" secondItem="Ebs-4B-prO" secondAttribute="height" id="m6L-DL-u7V"/>
-                                                                    <constraint firstAttribute="height" constant="240" id="w7X-9M-60H"/>
-                                                                    <constraint firstItem="LCg-rU-geE" firstAttribute="width" secondItem="Ebs-4B-prO" secondAttribute="width" multiplier="0.9" id="zLd-i3-fQn"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="Ebs-4B-prO" secondAttribute="bottom" id="NJd-g6-UjA"/>
-                                                            <constraint firstItem="Ebs-4B-prO" firstAttribute="top" secondItem="lMz-9f-lxe" secondAttribute="top" id="UVV-gL-F8p"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ebs-4B-prO" secondAttribute="trailing" id="W02-Tz-Wd0"/>
-                                                            <constraint firstItem="Ebs-4B-prO" firstAttribute="leading" secondItem="lMz-9f-lxe" secondAttribute="leading" id="hba-iZ-HOU"/>
-                                                        </constraints>
-                                                    </scrollView>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.98823529409999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="DUY-cy-wlU" firstAttribute="width" secondItem="tlw-9b-IcH" secondAttribute="width" constant="-26" id="2Qa-Xg-0wi"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lMz-9f-lxe" secondAttribute="trailing" id="41E-j8-FuR"/>
-                                                    <constraint firstItem="lMz-9f-lxe" firstAttribute="leading" secondItem="tlw-9b-IcH" secondAttribute="leading" id="KhE-VA-rel"/>
-                                                    <constraint firstItem="Ebs-4B-prO" firstAttribute="width" secondItem="tlw-9b-IcH" secondAttribute="width" id="Sl5-r7-p5b"/>
-                                                    <constraint firstItem="DUY-cy-wlU" firstAttribute="centerY" secondItem="tlw-9b-IcH" secondAttribute="centerY" constant="-93.75" id="a18-id-IRq"/>
-                                                    <constraint firstItem="DUY-cy-wlU" firstAttribute="centerX" secondItem="tlw-9b-IcH" secondAttribute="centerX" id="ehr-AV-BA1"/>
-                                                    <constraint firstItem="lMz-9f-lxe" firstAttribute="top" secondItem="DUY-cy-wlU" secondAttribute="bottom" id="p65-Fh-vEv"/>
-                                                    <constraint firstAttribute="bottom" secondItem="lMz-9f-lxe" secondAttribute="bottom" id="yKe-ce-ICL"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
-                                                        <real key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
-                                                        <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFe-VS-9EO" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
-                                                <rect key="frame" x="56" y="1655" width="262.5" height="240"/>
+                                                <rect key="frame" x="56" y="1392.5" width="262.5" height="240"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Path:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eVy-DN-2m6">
                                                         <rect key="frame" x="13" y="16" width="236.5" height="21.5"/>
@@ -1805,10 +1733,10 @@ Write your objective
                                                         <rect key="frame" x="0.0" y="37.5" width="262.5" height="202.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-9J-Wzn">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="600"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="99y-7f-JK5">
-                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="99y-7f-JK5">
+                                                                        <rect key="frame" x="13" y="13" width="236.5" height="264"/>
                                                                         <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -1817,11 +1745,10 @@ Write your objective
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="centerY" secondItem="vmg-9J-Wzn" secondAttribute="centerY" id="9bk-Mt-T6e"/>
-                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="centerX" secondItem="vmg-9J-Wzn" secondAttribute="centerX" id="Bi1-Nd-Mxy"/>
-                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="width" secondItem="vmg-9J-Wzn" secondAttribute="width" multiplier="0.9" id="TyG-kD-Ci4"/>
-                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="height" secondItem="vmg-9J-Wzn" secondAttribute="height" id="X4p-3N-WKa"/>
-                                                                    <constraint firstAttribute="height" constant="240" id="jGh-ux-st4"/>
+                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="leading" secondItem="vmg-9J-Wzn" secondAttribute="leading" constant="13" id="chh-nE-bgI"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="99y-7f-JK5" secondAttribute="trailing" constant="13" id="i39-Tk-Fea"/>
+                                                                    <constraint firstAttribute="height" constant="600" id="jGh-ux-st4"/>
+                                                                    <constraint firstItem="99y-7f-JK5" firstAttribute="top" secondItem="vmg-9J-Wzn" secondAttribute="top" constant="13" id="ufj-eE-brn"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1863,7 +1790,7 @@ Write your objective
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-BP-gP3" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
-                                                <rect key="frame" x="56" y="1918" width="262.5" height="240"/>
+                                                <rect key="frame" x="56" y="1655.5" width="262.5" height="240"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Career Path:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HbP-cB-FAa">
                                                         <rect key="frame" x="13" y="16" width="236.5" height="21.5"/>
@@ -1875,10 +1802,10 @@ Write your objective
                                                         <rect key="frame" x="0.0" y="37.5" width="262.5" height="202.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPo-kO-syh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="600"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b4A-AB-6Jx">
-                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b4A-AB-6Jx">
+                                                                        <rect key="frame" x="13" y="13" width="236.5" height="264"/>
                                                                         <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -1887,11 +1814,10 @@ Write your objective
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="centerX" secondItem="NPo-kO-syh" secondAttribute="centerX" id="6mk-vH-JHt"/>
-                                                                    <constraint firstAttribute="height" constant="240" id="AFA-3S-2cH"/>
-                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="height" secondItem="NPo-kO-syh" secondAttribute="height" id="Eir-yd-LZk"/>
-                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="centerY" secondItem="NPo-kO-syh" secondAttribute="centerY" id="WNq-Jm-be3"/>
-                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="width" secondItem="NPo-kO-syh" secondAttribute="width" multiplier="0.9" id="ZyI-XG-Ujl"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="b4A-AB-6Jx" secondAttribute="trailing" constant="13" id="0nN-95-ouO"/>
+                                                                    <constraint firstAttribute="height" constant="600" id="AFA-3S-2cH"/>
+                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="top" secondItem="NPo-kO-syh" secondAttribute="top" constant="13" id="Dzr-Tj-Uqm"/>
+                                                                    <constraint firstItem="b4A-AB-6Jx" firstAttribute="leading" secondItem="NPo-kO-syh" secondAttribute="leading" constant="13" id="VTp-KS-lUM"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1933,7 +1859,7 @@ Write your objective
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-cO-KYd" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
-                                                <rect key="frame" x="56" y="2185" width="262.5" height="240"/>
+                                                <rect key="frame" x="56" y="1922.5" width="262.5" height="240"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fAB-Th-HHr">
                                                         <rect key="frame" x="13" y="16" width="236.5" height="21.5"/>
@@ -1945,10 +1871,10 @@ Write your objective
                                                         <rect key="frame" x="0.0" y="37.5" width="262.5" height="202.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lF-Vm-G1K">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="600"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lU7-mq-kNH">
-                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lU7-mq-kNH">
+                                                                        <rect key="frame" x="13" y="13" width="236.5" height="264"/>
                                                                         <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -1957,11 +1883,10 @@ Write your objective
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="centerY" secondItem="5lF-Vm-G1K" secondAttribute="centerY" id="P3C-R8-Tkj"/>
-                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="height" secondItem="5lF-Vm-G1K" secondAttribute="height" id="WHh-Pk-Hpx"/>
-                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="width" secondItem="5lF-Vm-G1K" secondAttribute="width" multiplier="0.9" id="XKz-R3-Awh"/>
-                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="centerX" secondItem="5lF-Vm-G1K" secondAttribute="centerX" id="htE-Y9-H2J"/>
-                                                                    <constraint firstAttribute="height" constant="240" id="mS2-Ni-dEM"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="lU7-mq-kNH" secondAttribute="trailing" constant="13" id="Uam-6K-w4h"/>
+                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="leading" secondItem="5lF-Vm-G1K" secondAttribute="leading" constant="13" id="V35-mj-y7Z"/>
+                                                                    <constraint firstAttribute="height" constant="600" id="mS2-Ni-dEM"/>
+                                                                    <constraint firstItem="lU7-mq-kNH" firstAttribute="top" secondItem="5lF-Vm-G1K" secondAttribute="top" constant="13" id="oKX-jw-EL3"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -2003,7 +1928,7 @@ Write your objective
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBO-su-M8o" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
-                                                <rect key="frame" x="56" y="2454" width="262.5" height="240"/>
+                                                <rect key="frame" x="56" y="2191.5" width="262.5" height="240"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assessment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lXg-Y7-5YR">
                                                         <rect key="frame" x="13" y="16" width="236.5" height="21.5"/>
@@ -2015,10 +1940,10 @@ Write your objective
                                                         <rect key="frame" x="0.0" y="37.5" width="262.5" height="202.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiW-xJ-Eiq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="600"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-Oh-vE8">
-                                                                        <rect key="frame" x="13" y="0.0" width="236.5" height="240"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-Oh-vE8">
+                                                                        <rect key="frame" x="13" y="13" width="236.5" height="264"/>
                                                                         <string key="text">"In the Certificate in Strategic Marketing, you will investigate underlying models, techniques and theories that underpin marketing and can contribute to strategic objectives of any organisation in the public, private or volunteer sector. It will also provide learners with a critical understanding of the marketing function within complex organisations of any size."</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -2027,11 +1952,10 @@ Write your objective
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="width" secondItem="HiW-xJ-Eiq" secondAttribute="width" multiplier="0.9" id="ADv-TQ-aWF"/>
-                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="centerY" secondItem="HiW-xJ-Eiq" secondAttribute="centerY" id="Gby-sR-uMy"/>
-                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="height" secondItem="HiW-xJ-Eiq" secondAttribute="height" id="LB5-gz-wvn"/>
-                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="centerX" secondItem="HiW-xJ-Eiq" secondAttribute="centerX" id="kee-11-jxS"/>
-                                                                    <constraint firstAttribute="height" constant="240" id="sy9-is-TF5"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="5WC-Oh-vE8" secondAttribute="trailing" constant="13" id="Cno-fT-Qa4"/>
+                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="leading" secondItem="HiW-xJ-Eiq" secondAttribute="leading" constant="13" id="NS7-hF-oac"/>
+                                                                    <constraint firstItem="5WC-Oh-vE8" firstAttribute="top" secondItem="HiW-xJ-Eiq" secondAttribute="top" constant="13" id="qkZ-cY-VZS"/>
+                                                                    <constraint firstAttribute="height" constant="600" id="sy9-is-TF5"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -2073,7 +1997,7 @@ Write your objective
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dax-2u-KLe" customClass="Custom_Button" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
-                                                <rect key="frame" x="56.5" y="2760" width="262.5" height="105"/>
+                                                <rect key="frame" x="56.5" y="2498" width="262.5" height="105"/>
                                                 <color key="backgroundColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal" title="Purchase">
@@ -2104,8 +2028,7 @@ Write your objective
                                             <constraint firstItem="FSJ-BP-gP3" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="0ah-z8-lNL"/>
                                             <constraint firstItem="LtW-cW-g5w" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="1Xm-WQ-12z"/>
                                             <constraint firstItem="Vri-dS-0cx" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.09" id="2Fl-dD-xe6"/>
-                                            <constraint firstItem="IFe-VS-9EO" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="275" id="2Gs-ko-cCL"/>
-                                            <constraint firstItem="tlw-9b-IcH" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="4Y1-7C-Ds8"/>
+                                            <constraint firstItem="IFe-VS-9EO" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.825" constant="275" id="2Gs-ko-cCL"/>
                                             <constraint firstItem="LtW-cW-g5w" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="5d7-tu-G45"/>
                                             <constraint firstItem="VRy-AQ-p96" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="8qc-ct-5ZW"/>
                                             <constraint firstItem="dax-2u-KLe" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="CE7-5g-E2D"/>
@@ -2129,30 +2052,27 @@ Write your objective
                                             <constraint firstItem="VRy-AQ-p96" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.01" id="Uls-XQ-EtK"/>
                                             <constraint firstItem="xqg-cO-KYd" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="VTn-fh-fHJ"/>
                                             <constraint firstItem="IuM-Sv-WpO" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="XZ2-Gz-qgs"/>
-                                            <constraint firstItem="dax-2u-KLe" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="1.875" id="Xgj-d2-25R"/>
+                                            <constraint firstItem="dax-2u-KLe" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="1.7" id="Xgj-d2-25R"/>
                                             <constraint firstItem="7u5-bf-5c3" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="Y2O-zS-tKT"/>
                                             <constraint firstAttribute="height" constant="3000" id="YqP-dx-n9l"/>
-                                            <constraint firstItem="tlw-9b-IcH" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="bIs-Bl-BHr"/>
                                             <constraint firstItem="IFe-VS-9EO" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="bfE-OG-vW4"/>
                                             <constraint firstItem="FSJ-BP-gP3" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="eYa-4o-gfN"/>
                                             <constraint firstItem="Kmd-oT-wnm" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.48" id="ejp-jH-zkC"/>
-                                            <constraint firstItem="KBO-su-M8o" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="1074" id="fDv-0C-ill"/>
+                                            <constraint firstItem="KBO-su-M8o" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.825" constant="1074" id="fDv-0C-ill"/>
                                             <constraint firstItem="KBO-su-M8o" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="gy3-5m-1cC"/>
                                             <constraint firstItem="KBO-su-M8o" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="hAj-n9-q9t"/>
                                             <constraint firstItem="VRy-AQ-p96" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.18" id="izf-jo-B7D"/>
                                             <constraint firstItem="LtW-cW-g5w" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="-520" id="j9h-e6-BJE"/>
-                                            <constraint firstItem="FSJ-BP-gP3" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="538" id="jj3-gW-PV7"/>
+                                            <constraint firstItem="FSJ-BP-gP3" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.825" constant="538" id="jj3-gW-PV7"/>
                                             <constraint firstItem="Kmd-oT-wnm" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.08" id="ljp-xE-2ue"/>
                                             <constraint firstItem="FSJ-BP-gP3" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="mSX-sL-bBa"/>
                                             <constraint firstItem="dax-2u-KLe" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" multiplier="0.7" id="od0-KZ-3Tu"/>
                                             <constraint firstItem="xqg-cO-KYd" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="qzQ-Dq-3d6"/>
-                                            <constraint firstItem="xqg-cO-KYd" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" constant="805" id="tYv-Qg-MUP"/>
+                                            <constraint firstItem="xqg-cO-KYd" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" multiplier="0.825" constant="805" id="tYv-Qg-MUP"/>
                                             <constraint firstItem="Kmd-oT-wnm" firstAttribute="centerX" secondItem="4wV-DH-r1b" secondAttribute="centerX" id="vPJ-qO-F5N"/>
                                             <constraint firstItem="Vri-dS-0cx" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" multiplier="0.7" id="vVP-dS-9AH"/>
                                             <constraint firstItem="Fyp-En-JlI" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" multiplier="0.07" id="wZl-Wq-1J8"/>
-                                            <constraint firstItem="tlw-9b-IcH" firstAttribute="width" secondItem="4wV-DH-r1b" secondAttribute="width" constant="-112.5" id="xOG-Fh-WEN"/>
                                             <constraint firstItem="LtW-cW-g5w" firstAttribute="height" secondItem="4wV-DH-r1b" secondAttribute="height" constant="-2760" id="xSP-6e-6XK"/>
-                                            <constraint firstItem="tlw-9b-IcH" firstAttribute="centerY" secondItem="4wV-DH-r1b" secondAttribute="centerY" id="yzN-QD-zR8"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2185,7 +2105,6 @@ Write your objective
                         <outlet property="Course_Image" destination="Vri-dS-0cx" id="Nr8-Jq-rWe"/>
                         <outlet property="Descip_Label" destination="Abo-Nu-tAY" id="iM9-sf-WJr"/>
                         <outlet property="Entry_Label" destination="sY7-wU-y92" id="Vfv-6h-Flv"/>
-                        <outlet property="Learning_Label" destination="LCg-rU-geE" id="uda-og-CDl"/>
                         <outlet property="Objective_Label" destination="Jps-uu-VuG" id="sPA-Wn-QDf"/>
                         <outlet property="Outcome_Label" destination="lU7-mq-kNH" id="6ET-46-tFj"/>
                         <outlet property="Study_Label" destination="99y-7f-JK5" id="wde-C8-k8G"/>
@@ -2196,7 +2115,7 @@ Write your objective
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKJ-42-emZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="5569"/>
+            <point key="canvasLocation" x="-839.20000000000005" y="5609.5952023988011"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="9DR-qs-5GV">
@@ -2967,6 +2886,9 @@ Write your objective
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eWY-L2-qxu">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-Xj-2C1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2981,36 +2903,37 @@ Write your objective
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vci-0X-hdJ" customClass="Custom_View" customModule="Social_Networking_and_Professional_Development" customModuleProvider="target">
                                                     <rect key="frame" x="19" y="15" width="345" height="109"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="research-picture.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="he0-vy-5ag">
-                                                            <rect key="frame" x="18" y="27.5" width="310.5" height="54.5"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="he0-vy-5ag">
+                                                            <rect key="frame" x="-12" y="33" width="69" height="43.5"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS developement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="myI-tF-EGP">
-                                                            <rect key="frame" x="17" y="63" width="311" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                            <color key="textColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-rw-NaA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="111" height="27.5"/>
+                                                            <rect key="frame" x="8.5" y="-35.5" width="138" height="109.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <color key="highlightedColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS developement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="myI-tF-EGP">
+                                                            <rect key="frame" x="60.5" y="32.5" width="276" height="44"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="myI-tF-EGP" secondAttribute="bottom" constant="22" id="8g5-Jg-IuV"/>
-                                                        <constraint firstAttribute="trailing" secondItem="myI-tF-EGP" secondAttribute="trailing" constant="17" id="CEm-wb-mPm"/>
+                                                        <constraint firstItem="WwA-rw-NaA" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" multiplier="0.45" id="48s-JC-Cqz"/>
+                                                        <constraint firstItem="WwA-rw-NaA" firstAttribute="width" secondItem="Vci-0X-hdJ" secondAttribute="width" multiplier="0.4" id="Ezu-R5-ISO"/>
                                                         <constraint firstItem="he0-vy-5ag" firstAttribute="centerY" secondItem="Vci-0X-hdJ" secondAttribute="centerY" id="HyJ-mr-Nta"/>
-                                                        <constraint firstItem="myI-tF-EGP" firstAttribute="leading" secondItem="Vci-0X-hdJ" secondAttribute="leading" constant="17" id="LhH-Jx-fvx"/>
-                                                        <constraint firstItem="WwA-rw-NaA" firstAttribute="top" secondItem="Vci-0X-hdJ" secondAttribute="top" id="SGm-ab-sb5"/>
-                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="height" secondItem="Vci-0X-hdJ" secondAttribute="height" multiplier="0.5" id="V36-nB-dMy"/>
-                                                        <constraint firstItem="WwA-rw-NaA" firstAttribute="leading" secondItem="Vci-0X-hdJ" secondAttribute="leading" id="ayM-Xi-y2i"/>
-                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" id="fJC-h5-4H8"/>
-                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="top" secondItem="WwA-rw-NaA" secondAttribute="bottom" id="mzu-ju-ocD"/>
-                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="width" secondItem="Vci-0X-hdJ" secondAttribute="width" multiplier="0.9" id="xmo-FM-ieP"/>
-                                                        <constraint firstItem="myI-tF-EGP" firstAttribute="top" secondItem="Vci-0X-hdJ" secondAttribute="top" constant="63" id="yE1-ep-vKd"/>
+                                                        <constraint firstItem="WwA-rw-NaA" firstAttribute="centerY" secondItem="Vci-0X-hdJ" secondAttribute="centerY" multiplier="0.35" id="JhA-Bb-9QE"/>
+                                                        <constraint firstItem="myI-tF-EGP" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" multiplier="1.15" id="NO9-Cp-aQm"/>
+                                                        <constraint firstItem="myI-tF-EGP" firstAttribute="height" secondItem="Vci-0X-hdJ" secondAttribute="height" multiplier="0.4" id="Rim-N0-tc6"/>
+                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="height" secondItem="Vci-0X-hdJ" secondAttribute="height" multiplier="0.4" id="V36-nB-dMy"/>
+                                                        <constraint firstItem="WwA-rw-NaA" firstAttribute="height" secondItem="Vci-0X-hdJ" secondAttribute="height" id="WrY-3a-ksT"/>
+                                                        <constraint firstItem="myI-tF-EGP" firstAttribute="width" secondItem="Vci-0X-hdJ" secondAttribute="width" multiplier="0.8" id="aSe-xv-5QX"/>
+                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" multiplier="0.13" id="fJC-h5-4H8"/>
+                                                        <constraint firstItem="myI-tF-EGP" firstAttribute="centerY" secondItem="Vci-0X-hdJ" secondAttribute="centerY" id="fp8-3X-LKh"/>
+                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="width" secondItem="Vci-0X-hdJ" secondAttribute="width" multiplier="0.2" id="xmo-FM-ieP"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
@@ -3025,8 +2948,14 @@ Write your objective
                                                         <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                                             <size key="value" width="1" height="1"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                                             <color key="value" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -3040,7 +2969,6 @@ Write your objective
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="Purchase_Image" destination="he0-vy-5ag" id="3nJ-TP-5da"/>
                                             <outlet property="Purchase_description" destination="myI-tF-EGP" id="Uk3-jE-jjc"/>
                                         </connections>
                                     </tableViewCell>
@@ -3069,12 +2997,16 @@ Write your objective
                             <constraint firstItem="X89-Wd-EE6" firstAttribute="trailing" secondItem="grK-2Z-Txj" secondAttribute="trailing" id="A2y-By-jsd"/>
                             <constraint firstItem="eIU-os-RAj" firstAttribute="centerX" secondItem="grK-2Z-Txj" secondAttribute="centerX" multiplier="1.7" id="BWb-x5-59Z"/>
                             <constraint firstItem="eIU-os-RAj" firstAttribute="centerY" secondItem="grK-2Z-Txj" secondAttribute="centerY" multiplier="1.8" id="CGj-5c-BdR"/>
+                            <constraint firstItem="eWY-L2-qxu" firstAttribute="width" secondItem="65n-45-D5d" secondAttribute="width" id="NKk-TE-Bja"/>
                             <constraint firstItem="eIU-os-RAj" firstAttribute="width" secondItem="65n-45-D5d" secondAttribute="width" multiplier="0.15" id="NY5-7c-vBr"/>
+                            <constraint firstItem="eWY-L2-qxu" firstAttribute="height" secondItem="65n-45-D5d" secondAttribute="height" id="OR6-IV-BbG"/>
                             <constraint firstItem="X89-Wd-EE6" firstAttribute="leading" secondItem="grK-2Z-Txj" secondAttribute="leading" id="QXy-i0-YQt"/>
                             <constraint firstItem="eIU-os-RAj" firstAttribute="height" secondItem="65n-45-D5d" secondAttribute="height" multiplier="0.07" id="SPf-yC-YgK"/>
                             <constraint firstItem="X89-Wd-EE6" firstAttribute="top" secondItem="grK-2Z-Txj" secondAttribute="top" id="WPM-tf-F3G"/>
                             <constraint firstItem="8hN-Xj-2C1" firstAttribute="top" secondItem="X89-Wd-EE6" secondAttribute="bottom" id="Y62-WR-0E5"/>
+                            <constraint firstItem="eWY-L2-qxu" firstAttribute="centerY" secondItem="grK-2Z-Txj" secondAttribute="centerY" id="fd8-Ld-ARj"/>
                             <constraint firstItem="grK-2Z-Txj" firstAttribute="trailing" secondItem="8hN-Xj-2C1" secondAttribute="trailing" id="hGI-WN-TYp"/>
+                            <constraint firstItem="eWY-L2-qxu" firstAttribute="centerX" secondItem="grK-2Z-Txj" secondAttribute="centerX" id="lJX-ZI-8Op"/>
                             <constraint firstItem="8hN-Xj-2C1" firstAttribute="leading" secondItem="grK-2Z-Txj" secondAttribute="leading" id="qmr-I0-IEf"/>
                             <constraint firstItem="grK-2Z-Txj" firstAttribute="bottom" secondItem="8hN-Xj-2C1" secondAttribute="bottom" id="r2m-vk-lwL"/>
                         </constraints>
@@ -3082,6 +3014,7 @@ Write your objective
                     </view>
                     <tabBarItem key="tabBarItem" title="Purchase" image="purchase.png" id="Z5h-EQ-lLB"/>
                     <connections>
+                        <outlet property="indictor" destination="eWY-L2-qxu" id="jne-Cq-Cay"/>
                         <outlet property="purchase_table" destination="8hN-Xj-2C1" id="vol-zY-ygh"/>
                         <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="KHV-6I-MLA"/>
                         <segue destination="2Fe-HS-RVK" kind="presentation" identifier="Detail_Segue" id="VOy-9D-JtN"/>
@@ -3089,7 +3022,7 @@ Write your objective
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dL-fL-kzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="3063"/>
+            <point key="canvasLocation" x="696.79999999999995" y="3062.5187406296855"/>
         </scene>
         <!--Friend-->
         <scene sceneID="a8y-5i-jWy">
@@ -3099,6 +3032,11 @@ Write your objective
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PKi-Ap-Vl1">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OO0-qr-6YR">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
@@ -3218,6 +3156,7 @@ Write your objective
                     <tabBarItem key="tabBarItem" title="Friend" image="friend.png" id="58Y-ae-u4A"/>
                     <connections>
                         <outlet property="Friend_Table" destination="tlu-bK-EHj" id="XUe-F2-sab"/>
+                        <outlet property="indicator" destination="PKi-Ap-Vl1" id="2kg-R8-Qfb"/>
                         <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="lEg-aw-kd5"/>
                         <segue destination="cpr-oM-6LV" kind="show" identifier="Friend_Segue" id="yp9-cw-n22"/>
                     </connections>
@@ -3289,6 +3228,10 @@ Write your objective
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-wr-z3q">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <color key="color" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fEZ-IP-ydU">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3410,13 +3353,17 @@ Write your objective
                         <constraints>
                             <constraint firstItem="VrE-bb-pk0" firstAttribute="centerX" secondItem="S4E-2d-Xlk" secondAttribute="centerX" multiplier="1.7" id="1w5-3o-oXH"/>
                             <constraint firstItem="HgS-Tc-PCj" firstAttribute="top" secondItem="S4E-2d-Xlk" secondAttribute="top" id="5ks-QV-sSb"/>
+                            <constraint firstItem="zLv-wr-z3q" firstAttribute="height" secondItem="JeX-g1-T6J" secondAttribute="height" id="5mR-k7-o8v"/>
                             <constraint firstItem="fEZ-IP-ydU" firstAttribute="top" secondItem="HgS-Tc-PCj" secondAttribute="bottom" id="AgA-ty-7Mw"/>
                             <constraint firstItem="fEZ-IP-ydU" firstAttribute="trailing" secondItem="S4E-2d-Xlk" secondAttribute="trailing" id="BD9-66-wxQ"/>
                             <constraint firstItem="HgS-Tc-PCj" firstAttribute="trailing" secondItem="S4E-2d-Xlk" secondAttribute="trailing" id="CFi-3i-q1H"/>
+                            <constraint firstItem="zLv-wr-z3q" firstAttribute="centerY" secondItem="S4E-2d-Xlk" secondAttribute="centerY" id="It6-CN-hPa"/>
+                            <constraint firstItem="zLv-wr-z3q" firstAttribute="centerX" secondItem="S4E-2d-Xlk" secondAttribute="centerX" id="KBJ-4O-40V"/>
                             <constraint firstItem="VrE-bb-pk0" firstAttribute="width" secondItem="JeX-g1-T6J" secondAttribute="width" multiplier="0.15" id="MzU-0W-W5u"/>
                             <constraint firstItem="HgS-Tc-PCj" firstAttribute="leading" secondItem="S4E-2d-Xlk" secondAttribute="leading" id="WAa-NN-FpY"/>
                             <constraint firstItem="VrE-bb-pk0" firstAttribute="centerY" secondItem="S4E-2d-Xlk" secondAttribute="centerY" multiplier="1.8" id="Wdh-2v-kf6"/>
                             <constraint firstItem="VrE-bb-pk0" firstAttribute="height" secondItem="JeX-g1-T6J" secondAttribute="height" multiplier="0.07" id="XDp-r5-XV9"/>
+                            <constraint firstItem="zLv-wr-z3q" firstAttribute="width" secondItem="JeX-g1-T6J" secondAttribute="width" id="ebx-9j-bCE"/>
                             <constraint firstItem="fEZ-IP-ydU" firstAttribute="bottom" secondItem="S4E-2d-Xlk" secondAttribute="bottom" id="gaX-FY-bDx"/>
                             <constraint firstItem="fEZ-IP-ydU" firstAttribute="leading" secondItem="S4E-2d-Xlk" secondAttribute="leading" id="ger-aV-7kH"/>
                         </constraints>
@@ -3424,6 +3371,7 @@ Write your objective
                     </view>
                     <tabBarItem key="tabBarItem" title="Offer" image="offer.png" id="Bzu-YG-8ED"/>
                     <connections>
+                        <outlet property="indicator" destination="zLv-wr-z3q" id="qoE-nk-O8m"/>
                         <outlet property="offerTable" destination="fEZ-IP-ydU" id="B6K-kv-LOK"/>
                         <segue destination="2Fe-HS-RVK" kind="presentation" identifier="Detail_Segue" id="8yg-3r-wcX"/>
                         <segue destination="cpr-oM-6LV" kind="show" identifier="Live_Segue" id="L8i-mk-0LN"/>
@@ -3496,7 +3444,7 @@ Write your objective
         <image name="setting.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yp9-cw-n22"/>
+        <segue reference="L8i-mk-0LN"/>
         <segue reference="8yg-3r-wcX"/>
         <segue reference="K99-zC-8P3"/>
     </inferredMetricsTieBreakers>
