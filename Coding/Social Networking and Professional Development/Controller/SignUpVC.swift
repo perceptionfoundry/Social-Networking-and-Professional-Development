@@ -92,7 +92,7 @@ class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                             uploadMetaData.contentType = "image/jpeg"
                             storageRef.putData(imageData, metadata: uploadMetaData, completion: { (metaData, error) in
                     
-                    
+                
                     
                                 if error != nil{
                     
@@ -108,7 +108,7 @@ class SignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                     
                     
                                 else{
-                    
+                                    
                                     print(metaData?.downloadURL()?.description)
                     
                                     userInfo["uID"] = (Auth.auth().currentUser?.uid)!
