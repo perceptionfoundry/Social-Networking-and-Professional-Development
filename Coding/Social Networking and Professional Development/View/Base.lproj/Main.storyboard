@@ -2924,6 +2924,7 @@ Write your objective
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-rw-NaA">
                                                             <rect key="frame" x="8.5" y="-35.5" width="138" height="109.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="highlightedColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </label>
@@ -2935,9 +2936,9 @@ Write your objective
                                                             <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.74117647060000003" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.40000000000000002" green="0.45882352939999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="WwA-rw-NaA" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" multiplier="0.45" id="48s-JC-Cqz"/>
+                                                        <constraint firstItem="WwA-rw-NaA" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" multiplier="0.5" id="48s-JC-Cqz"/>
                                                         <constraint firstItem="WwA-rw-NaA" firstAttribute="width" secondItem="Vci-0X-hdJ" secondAttribute="width" multiplier="0.4" id="Ezu-R5-ISO"/>
                                                         <constraint firstItem="he0-vy-5ag" firstAttribute="centerY" secondItem="Vci-0X-hdJ" secondAttribute="centerY" id="HyJ-mr-Nta"/>
                                                         <constraint firstItem="WwA-rw-NaA" firstAttribute="centerY" secondItem="Vci-0X-hdJ" secondAttribute="centerY" multiplier="0.35" id="JhA-Bb-9QE"/>
@@ -2946,7 +2947,7 @@ Write your objective
                                                         <constraint firstItem="he0-vy-5ag" firstAttribute="height" secondItem="Vci-0X-hdJ" secondAttribute="height" multiplier="0.4" id="V36-nB-dMy"/>
                                                         <constraint firstItem="WwA-rw-NaA" firstAttribute="height" secondItem="Vci-0X-hdJ" secondAttribute="height" id="WrY-3a-ksT"/>
                                                         <constraint firstItem="myI-tF-EGP" firstAttribute="width" secondItem="Vci-0X-hdJ" secondAttribute="width" multiplier="0.8" id="aSe-xv-5QX"/>
-                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" multiplier="0.13" id="fJC-h5-4H8"/>
+                                                        <constraint firstItem="he0-vy-5ag" firstAttribute="centerX" secondItem="Vci-0X-hdJ" secondAttribute="centerX" multiplier="0.2" id="fJC-h5-4H8"/>
                                                         <constraint firstItem="myI-tF-EGP" firstAttribute="centerY" secondItem="Vci-0X-hdJ" secondAttribute="centerY" id="fp8-3X-LKh"/>
                                                         <constraint firstItem="he0-vy-5ag" firstAttribute="width" secondItem="Vci-0X-hdJ" secondAttribute="width" multiplier="0.2" id="xmo-FM-ieP"/>
                                                     </constraints>
@@ -2964,10 +2965,10 @@ Write your objective
                                                             <size key="value" width="1" height="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                                            <color key="value" red="0.61960784310000006" green="0.21176470589999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.40000000000000002" green="0.45882352939999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                            <color key="value" red="0.61960784310000006" green="0.21176470589999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.40000000000000002" green="0.45882352939999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="border_color">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
